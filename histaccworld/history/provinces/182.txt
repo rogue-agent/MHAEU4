@@ -1,8 +1,2 @@
 # 182 Vermandois - Principal cities: Compi�gne + Soissons
 
-owner = VR1
-controller = VR1
-add_core = CHP
-add_core = PIC
-add_core = FRA
-add_core = VR1
