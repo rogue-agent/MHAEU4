@@ -3,7 +3,7 @@
 
 owner = PBG
 controller = PBG
-capital = "Besan�on"
+capital = "Dole"
 is_city = yes
 estate = estate_burghers
 culture = burgundian

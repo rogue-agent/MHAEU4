@@ -47,3 +47,19 @@ dependency = {
 	start_date = 1350.2.9 # Countess becomes Queen Consort 
 	end_date = 1360.9.29 # part of BUR
 }
+# Co. of Bur., Ruled by the Duke of Burgundy
+dependency = {
+	subject_type = "union"
+	first = BUR
+	second = PBG
+	start_date = 1405.1.1 # Countess becomes Queen Consort 
+	end_date = 1360.9.29 # part of BUR
+}
+# Liege, Ruled by the Duke of Burgundy
+dependency = {
+	subject_type = "vassal"
+	first = BUR
+	second = LIE
+	start_date = 1456.1.1 # Luois de bourbon
+	end_date = 1465.1.1 # war
+}
