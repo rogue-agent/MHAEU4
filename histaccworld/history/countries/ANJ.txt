@@ -4,8 +4,9 @@ government_rank = 1
 technology_group = western
 primary_culture = cosmopolitan_french
 religion = catholic
-#capital = 178 # Anjou #Removed because balance issues during HYW
+#capital = 178 # Anjou 
 capital = 177	# Maine 
+add_historical_friend = PRO
 
 1351.1.1 = { # Duchy of Anjou created for the 2nd son of Jean II de Valois
 	monarch = {
@@ -96,8 +97,8 @@ capital = 177	# Maine
 		mil = 1
 	} 
 	heir = {
-		name = "RenÈ"
-		monarch_name = "RenÈ I"
+		name = "Ren√©"
+		monarch_name = "Ren√© I"
 		dynasty = "de Valois-Anjou"
 		birth_date = 1409.1.16
 		death_date = 1480.7.10
@@ -124,7 +125,7 @@ capital = 177	# Maine
 
 1434.11.12 = {
 	monarch = {
-		name = "RenÈ I"
+		name = "Ren√© I"
 		dynasty = "de Valois-Anjou"
 		birth_date = 1409.1.16
 		adm = 3
@@ -134,7 +135,7 @@ capital = 177	# Maine
 	queen = {
 		country_of_origin = LOR
 		name = "Isabelle I"
-		dynasty = "de Ch‚tenois"
+		dynasty = "de Ch√¢tenois"
 		birth_date = 1400.1.1
 		death_date = 1453.2.28
 		female = yes
@@ -165,7 +166,7 @@ capital = 177	# Maine
 	}
 }
 
-1474.1.1 = { # RenÈ I declares Charles as heir of Anjou
+1474.1.1 = { # Ren√© I declares Charles as heir of Anjou
 	heir = {
 		name = "Charles"
 		monarch_name = "Charles IV"

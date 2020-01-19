@@ -6,53 +6,73 @@ primary_culture = cosmopolitan_french
 religion = catholic
 capital = 179	# Bourges
 
-1461.1.1 = { # Duchy restored
+1356.12.26 = { #Technally they should be independent in 1356, however it was the third son of the King of France. So until we have dynastic mechanics it stays.
 	monarch = {
-		name = "Charles I"
+		name = "Jean I"
 		dynasty = "de Valois"
-		birth_date = 1446.4.11
-		female = no
-		adm = 3
+		birth_date = 1340.11.30
+		adm = 4
 		dip = 5
 		mil = 2
-
 	}
-1472.1.1 = {
+}
+
+1360.10.24 = {
 	monarch = {
-		name = "Francois I"
+		name = "Jean I"
 		dynasty = "de Valois"
-		birth_date = 1472.1.1
-		female = no
-		adm = 3
+		birth_date = 1340.11.30
+		adm = 4
 		dip = 5
 		mil = 2
-
 	}
-1498.1.1 = {
-	monarch = {
-		name = "Jeanne I"
-		dynasty = "de Valois"
-		birth_date = 1464.1.1
+	queen = {
+		country_of_origin = AMG
+		name = "Jeanne"
+		dynasty = "d'Armagnac"
+		birth_date = 1346.6.24
+		death_date = 1387.3.15
 		female = yes
-		adm = 3
-		dip = 5
+		adm = 2
+		dip = 2
 		mil = 2
 	}
-1514.1.1 = { 
-	monarch = {
-		name = "Claude I"
-		dynasty = "de Valois"
-		birth_date = 1499.1.1
-		female = yes
-		adm = 3
-		dip = 5
-		mil = 2
+}
 
+1389.6.5 = {
+	queen = {
+		country_of_origin = AUV
+		name = "Jeanne"
+		dynasty = "d'Auvergne"
+		birth_date = 1378.1.1
+		death_date = 1424.1.1
+		female = yes
+		adm = 5
+		dip = 4
+		mil = 2
 	}
-1517.4.11 = { 
+}
+
+1404.9.28 = { # as Duchess
+	queen = {
+		country_of_origin = AUV
+		name = "Jeanne II"
+		dynasty = "d'Auvergne"
+		birth_date = 1378.1.1
+		death_date = 1424.1.1
+		female = yes
+		adm = 5
+		dip = 4
+		mil = 2
+	}
+}
+
+# 1416.6.15 - To French Royal Domain
+
+1517.4.11 = { # Duchy restaured
 	monarch = {
 		name = "Marguerite I"
-		dynasty = "de Valois-Angoulême"
+		dynasty = "de Valois-AngoulÃªme"
 		birth_date = 1492.4.11
 		female = yes
 		adm = 3
@@ -63,7 +83,7 @@ capital = 179	# Bourges
 	queen = {
 		country_of_origin = ALE
 		name = "Charles IV"
-		dynasty = "de Valois-Alençon"
+		dynasty = "de Valois-AlenÃ§on"
 		birth_date = 1489.1.1
 		death_date = 1525.4.12
 		female = no
@@ -74,7 +94,7 @@ capital = 179	# Bourges
 }
 
 ###############################################################################
-#  1525.4.12 - 1549.12.21 PU under Armagnac (Marguerite de Valois-Angoulême)  #
+#  1525.4.12 - 1549.12.21 PU under Armagnac (Marguerite de Valois-AngoulÃªme)  #
 ###############################################################################
 
 1527.1.24 = {
