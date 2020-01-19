@@ -636,7 +636,7 @@ scandinavian = { #Nordic
 		}
 	}
 	icelandic = {
-		primary = IC3
+		primary = ICE
 		
 		#country = { naval_attrition = -0.5	}
 		#country = { navy_tradition_decay = -0.2 }
