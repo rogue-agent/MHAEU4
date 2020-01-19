@@ -1,0 +1,4 @@
+# 1958 - Kargopol
+
+culture = veps
+capital = "Puudoshi"

@@ -1,0 +1,4 @@
+# 1104 - Ivittuut
+
+culture = greenlandic
+capital = "Ivittuut"

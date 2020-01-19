@@ -1,0 +1,4 @@
+# 770 - Breslauja
+
+culture = selonians
+capital = "Mjory"

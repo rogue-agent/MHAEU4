@@ -1,0 +1,4 @@
+# 33 - Neva
+
+culture = izhorian
+capital = "Neva"

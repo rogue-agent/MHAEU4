@@ -1,0 +1,4 @@
+# 1982 - Blekinge
+
+culture = scanian
+capital = "Carskrona"

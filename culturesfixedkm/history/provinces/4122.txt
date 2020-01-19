@@ -1,0 +1,4 @@
+# 4122 - Shenkursk
+
+culture = chud
+capital = "Verhnjaja Toima"

@@ -1,0 +1,4 @@
+# 315 - Finnmørk
+
+culture = sapmi
+capital = "Alta"

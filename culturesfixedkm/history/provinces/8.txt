@@ -1,0 +1,4 @@
+# 8 - Dalaskogen
+
+culture = elfdalian
+capital = "Övdaln"

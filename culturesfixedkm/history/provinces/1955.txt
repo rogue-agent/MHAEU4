@@ -1,0 +1,4 @@
+# 1955 - Kholmogory
+
+culture = chud
+capital = "Arkangel"

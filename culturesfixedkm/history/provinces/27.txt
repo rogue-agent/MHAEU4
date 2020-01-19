@@ -1,0 +1,4 @@
+# 27 - Finland
+
+culture = finno-swede
+capital = "Åbo"

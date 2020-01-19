@@ -1,0 +1,4 @@
+# 2997 - Tuchel
+
+culture = polish
+capital = "Konitz"

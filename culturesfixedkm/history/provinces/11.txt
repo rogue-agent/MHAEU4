@@ -1,0 +1,4 @@
+# 11 - Västerbotten
+
+culture = swedish
+capital = "Jewera"

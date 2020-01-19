@@ -1,0 +1,4 @@
+# 4256 - Solvychegodsk
+
+culture = chud
+capital = "Korjažma"

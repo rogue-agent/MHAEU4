@@ -1,0 +1,4 @@
+# 4257 - Mezen
+
+culture = chud
+capital = "Okulovskiy"

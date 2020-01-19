@@ -1,0 +1,4 @@
+#4152-Kajanaland
+
+culture = finnish
+capital = "Suomussalmi"

@@ -1,0 +1,6 @@
+# 193 - Franche Comte (1444)
+# Changes: 
+
+owner = COB
+controller = FIN
+add_core = COB

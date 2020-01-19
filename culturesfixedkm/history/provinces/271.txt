@@ -1,0 +1,4 @@
+# 271 - Zemaitija
+
+culture = curonians
+capital = "Šiauliai"

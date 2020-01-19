@@ -1,0 +1,4 @@
+# 26 - Halland
+
+culture = scanian
+capital = "Halmftad"
