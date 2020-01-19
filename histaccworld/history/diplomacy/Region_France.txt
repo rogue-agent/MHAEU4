@@ -63,11 +63,19 @@ dependency = {
 	start_date = 1456.1.1 # Luois de bourbon
 	end_date = 1465.1.1 # war
 }
-# Liege, Ruled by the Duke of Burgundy
+# Surrender of maine
 dependency = {
 	subject_type = "vassal"
 	first = ENG
 	second = CO1
 	start_date = 1444.1.1 # Luois de bourbon
 	end_date = 1448.3.15 # surrender of maine
+}
+# Forez, PU with Bourbon
+dependency = {
+	subject_type = "vassal"
+	first = BOU
+	second = FOZ
+	start_date = 1410.1.1 # Luois de bourbon
+	end_date = 1531.3.15 # 
 }
