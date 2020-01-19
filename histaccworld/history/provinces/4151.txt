@@ -1,0 +1,18 @@
+# 4151 - Inari (1444)
+# Changes: (SWE)/religion
+	owner = SWE
+	controller = SWE
+	add_core = SWE
+
+
+
+1527.6.1  = { religion = protestant}
+1598.8.1  = { controller = PLC } # Sigismund tries to reconquer his crown
+1599.7.15 = { controller = SWE } # Duke Karl get it back
+1742.11.5 = { controller = RUS } # The War of the Hats-Estimated date
+1743.8.7  = { controller = SWE } # The Peace of �bo
+1808.9.14 = { controller = RUS } # The Swedish forces are defeated at the battle Oravais
+1809.9.17 = {	owner = RUS
+		add_core = RUS
+		remove_core = SWE
+	    } # Treaty of Fredrikshamn

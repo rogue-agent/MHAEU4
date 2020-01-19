@@ -1,0 +1,6 @@
+# 4152 - Per�pohja (1444)
+# Changes: (FIN)/religion
+
+owner = SWE
+controller = SWE
+add_core = SWE
