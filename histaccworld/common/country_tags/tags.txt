@@ -1,0 +1,9 @@
+#France 
+PBG = "countries/Palatinate of Burgundy.txt"
+ANJ = "countries/Anjou.txt"
+FOZ = "countries/Forez.txt"
+POU = "countries/Poitou.txt"
+CO1 = "countries/Maine.txt"
+
+#Low Countries
+ARS = "countries/Artois.txt"
