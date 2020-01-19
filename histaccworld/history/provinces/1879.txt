@@ -1,7 +1,7 @@
 # 1879 - Alençon
 
-owner = ENG
-controller = ENG
+owner = ALE
+controller = ALE
 capital = "Alençon"
 is_city = yes
 culture = cosmopolitan_french
