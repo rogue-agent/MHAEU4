@@ -6,7 +6,6 @@
  FOZ: "Forez"
  FOZ_ADJ: "Forez"
  CO1: "Maine"
- CO1: "Mainoise"
+ CO1_ADJ: "Mainoise"
  PBG: "Palatine Burgundy"
- PBG: "Palatine Burgundian"
- 
+ PBG_ADJ: "Palatine Burgundian"

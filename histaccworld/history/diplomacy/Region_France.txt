@@ -4,7 +4,7 @@ dependency = {
 	first = FRA
 	second = BER
 	start_date = 1444.11.11 # duchy created
-	end_date = 1416.6.15 # duchy inherited
+	end_date = 1445.6.15 # duchy inherited
 }
 # Bourbonnais, a French duchy vassal  (1327-1523)
 dependency = {
@@ -28,7 +28,7 @@ dependency = {
 	first = FRA
 	second = FOZ
 	start_date = 1444.11.11 # The Britisch attacking France
-	end_date = 1417.9.22 # becomes PU Partner of Bourbonnais
+	end_date = 1445.9.22 # becomes PU Partner of Bourbonnais
 }
 # Auvergne, a French county
 dependency = {
