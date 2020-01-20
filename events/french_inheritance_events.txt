@@ -1,0 +1,561 @@
+namespace = french_inheritance
+
+# French Inheritance of Brittany
+country_event = {
+	id = french_inheritance.1
+	title = "breton_inheritance.t"
+	desc = "breton_inheritance.d"
+	picture = DIPLOMACY_eventPicture
+
+	major = yes
+	
+	fire_only_once = yes
+	
+	
+	trigger = {
+		tag = FRA
+		NOT = { war_with = BRI }
+		BRI = {
+			exists = yes
+			ai = yes
+			was_player = no
+			is_subject = no
+			is_neighbor_of = ROOT
+			}
+		is_subject = no
+		num_of_cities = 10
+		OR = {
+			AND = {
+				FRA = { is_female = yes }
+				BRI = { is_female = no }
+			}
+			AND = {
+				FRA = { is_female = no }
+				BRI = { is_female = yes }
+			}
+			BRI = {
+				ai = yes
+				has_regency = yes
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.1
+			OR = {
+				AND = {
+					tag = FRA
+					BRI = {
+						has_regency = no 
+					}
+				}
+				AND = {
+					tag = FRA
+					BRI = { 
+						has_regency = no 
+					}
+				}
+			}
+		}
+	}
+	
+	
+	option = {		# France gains Restoration of Union casus belli on Brittany
+		name = "breton_inheritance.a"
+		ai_chance = { factor = 90 }
+		FRA = {
+			add_casus_belli = {	
+				target = BRI
+				type = cb_restore_personal_union
+				months = 300
+			}
+		}
+		BRI = {
+			add_opinion = {
+			who = FRA
+			modifier = forced_breton_inheritance_brittany
+			}
+			hidden_effect = {
+				country_event = { id = french_inheritance.4 days = 1 }
+			}
+		}
+		every_known_country = {
+			limit = {
+				marriage_with = BRI
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = forced_breton_inheritance_rm
+			}
+		}
+	}
+	option = {		# France rejects a personal union over Brittany
+		name = "breton_inheritance.b"
+		ai_chance = { factor = 10 }
+		BRI = {
+			add_opinion = {
+				who = ROOT
+				modifier = no_forced_breton_inheritance
+			}
+			hidden_effect = {
+				country_event = { id = french_inheritance.5 days = 1 }
+			}
+		}
+		add_legitimacy = -5
+		add_prestige = -5
+	}
+}
+
+#French Inheritance of Provence
+country_event = {
+	id = french_inheritance.2
+	title = "provencal_inheritance.t"
+	desc = "provencal_inheritance.d"
+	picture = CITY_VIEW_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		NOT = { war_with = PRO }
+		PRO = {
+			exists = yes
+			ai = yes
+			was_player = no
+			is_subject = no
+			is_neighbor_of = ROOT
+			}
+		is_subject = no
+		num_of_cities = 10
+	}
+
+	mean_time_to_happen = {
+		months = 250
+		modifier = {
+			factor = 1.1
+			luck = yes
+		}
+		modifier = {
+			factor = 1.1
+			has_heir = no
+		}
+		modifier = {
+			factor = 1.1
+			PRO = {
+				dynasty = FRA
+			}
+		}
+	}
+	
+	option = {		#France inherits Provence and its subjects
+		name = "provencal_inheritance.a"
+		if = {
+			limit = {
+				PRO = {
+					owns_core_province = 187
+				}
+				LOR = {
+					exists = yes
+					is_subject = no
+				}
+			}
+			187 = {
+				add_core = LOR
+				cede_province = LOR
+				add_local_autonomy = 10
+			}
+		}
+		PRO = {
+			every_subject_country = {
+				every_owned_province = {
+					add_core = PRO
+					cede_province = PRO
+				}
+			}
+			set_in_empire = no
+		}
+		inherit = PRO
+		LOR = {
+			country_event = { id = french_inheritance.6 days = 1 }
+		}
+	}
+}
+
+# Breton Reaction to French Claims on Brittany
+country_event = {
+	id = french_inheritance.4
+	title = "breton_reaction_french_claim.t"
+	desc = "breton_reaction_french_claim.d"
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "breton_reaction_french_claim.a"
+
+		add_country_modifier = {
+			name = threatened_france
+			duration = 1825
+		}
+	}
+}
+
+# Breton Reaction to French Claims on Brittany (Relinquished)
+country_event = {
+	id = french_inheritance.5
+	title = "breton_reaction_french_claim_relinquished.t"
+	desc = "breton_reaction_french_claim_relinquished.d"
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "breton_reaction_french_claim_relinquished.a"
+		add_legitimacy = 5
+		add_prestige = 5
+	}
+}
+
+# Lorrainer Reaction to French Inheritance of Provence
+country_event = {
+	id = french_inheritance.6
+	title = "lorrainer_reaction.t"
+	desc = "lorrainer_reaction_provence.d"
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "lorrainer_reaction.a"
+		tooltip = {
+			187 = {
+				add_core = LOR
+				cede_province = LOR
+				add_local_autonomy = 10
+			}
+		}
+		add_legitimacy = 5
+		add_prestige = 5
+	}
+}
+
+# French Claim to Milan
+country_event = {
+	id = french_inheritance.8
+	title = "french_claim_milan.t"
+	desc = "french_claim_milan.d"
+	picture = COURT_eventPicture
+
+
+	fire_only_once = yes
+	trigger = {
+		tag = FRA
+		NOT = { is_year = 1550 }
+		NOT = { senior_union_with = MLO }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+	}
+
+	option = {		# Let us claim what is rightfully Ours!
+		name = "french_claim_milan.a"
+		every_province = {
+			limit = {
+				owned_by = MLO
+			}
+			add_claim = FRA
+		}
+        if = {
+            limit = {
+            	MLO = {
+                    government = monarchy
+					is_subject = no
+                }
+            }
+            add_casus_belli = {
+                target = MLO
+                type = cb_restore_personal_union
+                months = 300
+            }
+        }
+		MLO = {
+			add_opinion = {
+				who = ROOT
+				modifier = fra_claimed_milan
+			}
+		}
+	}
+	option = {		# Let us drop our claims for good!
+		name = "french_claim_milan.b"
+		MLO = {
+			add_opinion = {
+				who = ROOT
+				modifier = fra_did_not_claim_milan
+			}
+		}
+	}
+}
+
+# Treaty of Senlis (Ask for French Burgundy)
+country_event = {
+	id = french_inheritance.9
+	title = "french_burgundy_ask.t"
+	desc = "french_burgundy_ask.d"
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = france_has_burgundy_provinces
+		NOT = { is_year = 1550 }
+		NOT = { war_with = FRA }
+		FRA = {
+			is_subject = no
+		}
+		OR = {
+			88 = {
+				owned_by = FRA
+			}
+			193 = {
+				owned_by = FRA
+			}
+			1877 = {
+				owned_by = FRA
+			}
+		}
+	}
+
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = french_burgundy_ask.a
+		FRA = {
+			country_event = {
+				id = french_inheritance.10
+				days = 30
+			}
+		}
+	}
+
+	option = {
+		name = french_burgundy_ask.b
+		add_prestige = -5
+		if = {
+			limit = {
+				88 = {
+					owned_by = FRA
+				}
+			}
+			88 = {
+				remove_core = ROOT
+			}
+		}
+		if = {
+			limit = {
+				193 = {
+					owned_by = FRA
+				}
+			}
+			193 = {
+				remove_core = ROOT
+			}
+		}
+		if = {
+			limit = {
+				1877 = {
+					owned_by = FRA
+				}
+			}
+			1877 = {
+				remove_core = ROOT
+			}
+		}
+		clr_country_flag = france_has_burgundy_provinces
+		if = {
+			limit = {
+				OR = {
+					tag = HAB
+					tag = STY
+					tag = AUT
+				}
+			}
+			set_country_flag = low_countries_controlled
+		}
+	}
+}
+
+# Treaty of Senlis (Response for French Burgundy)
+country_event = {
+	id = french_inheritance.10
+	title = "french_burgundy_response.t"
+	desc = "french_burgundy_response.d"
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = french_burgundy_response.a
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 40
+				is_rival = FROM
+			}
+			modifier = {
+				factor = 40
+				historical_rival_with = FROM
+			}
+			modifier = {
+				factor = 0
+				war_with = FROM
+			}
+		}
+		if = {
+			limit = {
+				88 = {
+					owned_by = ROOT
+				}
+			}
+			88 = {
+				remove_core = ROOT
+				add_core = FROM
+				cede_province = FROM
+			}
+		}
+		if = {
+			limit = {
+				193 = {
+					owned_by = ROOT
+				}
+			}
+			193 = {
+				remove_core = ROOT
+				add_core = FROM
+				cede_province = FROM
+			}
+		}
+		if = {
+			limit = {
+				1877 = {
+					owned_by = ROOT
+				}
+			}
+			1877 = {
+				remove_core = ROOT
+				add_core = FROM
+				cede_province = FROM
+			}
+		}
+		add_country_modifier = {
+			name = treaty_of_senlis
+			duration = 9125
+		}
+		add_truce_with = FROM
+		FROM = {
+			add_opinion = {
+				who = FRA
+				modifier = accepted_treaty_of_senlis
+			}
+			add_truce_with = FRA
+			country_event = {
+				id = french_inheritance.11
+				days = 1
+			}	
+		}
+	}
+
+	option = {
+		name = french_burgundy_response.b
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 60
+				is_rival = FROM
+			}
+			modifier = {
+				factor = 60
+				historical_rival_with = FROM
+			}
+			modifier = {
+				factor = 100
+				war_with = FROM
+			}
+		}
+		add_prestige = 5
+		FROM = {
+			add_opinion = {
+				who = FRA
+				modifier = refused_treaty_of_senlis
+			}
+			country_event = {
+				id = french_inheritance.12
+				days = 1
+			}	
+		}
+	}
+}
+
+# Treaty of Senlis (Accepted)
+country_event = {
+	id = french_inheritance.11
+	title = "french_burgundy_accepted.t"
+	desc = "french_burgundy_accepted.d"
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = french_burgundy_accepted.a
+		add_prestige = 25
+		clr_country_flag = france_has_burgundy_provinces
+		if = {
+			limit = {
+				OR = {
+					tag = HAB
+					tag = STY
+					tag = AUT
+				}
+			}
+			set_country_flag = low_countries_controlled
+		}
+	}
+}
+
+# Treaty of Senlis (Refused)
+country_event = {
+	id = french_inheritance.12
+	title = "french_burgundy_refused.t"
+	desc = "french_burgundy_refused.d"
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = french_burgundy_refused.a
+		add_prestige = -25
+		clr_country_flag = france_has_burgundy_provinces
+		if = {
+			limit = {
+				OR = {
+					tag = HAB
+					tag = STY
+					tag = AUT
+				}
+			}
+			set_country_flag = low_countries_controlled
+		}
+	}
+}

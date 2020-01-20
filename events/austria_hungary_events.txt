@@ -1,0 +1,904 @@
+namespace = austria_hungary
+normal_or_historical_nations = yes
+
+# János Hunyadi Dies Early
+country_event = {
+	id = austria_hungary.2
+	title = "flavor_hun.1.t"
+	desc = "hunyadi_dies_early.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	major = yes
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		has_regency = yes
+		has_consort_regency = no
+		is_lesser_in_union = no
+		NOT = { has_leader = "János Hunyadi" }
+		is_year = 1445
+		NOT = { is_year = 1470 }
+		has_government_attribute = heir
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	immediate = {
+		set_country_flag = hunyadi_dies_early
+	}
+	
+	option = {
+		name = flavor_hun.1.b
+		add_stability_or_adm_power = yes
+		define_heir = {
+			name = "Ladislaus Postumus"
+			dynasty = "von Habsburg"
+			culture = austrian
+			adm = 3
+			dip = 3
+			mil = 2
+			birth_date = 1440.2.22
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -15
+		}
+		clr_country_flag = interregnum_flag
+	}
+}
+
+# Death of the Albertine Line
+country_event = {
+	id = austria_hungary.6
+	title = "death_albertine_line.t"
+	desc = "death_albertine_line.d"
+	picture = CITY_VIEW_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = STY
+		dynasty = "von Habsburg"
+		AUT = {
+			exists = yes
+			ai = yes
+		}
+		HUN = {
+			NOT = {
+				has_heir = "Ladislaus Postumus"
+				has_ruler = "Ladislaus Postumus"
+				has_country_flag = interregnum_flag
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        set_country_flag = inherited_austria_1
+		set_country_flag = inherited_austria_2
+    }
+	
+	option = {		#Styria inherits Austria
+		name = "death_albertine_line.a"
+		AUT = {
+			every_subject_country = {
+				every_owned_province = {
+					add_core = ROOT
+					cede_province = ROOT
+				}
+			}
+			every_owned_province = {
+				add_core = STY
+				cede_province = STY
+			}
+			clr_country_flag = ladislaus_returns
+		}
+		if = {
+			limit = {
+				OR = {
+					AUT = {
+						has_casus_belli = {
+							type = cb_restore_personal_union
+							target = CRO
+						}
+					}
+					CRO = {
+						is_subject_of = AUT
+					}
+				}
+			}
+			HUN = {
+				create_union = CRO
+			}
+		}
+		hidden_effect = {
+			HUN = {
+            	country_event = {
+                	id = austria_hungary.7
+                	days = 30
+            	}
+        	}
+		}
+	}
+}
+
+# Austrian Ladislaus Dies
+country_event = {
+	id = austria_hungary.4
+	title = "ladislaus_dies.t"
+	desc = "ladislaus_dies.d"
+	picture = DEATH_OF_HEIR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		NOT = { has_country_flag = interregnum_flag }
+		OR = {
+			has_heir = "Ladislaus Postumus"
+			has_ruler = "Ladislaus Postumus"
+		}
+		AUT = {
+			exists = yes
+			is_subject = no
+			NOT = { has_heir = "Ladislaus Postumus" }
+			NOT = { has_ruler = "Ladislaus Postumus" }
+			has_country_flag = ladislaus_returns
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = ladislaus_dies_hungary.a
+		if = { 
+			limit = { 
+				has_heir = "Ladislaus Postumus"
+			}
+			kill_heir = yes
+		}
+		if = { 
+			limit = { 
+				has_ruler = "Ladislaus Postumus"
+			}
+			kill_ruler = yes
+		}
+		AUT = {
+			clr_country_flag = ladislaus_returns
+		}
+	}
+}
+
+# Hungarian Ladislaus Dies
+country_event = {
+	id = austria_hungary.5
+	title = "ladislaus_dies.t"
+	desc = "ladislaus_dies.d"
+	picture = DEATH_OF_HEIR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = STY
+			tag = AUT
+			tag = HAB
+			tag = BOH
+		}
+		OR = {
+			STY = {
+				exists = yes
+				is_lesser_in_union = no
+				OR = { 
+					has_heir = "Ladislaus Postumus"
+					has_ruler = "Ladislaus Postumus"
+				}
+			}
+			AUT = {
+				exists = yes
+				is_lesser_in_union = no
+				OR = { 
+					has_heir = "Ladislaus Postumus"
+					has_ruler = "Ladislaus Postumus"
+				}
+			}
+			HAB = {
+				exists = yes
+				is_lesser_in_union = no
+				OR = { 
+					has_heir = "Ladislaus Postumus"
+					has_ruler = "Ladislaus Postumus"
+				}
+			}
+			BOH = {
+				exists = yes
+				is_lesser_in_union = no
+				OR = {
+					has_heir = "Ladislaus Postumus"
+					has_ruler = "Ladislaus Postumus"
+				}
+			}
+		}
+		HUN = {
+			NOT = { has_country_flag = interregnum_flag }
+			exists = yes
+			is_subject = no
+			NOT = { has_heir = "Ladislaus Postumus" }
+			NOT = { has_ruler = "Ladislaus Postumus" }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = ladislaus_dies_austria.a
+		if = { 
+			limit = { 
+				has_heir = "Ladislaus Postumus"
+			}
+			kill_heir = yes
+		}
+		if = { 
+			limit = { 
+				has_ruler = "Ladislaus Postumus"
+			}
+			kill_ruler = yes
+		}
+	}
+}
+
+
+# Mátyás Corvinus or a Habsburg king
+country_event = {
+	id = austria_hungary.7
+	title = flavor_hun.2.t
+	desc = flavor_hun.2.d
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	major = yes
+
+    is_triggered_only = yes
+
+	option = {
+		name = flavor_hun.2.a
+		ai_chance = { factor = 75 }
+		if = {
+			limit = {
+				HUN = {
+					is_subject = yes
+				}
+			}
+			grant_independence = yes
+		}
+		remove_historical_friend = HAB
+		HAB = { remove_historical_friend = HUN }
+		define_heir = {
+			name = "Mátyás"
+			culture = hungarian
+			dynasty = "Hunyadi"
+			adm = 4
+			dip = 5
+			mil = 6
+			claim = 50
+			birth_date = 1443.2.23
+		}
+		if = {
+			limit = {
+				has_dlc = "Rights of Man" 
+			}
+			hidden_effect = { add_heir_personality = just_personality }
+		}
+		if = {
+			limit = {
+				NOT = {
+					dynasty = "Hunyadi"
+				}
+			}
+			kill_ruler = yes
+		}
+        if = {
+            limit = {
+                STY = {
+                    has_country_flag = inherited_austria_1
+                }
+            }
+    		STY = {
+			    tooltip = {
+				    add_casus_belli = {	
+					    target = HUN
+					    type = cb_restore_personal_union
+					    months = 300
+				    }	
+			    }
+			    hidden_effect = {
+				    country_event = { id = flavor_hun.10 days = 1 }
+			    }
+                clr_country_flag = inherited_austria_1
+		    }
+		}
+        if = {
+            limit = {
+                HAB = {
+                    has_country_flag = inherited_austria_1
+                }
+            }
+    		HAB = {
+			    tooltip = {
+				    add_casus_belli = {	
+					    target = HUN
+					    type = cb_restore_personal_union
+					    months = 300
+				    }	
+			    }
+			    hidden_effect = {
+				    country_event = { id = flavor_hun.10 days = 1 }
+			    }
+                clr_country_flag = inherited_austria_1
+		    }
+        }
+	}
+	option = {
+		name = flavor_hun.2.b	
+		ai_chance = { factor = 25 }
+		add_stability_or_adm_power = yes
+        if = {
+            limit = {
+                STY = {
+                    has_country_flag = inherited_austria_1
+                }
+            }
+		    STY = {
+			    create_union = HUN
+			    hidden_effect = {
+				    country_event = { id = flavor_hun.3 days = 1 }
+			    }
+                clr_country_flag = inherited_austria_1
+		    }
+        }
+        if = {
+            limit = {
+                HAB = {
+                    has_country_flag = inherited_austria_1
+                }
+            }
+		    HAB = {
+			    create_union = HUN
+			    hidden_effect = {
+				    country_event = { id = flavor_hun.3 days = 1 }
+			    }
+                clr_country_flag = inherited_austria_1
+		    }
+        }
+	}
+	option = {
+		name = flavor_hun.2.c
+		trigger = {
+            is_subject = no
+			has_ruler = yes
+			NOT = { has_ruler = "Ladislaus Postumus" }
+			NOT = { dynasty = STY }
+            NOT = { dynasty = HAB }
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 10
+				heir_adm = 5
+				heir_mil = 5
+				heir_dip = 5
+			}
+		}
+		remove_historical_friend = HAB
+		HAB = { remove_historical_friend = HUN }
+        if = {
+            limit = {
+                STY = {
+                    has_country_flag = inherited_austria_1
+                }
+            }
+    		STY = {
+			    tooltip = {
+				    add_casus_belli = {	
+					    target = HUN
+					    type = cb_restore_personal_union
+					    months = 300
+				    }	
+			    }
+			    hidden_effect = {
+				    country_event = { id = flavor_hun.10 days = 1 }
+			    }
+                clr_country_flag = inherited_austria_1
+		    }
+		}
+        if = {
+            limit = {
+                HAB = {
+                    has_country_flag = inherited_austria_1
+                }
+            }
+    		HAB = {
+			    tooltip = {
+				    add_casus_belli = {	
+					    target = HUN
+					    type = cb_restore_personal_union
+					    months = 300
+				    }	
+			    }
+			    hidden_effect = {
+				    country_event = { id = flavor_hun.10 days = 1 }
+			    }
+                clr_country_flag = inherited_austria_1
+		    }
+        }
+	}
+}
+
+# Spanish Acquisition of the Low Countries
+country_event = {
+	id = austria_hungary.9
+	title = spanish_low_countries.t
+	desc = spanish_low_countries.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { # Let us cede the lands to Spain
+		name = spanish_low_countries.a
+		every_owned_province = {
+			limit = {
+				OR = {
+					region = low_countries_region
+					region = france_region
+				}
+			}
+			remove_core = HAB
+			add_core = SPA
+			cede_province = SPA
+		}
+		SPA = {
+			add_opinion = {
+				who = ROOT
+				modifier = ceded_netherlands
+			}
+			country_event = {
+				id = austria_hungary.11
+				days = 1
+			}	
+		}
+		clr_country_flag = low_countries_controlled
+	}
+
+	option = { # Let us keep the lands for ourselves
+		name = spanish_low_countries.b
+		SPA = {
+			add_opinion = {
+				who = ROOT
+				modifier = did_not_cede_netherlands
+			}	
+		}
+		every_owned_province = {
+			limit = {
+				region = low_countries_region
+			}
+			add_province_modifier = {
+				name = wrongful_rulers
+				duration = 3650
+			}
+		}
+		country_event = {
+			id = austria_hungary.12
+			days = 1
+		}
+		clr_country_flag = low_countries_controlled
+	}
+}
+
+# Castilian Acquisition of the Low Countries
+country_event = {
+	id = austria_hungary.10
+	title = castilian_low_countries.t
+	desc = castilian_low_countries.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { # Let us cede the lands to Castile
+		name = castilian_low_countries.a
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				liberty_desire = 50
+			}
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					region = low_countries_region
+					region = france_region
+				}
+			}
+			remove_core = HAB
+			add_core = CAS
+			cede_province = CAS
+		}
+		CAS = {
+			add_opinion = {
+				who = ROOT
+				modifier = ceded_netherlands
+			}
+			country_event = {
+				id = austria_hungary.11
+				days = 1
+			}	
+		}
+		clr_country_flag = low_countries_controlled
+	}
+
+	option = { # Let us keep the lands for ourselves
+		name = castilian_low_countries.b
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 100
+				liberty_desire = 50
+			}
+		}
+		every_owned_province = {
+			limit = {
+				region = low_countries_region
+			}
+			add_province_modifier = {
+				name = wrongful_rulers
+				duration = 3650
+			}
+		}
+		CAS = {
+			add_opinion = {
+				who = ROOT
+				modifier = did_not_cede_netherlands
+			}	
+		}
+		country_event = {
+			id = austria_hungary.12
+			days = 1
+		}
+		clr_country_flag = low_countries_controlled	
+	}
+}
+
+# Successful Acquisition of the Low Countries
+country_event = {
+	id = austria_hungary.11
+	title = successful_acquisition.t
+	desc = successful_acquisition.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # Excellent
+		name = successful_acquisition.a
+		add_legitimacy = 10
+		add_prestige = 25
+		every_owned_province = {
+			limit = {
+				region = low_countries_region
+			}
+			add_province_modifier = {
+				name = rightful_rulers
+				duration = 3650
+			}
+		}
+	}
+}
+
+# Failed Acquisition of the Low Countries
+country_event = {
+	id = austria_hungary.12
+	title = failed_acquisition.t
+	desc = failed_acquisition.d
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # Unfortunate
+		name = failed_acquisition.a
+		add_legitimacy = -10
+		add_prestige = -25
+	}
+}
+
+# Request for the Low Countries
+country_event = {
+	id = austria_hungary.13
+	title = request_low_countries.t
+	desc = request_low_countries.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = SPA
+			tag = CAS
+		}
+		NOT = { is_year = 1550 }
+		senior_union_with = HAB
+		NOT = { exists = BUR }
+		dynasty = "von Habsburg"
+		HAB = {
+			any_owned_province = {
+				OR = {
+					region = low_countries_region
+					region = france_region
+				}
+			}
+			has_country_flag = low_countries_controlled
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = request_low_countries.a
+		ai_chance = {
+			factor = 80
+		}
+		if = {
+			limit = {
+				tag = SPA
+			}
+			HAB = {
+				country_event = {
+					id = austria_hungary.9
+					days = 30
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = CAS
+			}
+			HAB = {
+				country_event = {
+					id = austria_hungary.10
+					days = 30
+				}
+			}
+		}
+	}
+
+	option = {
+		name = request_low_countries.b
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = -5
+	}
+}
+
+# Two Ladislaus
+country_event = {
+	id = austria_hungary.14
+	title = ladislaus_two_thrones.t
+	desc = ladislaus_two_thrones.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	major = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		government = monarchy
+		has_ruler = "Ladislaus Postumus"
+		AUT = {
+			has_ruler = "Ladislaus Postumus"
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = ladislaus_two_thrones.a
+		AUT = {
+			create_union = HUN
+			hidden_effect = {
+				country_event = {
+					id = flavor_hun.3
+				}
+			}
+		}
+		HUN = {
+			add_liberty_desire = -300
+		}
+	}
+}
+
+# Ladislaus Comes of Age
+country_event = {
+	id = austria_hungary.15
+	title = ladislaus_adulthood.t
+	desc = ladislaus_adulthood.d
+	picture = COURT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = STY
+		government = monarchy
+		AUT = {
+			is_subject_of = STY
+		}
+		HUN = {
+			OR = {
+				AND = {
+					has_heir = "Ladislaus Postumus"
+					heir_age = 15
+				}
+				AND = {
+					has_ruler = "Ladislaus Postumus"
+					ruler_age = 15
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = ladislaus_adulthood.a
+		ai_chance = { factor = 75 }
+		break_union = AUT
+		hidden_effect = {
+			AUT = {
+				define_heir = {
+					name = "Ladislaus Postumus"
+					dynasty = "von Habsburg"
+					culture = austrian
+					adm = 3
+					dip = 3
+					mil = 2
+					birth_date = 1440.2.22
+				}
+				kill_ruler = yes
+				country_event = {
+					id = austria_hungary.16
+					days = 1
+				}
+			}
+		}
+		add_prestige = -5
+		remove_casus_belli = {
+			target = AUT
+			type = cb_restore_personal_union
+		}
+	}
+	
+	option = {
+		name = ladislaus_adulthood.b
+		ai_chance = { factor = 25 }
+		AUT = {
+			add_liberty_desire = 100
+			add_opinion = {
+				who = STY
+				modifier = ladislaus_withheld
+			}
+		}
+		hidden_effect = {
+			AUT = {
+				country_event = {
+					id = austria_hungary.17
+					days = 1
+				}
+			}
+		}
+		add_stability = -1
+	}
+}
+
+# Ladislaus Returns to Austria
+country_event = {
+	id = austria_hungary.16
+	title = ladislaus_returns.t
+	desc = ladislaus_returns.d
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ladislaus_returns.a
+		add_stability = 1
+		add_prestige = 25
+		add_legitimacy = 25
+		set_country_flag = ladislaus_returns
+	}
+}
+
+# Ladislaus Withheld from Austria
+country_event = {
+	id = austria_hungary.17
+	title = ladislaus_withheld.t
+	desc = ladislaus_withheld.d
+	picture = ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ladislaus_withheld.a
+		add_stability = -1
+	}
+}
+
+# Bohemian Ladislaus Dies
+country_event = {
+	id = austria_hungary.18
+	title = "ladislaus_dies.t"
+	desc = "ladislaus_dies_2.d"
+	picture = DEATH_OF_HEIR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		OR = {
+			has_heir = "Ladislaus Postumus"
+			has_ruler = "Ladislaus Postumus"
+		}
+		BOH = {
+			exists = yes
+			is_lesser_in_union = no
+			NOT = {
+				has_heir = "Ladislaus Postumus"
+				has_ruler = "Ladislaus Postumus"
+			}
+			OR = {
+				has_country_flag = boh_hussites_mission_decline
+				has_country_flag = ladislaus_in_bohemia
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = ladislaus_dies_hungary.a
+		if = { 
+			limit = { 
+				has_heir = "Ladislaus Postumus"
+			}
+			kill_heir = yes
+		}
+		if = { 
+			limit = { 
+				has_ruler = "Ladislaus Postumus"
+			}
+			kill_ruler = yes
+		}
+	}
+}

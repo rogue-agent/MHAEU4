@@ -1,0 +1,16 @@
+#Dummy
+dummy_5 = {
+	local_unrest = 5
+}
+
+#Wrongful Rulers
+wrongful_rulers = {
+    local_unrest = 5
+    trade_goods_size_modifier = -0.25
+}
+
+#Rightful Rulers
+rightful_rulers = {
+    local_unrest = -2
+    trade_goods_size_modifier = 0.25
+}

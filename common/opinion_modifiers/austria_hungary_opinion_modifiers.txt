@@ -1,0 +1,17 @@
+ceded_netherlands = {
+    opinion = 75
+    years = 75
+    yearly_deacy = 1
+}
+
+did_not_cede_netherlands = {
+    opinion = -75
+    years = 75
+    yearly_deacy = 1
+}
+
+ladislaus_withheld = {
+    opinion = -100
+    years = 50
+    yearly_decay = 2
+}
