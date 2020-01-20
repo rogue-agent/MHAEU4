@@ -6,60 +6,14 @@ primary_culture = cosmopolitan_french
 religion = catholic
 capital = 179	# Bourges
 
-1356.12.26 = { #Technally they should be independent in 1356, however it was the third son of the King of France. So until we have dynastic mechanics it stays.
-	monarch = {
-		name = "Jean I"
-		dynasty = "de Valois"
-		birth_date = 1340.11.30
-		adm = 4
-		dip = 5
-		mil = 2
-	}
-}
 
-1360.10.24 = {
-	monarch = {
-		name = "Jean I"
-		dynasty = "de Valois"
-		birth_date = 1340.11.30
-		adm = 4
-		dip = 5
-		mil = 2
-	}
-	queen = {
-		country_of_origin = AMG
-		name = "Jeanne"
-		dynasty = "d'Armagnac"
-		birth_date = 1346.6.24
-		death_date = 1387.3.15
-		female = yes
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-}
-
-1389.6.5 = {
-	queen = {
-		country_of_origin = AUV
-		name = "Jeanne"
-		dynasty = "d'Auvergne"
-		birth_date = 1378.1.1
-		death_date = 1424.1.1
-		female = yes
-		adm = 5
-		dip = 4
-		mil = 2
-	}
-}
-
-1404.9.28 = { # as Duchess
+1444.1.1 = { # as Duchess
 	queen = {
 		country_of_origin = AUV
 		name = "Jeanne II"
 		dynasty = "d'Auvergne"
 		birth_date = 1378.1.1
-		death_date = 1424.1.1
+		death_date = 1445.1.1
 		female = yes
 		adm = 5
 		dip = 4

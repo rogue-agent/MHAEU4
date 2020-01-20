@@ -50,17 +50,17 @@ monarch_names = {
 	"Aimeric #0" = 0
         "Andriu #0" = 0
 	"Arnaud #0" = 0
-	"Beránger #0" = 0
+	"Berï¿½nger #0" = 0
 	"Bernat #0" = 0
 	"Borel #0" = 0
         "Domenc #0" = 0
 	"Emeric #0" = 0
         "Enric #0" = 0
-	"Estève #0" = 0
+	"Estï¿½ve #0" = 0
 	"Felip #0" = 0
 	"Guilhem #0" = 0
         "Gui #0" = 0
-	"Jaufré #0" = 0
+	"Jaufrï¿½ #0" = 0
 	"Joan #0" = 0
 	"Jordi #0" = 0
 	"Jules #0" = 0
@@ -77,15 +77,15 @@ monarch_names = {
 }
 
 leader_names = {
-	"d'Alègre" "d'Altier de Borne" "d'Apchon" "d'Arfeuille" Arnauld "d'Arpajon"
-	"de Baffie" "de Balzac" Barbey "de Basredon" "de Beauverger" "de Blanchefort" "Bouillé du Chariol" "Brachet" "de Brossadol" "de Brugière"
-	"de Canilhac" "Carbonnières de La Barthe" "de Cardaillac" "de Carlat" "de Casteras" "de Chalençon" "de Chazeron" "de Clermont" "de Cressac" "du Croc"
-	"de Fougères"
+	"d'Alï¿½gre" "d'Altier de Borne" "d'Apchon" "d'Arfeuille" Arnauld "d'Arpajon"
+	"de Baffie" "de Balzac" Barbey "de Basredon" "de Beauverger" "de Blanchefort" "Bouillï¿½ du Chariol" "Brachet" "de Brossadol" "de Brugiï¿½re"
+	"de Canilhac" "Carbonniï¿½res de La Barthe" "de Cardaillac" "de Carlat" "de Casteras" "de Chalenï¿½on" "de Chazeron" "de Clermont" "de Cressac" "du Croc"
+	"de Fougï¿½res"
 	"de Grandsaigne"
-	"d'Humières"
+	"d'Humiï¿½res"
 	"de Lavie"
 	"de Magnac" "de Massebeau" "de Mercoeur" "de Montboissier" "de Montgascon" "de Montpensier" "de Montvert"
-	"de Nérestang"
+	"de Nï¿½restang"
 	"d'Oliergues"
 	"de Pennautier" "de Pascal" "de Polignac"
 	"de la Queuille"
@@ -96,22 +96,22 @@ leader_names = {
 }
 
 ship_names = {
-        Aiguiller Artense "Banne d'Ordanche" Cézailler Chaudefour
+        Aiguiller Artense "Banne d'Ordanche" "Cï¿½zailler" Chaudefour
         Cliergue Cliersoux "Dent de la Rancune" "Gour de Tazenat" "Lac Chauvet"
-        "Lac de Guéry" "Lac du Joland" "Lac Pavin" "Lac de Servières" Mandailles
+        "Lac de Guï¿½ry" "Lac du Joland" "Lac Pavin" "Lac de Serviï¿½res" Mandailles
         "Mont Dore" "Narse d'Espinasse" "Orgues de Bort" "Peyre Arse" "Plomb du Cantal"
-        "Puy Chavaroche" "Puy de l'Angle" "Puy de Bort" "Puy de Côme" "Puy de Dôme"
+        "Puy Chavaroche" "Puy de l'Angle" "Puy de Bort" "Puy de Cï¿½me" "Puy de Dï¿½me"
         "Puy des Goules" "Puy de la Grousse" "Puy de Lassolas" "Puy de Monne" "Puy de Montchal"
-        "Puy de Montcineyre" "Puy de Monténard" "Puy de Paillaret" "Puy de la Perdrix" "Puy de Sancy"
+        "Puy de Montcineyre" "Puy de Montï¿½nard" "Puy de Paillaret" "Puy de la Perdrix" "Puy de Sancy"
         "Puy de Seycheuse" "Puy de la Tache" "Puy de Tartaret" "Puy de la Vache" "Puy en Velay" 
         "Puy Ferrand" "Puy Griou" "Puy Gros" "Puy Mary" "Puy Violent"
-        "Rochefort Montagne" "Roches Tuilière" Sanadoire Sarcouy "Signal du Luguet"
+        "Rochefort Montagne" "Roches Tuiliï¿½re" Sanadoire Sarcouy "Signal du Luguet"
 }
 
 army_names = {
-         "Armée d'Auvergne"        "Armée de Clermont"  "Armée de Montpensier"
-         "Armée du Velay"          "Armée du Brivadois" "Armée du Dauphin d'Auvergne"  
-         "Armée de Grande Limagne" "Armée du Livradois" "Armée du Cantal"     
-         "Armée de la Margeride"  
-	 "Armée de $PROVINCE$" 
+         "Armï¿½e d'Auvergne"        "Armï¿½e de Clermont"  "Armï¿½e de Montpensier"
+         "Armï¿½e du Velay"          "Armï¿½e du Brivadois" "Armï¿½e du Dauphin d'Auvergne"  
+         "Armï¿½e de Grande Limagne" "Armï¿½e du Livradois" "Armï¿½e du Cantal"     
+         "Armï¿½e de la Margeride"  
+	 "Armï¿½e de $PROVINCE$" 
 }

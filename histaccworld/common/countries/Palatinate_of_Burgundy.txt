@@ -43,18 +43,18 @@ monarch_names = {
 	"Henri-Jules #0" = 10
 	"Joseph #0" = 10
 	"Marie #0" = -10
-	"François #0" = 5
+	"Franï¿½ois #0" = 5
 	"Hughes #5" = 1
 	"Eudes #4" = 1
 	"Robert #2" = 1
 	"Armand #0" = 0
-	"Barthélemy #0" = 0
-	"Benoît #0" = 0
+	"Barthï¿½lemy #0" = 0
+	"Benoï¿½t #0" = 0
 	"Bernard #0" = 0
 	"Claude #0" = 0
 	"Denis #0" = 0
-	"Étienne #0" = 0
-	"Eugène #0" = 0
+	"ï¿½tienne #0" = 0
+	"Eugï¿½ne #0" = 0
 	"Eustache #0" = 0
 	"Georges #0" = 0
 	"Gui #0" = 0
@@ -69,43 +69,43 @@ monarch_names = {
 	"Pascal #0" = 0
 	"Pierre #0" = 0
 	"Raoul #0" = 0
-	"René #0" = 0
-	"Sébastien #0" = 0
+	"Renï¿½ #0" = 0
+	"Sï¿½bastien #0" = 0
 	"Simon #0" = 0
 }
 
 leader_names = {
-	d'Aban d'Abonde Arbelot d'Auxy
+	"d'Aban" "d'Abonde" "Arbelot" "d'Auxy"
         "de Balay" "de Bauffremont" "de Beaumont" "de Beugre" "de Boulay" "de Bourgeois" Bourgogne-Montaigu "de Brachet" "de Brimeu"
-        "de Castaing" "de Chabot" "de Châlon" "de Châlon-Arlay" "de Chandieu" "de Chastellux" "de Chin" "de Cicon" "de Coligny" "de Créquy" "de Cuiseaux"
+        "de Castaing" "de Chabot" "de Chï¿½lon" "de Chï¿½lon-Arlay" "de Chandieu" "de Chastellux" "de Chin" "de Cicon" "de Coligny" "de Crï¿½quy" "de Cuiseaux"
         "de Damas" "de Dammartin" "de Donzy" "de Dyo"
         "d'Egmont"
         "de Ferrette"
         "de Lalaing" "de Lannoy" "Le Corgne" "de Lugny"
         "de Marle" "de Melun" "de Montfaucon"
-        "Nagu de Varennes" "de Nanton" "de Neufchâtel" "de Noyelles"
+        "Nagu de Varennes" "de Nanton" "de Neufchï¿½tel" "de Noyelles"
         "de Pontailler" "de la Porte"
         "Pot de la Roche" "de Rochebaron" "de Rochechouart" "de Roye"
-        "de Scorailles" "de Sémur"
+        "de Scorailles" "de Sï¿½mur"
         "de Ternant" "de Tonnerre" "de Toucy" "de Toulonjon"
         "de Vaubresson" "de Vaudrey" "de Vellexon" "de Vergy" "de Vienne" "de Villaines" "de Villiers"
 }
 
 ship_names = {
-	Armançon Arroux
+	"Armanï¿½on" Arroux
 	Bourgogne Brugge
-	Cambrai "Castrum Divionense" Childebert "Childebert II" Chilperic Citeaux Chlothar Cluny Comtesse "Côte-d'Or" 
+	Cambrai "Castrum Divionense" Childebert "Childebert II" Chilperic Citeaux Chlothar Cluny Comtesse "Cï¿½te-d'Or" 
 	Dijon "Duc de Bourgogne" Duchesse 
 	Gebicca Giselher Godegisel Godomar Gunderic Gundobad Gundomar "Gundomar II" Gunther Guntram
 	"Jean sans Peur"
 	"Marie de Bourgogne"
 	"Philippe le Bon" "Philippe le Hardi"
 	"Richard de Bourgogne"
-	Saône Sigismund
+	"Saï¿½ne" Sigismund
 	Theudebert "Theuderic II"
-	Vézelay
+	"Vï¿½zelay"
 }
 
 army_names = {
-	"Armée du Comté" "Armée de $PROVINCE$"
+	"Armï¿½e du Comtï¿½" "Armï¿½e de $PROVINCE$"
 }

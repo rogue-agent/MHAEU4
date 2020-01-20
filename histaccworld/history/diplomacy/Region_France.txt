@@ -3,7 +3,7 @@ dependency = {
 	subject_type = "vassal"
 	first = FRA
 	second = BER
-	start_date = 1444.1.1 # duchy created
+	start_date = 1444.11.11 # duchy created
 	end_date = 1416.6.15 # duchy inherited
 }
 # Bourbonnais, a French duchy vassal  (1327-1523)
@@ -11,7 +11,7 @@ dependency = {
 	subject_type = "vassal"
 	first = FRA
 	second = BOU
-	start_date = 1444.1.1 # duchy created
+	start_date = 1444.11.11 # duchy created
 	end_date = 1523.10.9 # duchy to Kingmother Louise de Savoie
 }
 # Alençon, a French county/duchy (1346-1458)
@@ -19,24 +19,15 @@ dependency  = {
 	subject_type = "vassal"
 	first = FRA
 	second = ALE
-	start_date = 1444.1.1 # duchy created
+	start_date = 1444.11.11 # duchy created
 	end_date = 1458.1.1 # royal domain
-}
-# Foix, a French county
-dependency = {
-	subject_type = "vassal"
-	first = FRA
-	second = FOI
-	start_date = 1444.1.1 #This is because it is harder to make them vassals later on, as it's highly possible Foix will no longer exist by 1380.
-	#start_date = 1380.5.1 # becomes Lieutenant-général of Languedoc
-	end_date = 1479.2.13 # becomes the King of Navarra
 }
 # Forez, a French county
 dependency = {
 	subject_type = "vassal"
 	first = FRA
 	second = FOZ
-	start_date = 1444.1.1 # The Britisch attacking France
+	start_date = 1444.11.11 # The Britisch attacking France
 	end_date = 1417.9.22 # becomes PU Partner of Bourbonnais
 }
 # Auvergne, a French county
@@ -44,16 +35,16 @@ dependency = {
 	subject_type = "vassal"
 	first = FRA
 	second = AUV
-	start_date = 1350.2.9 # Countess becomes Queen Consort 
-	end_date = 1360.9.29 # part of BUR
+	start_date = 1444.11.11 #  
+	end_date = 1460.9.29 # 
 }
 # Co. of Bur., Ruled by the Duke of Burgundy
 dependency = {
 	subject_type = "union"
 	first = BUR
 	second = PBG
-	start_date = 1405.1.1 # Countess becomes Queen Consort 
-	end_date = 1360.9.29 # part of BUR
+	start_date = 1444.11.11 # Countess becomes Queen Consort 
+	end_date = 1460.9.29 # part of BUR
 }
 # Liege, Ruled by the Duke of Burgundy
 dependency = {
@@ -68,7 +59,7 @@ dependency = {
 	subject_type = "vassal"
 	first = ENG
 	second = CO1
-	start_date = 1444.1.1 # Luois de bourbon
+	start_date = 1444.11.11 # 
 	end_date = 1448.3.15 # surrender of maine
 }
 # Forez, PU with Bourbon
@@ -76,6 +67,14 @@ dependency = {
 	subject_type = "vassal"
 	first = BOU
 	second = FOZ
-	start_date = 1410.1.1 # Luois de bourbon
+	start_date = 1444.11.11 # 
 	end_date = 1531.3.15 # 
+}
+# Provonce, PU with Anjou
+dependency = {
+	subject_type = "vassal"
+	first = PRO
+	second = ANJ
+	start_date = 1444.11.11 # 
+	end_date = 1445.8.31 # 
 }
