@@ -1,4 +1,4 @@
-# 19 - ï¿½sterbotten (1444)
+# 19 - Österbotten (1444)
 # Changes: FIN
 
 owner = FIN
