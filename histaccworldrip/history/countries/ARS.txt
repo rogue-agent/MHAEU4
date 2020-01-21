@@ -5,3 +5,15 @@ religion = catholic
 technology_group = western
 primary_culture = wallonian
 capital = 88 # Artois
+
+1444.11.11 = {
+    monarch = {
+		name = "Henri"
+		dynasty = "Calais"
+		birth_date = 1420.8.7
+		death_date = 1479.11.30
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}

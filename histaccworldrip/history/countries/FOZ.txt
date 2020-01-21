@@ -7,3 +7,17 @@ religion = catholic
 technology_group = western
 capital = 203	# Lyonnais
 fixed_capital = 203 # Cannot move capital away from this province & no power cost to move to it
+
+1444.11.11 = { # as Duchess
+	monarch = {
+		country_of_origin = AUV
+		name = "Jeanne I"
+		dynasty = "de Montferrat"
+		birth_date = 1378.1.1
+		death_date = 1445.1.1
+		female = yes
+		adm = 5
+		dip = 4
+		mil = 2
+	}
+}

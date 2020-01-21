@@ -1,6 +1,0 @@
-# 89 Picardie - Principal cities: Amiens
-
-owner = PIC
-controller = PIC
-add_core = FRA
-add_core = PIC

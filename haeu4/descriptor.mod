@@ -6,5 +6,5 @@ tags={
 	"Missions And Decisions"
 }
 picture="thumbnail.png"
-name="[KM] Historically accurate EU4"
+name="Historically accurate EU4"
 supported_version="1.29.3"

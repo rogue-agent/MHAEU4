@@ -1,4 +1,4 @@
-# 4123 - Birkaland (1444)
+# 31 - Savolaks (1444)
 # Changes: FIN
 
 owner = FIN

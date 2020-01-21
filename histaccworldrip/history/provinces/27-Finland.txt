@@ -6,7 +6,7 @@ controller = FIN
 add_core = FIN
 add_core = SWE
 
-capital = "Åbo"
+capital = "ï¿½bo"
 estate = estate_church
 is_city = yes
 fort_15th = yes
