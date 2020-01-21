@@ -1,0 +1,6 @@
+# 88 Artois - Principal cities: Arras, Saint-Omer & Lille
+
+owner = ARS
+controller = ARS
+add_core = BUR
+add_core = ARS

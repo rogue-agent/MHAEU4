@@ -9,7 +9,7 @@ capital = 177	# Maine
 add_historical_friend = PRO
 
 
-1444.11.11 = {
+1445.8.31 = {
 	monarch = {
 		country_of_origin = SAV
 		name = "Margherita"

@@ -1,0 +1,6 @@
+#Karelen, incl. Sordavala and Keksholm.
+
+owner = NOV
+controller = NOV
+add_core = NOV
+add_core = KAR

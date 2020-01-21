@@ -1,0 +1,7 @@
+# 31 - Savolaks (1444)
+# Changes: FIN
+
+owner = FIN
+controller = FIN
+add_core = FIN
+add_core = SWE

@@ -8,7 +8,7 @@ capital = 179	# Bourges
 
 
 1444.11.11 = { # as Duchess
-	monarch = {
+	queen = {
 		country_of_origin = AUV
 		name = "Jeanne II"
 		dynasty = "d'Auvergne"
