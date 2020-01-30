@@ -5,4 +5,4 @@ owner = FIN
 controller = FIN
 add_core = FIN
 add_core = SWE
-
+add_core = KRL

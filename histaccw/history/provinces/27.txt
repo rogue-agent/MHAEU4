@@ -1,0 +1,10 @@
+#Finland, incl. Åbo.
+
+owner = SWE
+controller = SWE
+add_core = SWE
+add_core = FIN
+capital = "Åbo"
+estate = estate_church
+is_city = yes
+fort_15th = yes
