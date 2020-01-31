@@ -181,7 +181,7 @@ country_event = {
 			factor = 100
 		}
 		define_heir = {
-			name = "Ismï¿½'ï¿½l"
+			name = "Ismâ'îl"
 			dynasty = "Safavi"
 			adm = 6
 			dip = 5
@@ -502,7 +502,7 @@ country_event = {
 	trigger = {
 		tag = ARL
 		has_country_modifier = rise_of_safavids
-		total_development = 150
+		total_development = 300
 	}
 
 	mean_time_to_happen = {

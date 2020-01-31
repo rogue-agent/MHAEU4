@@ -44,11 +44,11 @@ fixed_capital = 145 # Cannot move capital away from this province & no power cos
 
 1443.1.1 = {
 	monarch = {
-		name = "Demetrios II"
+		name = "Thomas"
 		dynasty = "Palaiologos"
 		dip = 2
-		adm = 1
-		mil = 1
+		adm = 3
+		mil = 2
 	}
 }
 

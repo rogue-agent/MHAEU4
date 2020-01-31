@@ -564,6 +564,10 @@ mamluk_government = {
 				NOT = { map_setup = map_setup_random }
 			}
 			AND = {
+				tag = ARB
+				have_had_reform = mamluk_government
+			}
+			AND = {
 				is_playing_custom_nation = yes
 				have_had_reform = mamluk_government
 			}

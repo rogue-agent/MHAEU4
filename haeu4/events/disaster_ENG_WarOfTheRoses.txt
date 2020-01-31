@@ -16,6 +16,24 @@ country_event = {
 	immediate = {
 		set_global_flag = had_war_of_the_roses
 		add_stability = -2
+		every_owned_province = {
+			limit = {
+				has_estate = estate_burghers
+			}
+			set_province_flag = english_burghers
+		}
+		every_owned_province = {
+			limit = {
+				has_estate = estate_church
+			}
+			set_province_flag = english_church
+		}
+		every_owned_province = {
+			limit = {
+				has_estate = estate_nobles
+			}
+			set_province_flag = english_nobles
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -1028,6 +1046,11 @@ country_event = {
 			}
 			
 			set_country_flag = war_of_the_roses_ended
+			every_core_province = {
+				clr_province_flag = english_burghers
+				clr_province_flag = english_church
+				clr_province_flag = english_nobles
+			}
 		}
 	}
 	

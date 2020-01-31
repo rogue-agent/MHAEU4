@@ -291,4 +291,3 @@ vassal = {
 	start_date = 1400.3.1
 	end_date = 1453.7.7
 }
-

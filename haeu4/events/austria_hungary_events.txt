@@ -709,6 +709,7 @@ country_event = {
 		has_ruler = "Ladislaus Postumus"
 		AUT = {
 			has_ruler = "Ladislaus Postumus"
+			is_lesser_in_union = no
 		}
 	}
 	

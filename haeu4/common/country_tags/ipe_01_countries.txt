@@ -13,6 +13,8 @@ BMB = "countries/Bamberg.txt"
 # Switzerland
 THL = "countries/ThreeLeagues.txt"
 VLS = "countries/Valais.txt"
+ZUR = "countries/Zurich.txt"
+SGA = "countries/StGallen.txt"
 
 # Silesia
 BRL = "countries/Breslau.txt"
@@ -60,3 +62,7 @@ SCN = "countries/Scania.txt"
 # British Isles
 YRK = "countries/York.txt"
 LNC = "countries/Lancaster.txt"
+
+# Caucasus
+OSS = "countries/Ossetia.txt"
+KBR = "countries/Kabardia.txt"
