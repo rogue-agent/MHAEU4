@@ -51,7 +51,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 500
+		months = 360
 		modifier = {
 			factor = 1.1
 			luck = yes
@@ -83,6 +83,22 @@ country_event = {
 		modifier = {
 			factor = 0.5
 			NOT = { war_score = -75 }
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1470
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1480
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1490
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1500
 		}
 	}
 	
@@ -722,6 +738,32 @@ country_event = {
 					set_province_flag = bur_succession_province
 				}
 			}
+			if = {
+				limit = {
+					88 = {
+						owned_by = BUR
+					}
+				}
+				88 = {
+					add_core = ROOT
+					cede_province = ROOT
+					add_local_autonomy = 10
+					set_province_flag = bur_succession_province
+				}
+			}
+			if = {
+				limit = {
+					193 = {
+						owned_by = BUR
+					}
+				}
+				193 = {
+					add_core = ROOT
+					cede_province = ROOT
+					add_local_autonomy = 10
+					set_province_flag = bur_succession_province
+				}
+			}
 			every_owned_province = {
 				limit = {
 					OR = {
@@ -730,8 +772,6 @@ country_event = {
 							NOT = { province_id = 1743 }
 						}
 						province_id = 181 #Rethel
-						province_id = 88
-						province_id = 193
 						culture_group = french
 					}
 					is_part_of_hre = no
@@ -954,33 +994,8 @@ country_event = {
 				193 = {
 					add_core = ROOT
 				}
-				1877 = {
-					add_core = ROOT
-				}
 			}
-			if = {
-				limit = {
-					88 = {
-						owned_by = BUR
-					}
-				}
-				88 = {
-					add_core = FRA
-					cede_province = FRA
-				}
-			}
-			if = {
-				limit = {
-					193 = {
-						owned_by = BUR
-					}
-				}
-				193 = {
-					add_core = FRA
-					cede_province = FRA
-				}
-			}
-			set_country_flag = france_has_burgundy_provinces
+			set_global_flag = france_has_burgundy_provinces
 		}
 		
 		# Clear flags
@@ -1068,33 +1083,8 @@ country_event = {
 			193 = {
 				add_core = ROOT
 			}
-			1877 = {
-				add_core = ROOT
-			}
-			if = {
-				limit = {
-					88 = {
-						owned_by = BUR
-					}
-				}
-				88 = {
-					add_core = FRA
-					cede_province = FRA
-				}
-			}
-			if = {
-				limit = {
-					193 = {
-						owned_by = FRA
-					}
-				}
-				193 = {
-					add_core = FRA
-					cede_province = FRA
-				}
-			}
 		}
-		set_country_flag = france_has_burgundy_provinces
+		set_global_flag = france_has_burgundy_provinces
 		
 		# Clear flags
 		hidden_effect = {
@@ -1179,31 +1169,6 @@ country_event = {
 			}
 			193 = {
 				add_core = ROOT
-			}
-			1877 = {
-				add_core = ROOT
-			}
-			if = {
-				limit = {
-					88 = {
-						owned_by = BUR
-					}
-				}
-				88 = {
-					add_core = FRA
-					cede_province = FRA
-				}
-			}
-			if = {
-				limit = {
-					193 = {
-						owned_by = BUR
-					}
-				}
-				193 = {
-					add_core = FRA
-					cede_province = FRA
-				}
 			}
 		}
 		set_country_flag = france_has_burgundy_provinces
@@ -1291,31 +1256,6 @@ country_event = {
 			}
 			193 = {
 				add_core = ROOT
-			}
-			1877 = {
-				add_core = ROOT
-			}
-			if = {
-				limit = {
-					88 = {
-						owned_by = BUR
-					}
-				}
-				88 = {
-					add_core = FRA
-					cede_province = FRA
-				}
-			}
-			if = {
-				limit = {
-					193 = {
-						owned_by = BUR
-					}
-				}
-				193 = {
-					add_core = FRA
-					cede_province = FRA
-				}
 			}
 		}
 		set_country_flag = france_has_burgundy_provinces
@@ -1452,208 +1392,6 @@ country_event = {
 	}
 }
 
-# PROVINCENAME Revolts!
-province_event = {
-	id = flavor_bur.8
-	title = "flavor_bur.EVTNAME8"
-	desc = "flavor_bur.EVTDESC8"
-	picture = ANGRY_MOB_eventPicture
-	
-	trigger = {
-		is_year = 1550
-		NOT = { is_year = 1650 }
-		owner = { ai = no }
-		NOT = { has_global_flag = dutch_revolt }
-		NOT = { local_autonomy = 1 }
-		region = low_countries_region
-		OR = {
-			culture = dutch
-			culture = flemish
-			is_core = NED
-		}
-		owner = {
-			NOT = { tag = NED }
-			NOT = { tag = FLA }
-			is_free_or_tributary_trigger = yes
-			num_of_cities = 6
-			capital_scope = {
-				NOT = { region = low_countries_region }
-			}
-			NOT = {
-				OR = {
-					primary_culture = dutch
-					primary_culture = flemish
-				}
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 4000
-		modifier = {
-			factor = 0.75
-			owner = { is_at_war = yes }
-		}
-		modifier = {
-			factor = 0.5
-			has_owner_religion = no
-		}
-		modifier = {
-			factor = 0.5
-			owner = {
-				NOT = { culture_group = ROOT }
-			}
-		}
-		modifier = {
-			factor = 0.5
-			owner = {
-				NOT = { primary_culture = ROOT }
-				NOT = { accepted_culture = ROOT }
-			}
-		}
-		modifier = {
-			factor = 0.5
-			owner = { war_with = NED }
-		}
-		modifier = {
-			factor = 0.75
-			unrest = 3
-		}
-		modifier = {
-			factor = 0.75
-			unrest = 5
-		}
-		modifier = {
-			factor = 0.75
-			unrest = 7
-		}
-		modifier = {
-			factor = 0.75
-			unrest = 9
-		}
-	}
-
-	immediate = {
-		set_global_flag = dutch_revolt
-	}
-	
-	option = {
-		name = "flavor_bur.EVTOPTA8"
-		set_province_flag = dutch_revolt
-		spawn_rebels = {
-			type = nationalist_rebels
-			size = 3
-			friend = NED
-		}
-	}
-	option = {
-		name = "flavor_bur.EVTOPTB8"
-		set_province_flag = no_dutch_revolt
-		add_local_autonomy = 100
-	}
-}
-
-# PROVINCENAME Revolts!
-province_event = {
-	id = flavor_bur.9
-	title = "flavor_bur.EVTNAME9"
-	desc = "flavor_bur.EVTDESC9"
-	picture = ANGRY_MOB_eventPicture
-	
-	trigger = {
-		is_year = 1550
-		NOT = { is_year = 1650 }
-		owner = { ai = no }
-		has_global_flag = dutch_revolt
-		NOT = { has_province_flag = dutch_revolt }
-		NOT = { has_province_flag = no_dutch_revolt }
-		NOT = { local_autonomy = 1 }
-		region = low_countries_region
-		OR = {
-			culture = dutch
-			culture = flemish
-			is_core = NED
-		}
-		owner = {
-			NOT = { tag = NED }
-			NOT = { tag = FLA }
-			is_free_or_tributary_trigger = yes
-			num_of_cities = 6
-			capital_scope = {
-				NOT = { region = low_countries_region }
-			}
-			NOT = {
-				OR = {
-					primary_culture = dutch
-					primary_culture = flemish
-				}
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 120
-		modifier = {
-			factor = 0.5
-			any_neighbor_province = {
-				has_province_flag = dutch_revolt
-			}
-		}
-		modifier = {
-			factor = 0.5
-			has_owner_religion = no
-		}
-		modifier = {
-			factor = 0.5
-			owner = {
-				NOT = { culture_group = ROOT }
-			}
-		}
-		modifier = {
-			factor = 0.5
-			owner = {
-				NOT = { primary_culture = ROOT }
-				NOT = { accepted_culture = ROOT }
-			}
-		}
-		modifier = {
-			factor = 0.5
-			owner = { war_with = NED }
-		}
-		modifier = {
-			factor = 0.75
-			unrest = 3
-		}
-		modifier = {
-			factor = 0.75
-			unrest = 5
-		}
-		modifier = {
-			factor = 0.75
-			unrest = 7
-		}
-		modifier = {
-			factor = 0.75
-			unrest = 9
-		}
-	}
-
-	option = {
-		name = "flavor_bur.EVTOPTA9"
-		set_province_flag = dutch_revolt
-		spawn_rebels = {
-			type = nationalist_rebels
-			size = 2
-			friend = NED
-		}
-	}
-	option = {
-		name = "flavor_bur.EVTOPTB9"
-		set_province_flag = no_dutch_revolt
-		add_local_autonomy = 100
-	}
-}
-
 # Netherlands Declare Independence!
 country_event = {
 	id = flavor_bur.10
@@ -1668,7 +1406,6 @@ country_event = {
 		is_year = 1550
 		NOT = { is_year = 1650 }
 		ai = yes
-		was_player = no
 		NOT = { exists = NED }
 		NOT = { tag = FLA }
 		is_free_or_tributary_trigger = yes
@@ -1678,6 +1415,7 @@ country_event = {
 			OR = {
 				culture = dutch
 				culture = flemish
+				culture = frisian
 				is_core = NED
 			}
 		}
@@ -1688,6 +1426,7 @@ country_event = {
 			OR = {
 				primary_culture = dutch
 				primary_culture = flemish
+				primary_culture = frisian
 			}
 		}
 		num_of_owned_provinces_with = {
@@ -1696,6 +1435,7 @@ country_event = {
 			OR = {
 				culture = dutch
 				culture = flemish
+				culture = frisian
 			}
         }
 	}
@@ -1712,12 +1452,17 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.75
+			NOT = { accepted_culture = frisian }
+		}
+		modifier = {
+			factor = 0.75
 			num_of_owned_provinces_with = {
 				value = 10
 				region = low_countries_region
 				OR = {
 					culture = dutch
 					culture = flemish
+					culture = frisian
 				}
 			}
 		}
@@ -1729,6 +1474,7 @@ country_event = {
 				OR = {
 					culture = dutch
 					culture = flemish
+					culture = frisian
 				}
 			}
 		}
@@ -1740,6 +1486,7 @@ country_event = {
 				OR = {
 					culture = dutch
 					culture = flemish
+					culture = frisian
 				}
 			}
 		}
@@ -1751,6 +1498,7 @@ country_event = {
 				OR = {
 					culture = dutch
 					culture = flemish
+					culture = frisian
 				}
 			}
 		}
@@ -1764,6 +1512,7 @@ country_event = {
 					OR = {
 						culture = dutch
 						culture = flemish
+						culture = frisian
 						is_core = NED
 					}
 					is_capital = no
@@ -1773,6 +1522,7 @@ country_event = {
 			}
 			release = NED
 			NED = {
+				change_government = republic
 				add_government_reform = dutch_republic
 			}
 			every_owned_province = {
@@ -1789,7 +1539,7 @@ country_event = {
 		ROOT = {
 			declare_war_with_cb = {
 				who = NED
-				casus_belli = cb_liberation
+				casus_belli = cb_dutch_independence
 			}
 			if = {
 				limit = {
@@ -1896,12 +1646,16 @@ country_event = {
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
 		NOT = { num_of_cities = 5 }
+		NOT = {
+			tag = EFR
+		}
 		any_owned_province = {
 			region = low_countries_region
 		}
 		OR = {
 			primary_culture = dutch
 			primary_culture = flemish
+			primary_culture = frisian
 		}
 		NOT = {
 			has_country_flag = state_joined_netherlands
@@ -1971,6 +1725,7 @@ province_event = {
 		OR = {
 			culture = dutch
 			culture = flemish
+			culture = frisian		
 			is_core = NED
 		}
 		OR = {
@@ -1986,6 +1741,7 @@ province_event = {
 					OR = {
 						primary_culture = dutch
 						primary_culture = flemish
+						primary_culture = frisian
 					}
 				}
 			}
@@ -2329,6 +2085,7 @@ country_event = {
 				}
 				random = {
 					chance = 20
+					change_government = republic
 					add_government_reform = merchant_republic
 				}
 			}
@@ -2339,7 +2096,8 @@ country_event = {
 				}
 				random = {
 					chance = 20
-					add_government_reform = administrative_republic
+					change_government = republic
+					set_legacy_government = administrative_republic
 				}
 			}
 		}

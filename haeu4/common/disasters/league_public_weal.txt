@@ -159,8 +159,6 @@ league_public_weal = {
 	on_end = league_public_weal.100
 
 	on_monthly = {
-		events = {
-		}
 		random_events = { 
 			120 = 0
 			1 = league_public_weal.2 #Civil War Spreads to Province

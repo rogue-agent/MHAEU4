@@ -83,7 +83,7 @@ muscovite_civil_war = {
                     has_ruler_modifier = mos_civil_war_troubles
                 }
             }
-            has_ruler = "Dmitry I Shemyaka"
+            has_ruler = "Dmitry Shemyaka"
         }
 	}
 
@@ -98,8 +98,8 @@ muscovite_civil_war = {
 		events = {
 		}
 		random_events = { 
-			120 = 0
-			1 = MOS_civil_war.19 #Civil War Spreads to Province
+			2000 = 0
+			100 = MOS_civil_war.19 #Civil War Spreads to Province
 		}
 	}
 }			

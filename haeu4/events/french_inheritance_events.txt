@@ -6,24 +6,21 @@ country_event = {
 	title = "breton_inheritance.t"
 	desc = "breton_inheritance.d"
 	picture = DIPLOMACY_eventPicture
-
-	major = yes
 	
 	fire_only_once = yes
 	
-	
 	trigger = {
 		tag = FRA
+		government = monarchy
 		NOT = { war_with = BRI }
 		BRI = {
 			exists = yes
-			ai = yes
-			was_player = no
 			is_subject = no
 			is_neighbor_of = ROOT
-			}
+			government = monarchy
+		}
 		is_subject = no
-		num_of_cities = 10
+		num_of_cities = BRI
 		OR = {
 			AND = {
 				FRA = { is_female = yes }
@@ -34,7 +31,6 @@ country_event = {
 				BRI = { is_female = yes }
 			}
 			BRI = {
-				ai = yes
 				has_regency = yes
 			}
 		}
@@ -42,23 +38,6 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 12
-		modifier = {
-			factor = 0.1
-			OR = {
-				AND = {
-					tag = FRA
-					BRI = {
-						has_regency = no 
-					}
-				}
-				AND = {
-					tag = FRA
-					BRI = { 
-						has_regency = no 
-					}
-				}
-			}
-		}
 	}
 	
 	
@@ -103,7 +82,6 @@ country_event = {
 				country_event = { id = french_inheritance.5 days = 1 }
 			}
 		}
-		add_legitimacy = -5
 		add_prestige = -5
 	}
 }
@@ -125,7 +103,6 @@ country_event = {
 		PRO = {
 			exists = yes
 			ai = yes
-			was_player = no
 			is_subject = no
 			is_neighbor_of = ROOT
 			}
@@ -134,20 +111,36 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 250
+		months = 300
 		modifier = {
-			factor = 1.1
+			factor = 0.9
 			luck = yes
 		}
 		modifier = {
-			factor = 1.1
+			factor = 0.5
 			has_heir = no
 		}
 		modifier = {
-			factor = 1.1
+			factor = 0.9
 			PRO = {
 				dynasty = FRA
 			}
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1470
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1480
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1490
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1500
 		}
 	}
 	
@@ -160,7 +153,6 @@ country_event = {
 				}
 				LOR = {
 					exists = yes
-					is_subject = no
 				}
 			}
 			187 = {
@@ -170,12 +162,6 @@ country_event = {
 			}
 		}
 		PRO = {
-			every_subject_country = {
-				every_owned_province = {
-					add_core = PRO
-					cede_province = PRO
-				}
-			}
 			set_in_empire = no
 		}
 		inherit = PRO
@@ -212,7 +198,6 @@ country_event = {
 	desc = "breton_reaction_french_claim_relinquished.d"
 	picture = DIPLOMACY_eventPicture
 
-	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
@@ -257,12 +242,13 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = FRA
+		is_year = 1490
 		NOT = { is_year = 1550 }
 		NOT = { senior_union_with = MLO }
 	}
 
 	mean_time_to_happen = {
-		months = 300
+		months = 60
 	}
 
 	option = {		# Let us claim what is rightfully Ours!
@@ -314,7 +300,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		has_country_flag = france_has_burgundy_provinces
+		has_global_flag = france_has_burgundy_provinces
 		NOT = { is_year = 1550 }
 		NOT = { war_with = FRA }
 		FRA = {
@@ -325,9 +311,6 @@ country_event = {
 				owned_by = FRA
 			}
 			193 = {
-				owned_by = FRA
-			}
-			1877 = {
 				owned_by = FRA
 			}
 		}
@@ -371,17 +354,7 @@ country_event = {
 				remove_core = ROOT
 			}
 		}
-		if = {
-			limit = {
-				1877 = {
-					owned_by = FRA
-				}
-			}
-			1877 = {
-				remove_core = ROOT
-			}
-		}
-		clr_country_flag = france_has_burgundy_provinces
+		clr_global_flag = france_has_burgundy_provinces
 		if = {
 			limit = {
 				OR = {
@@ -442,18 +415,6 @@ country_event = {
 				}
 			}
 			193 = {
-				remove_core = ROOT
-				add_core = FROM
-				cede_province = FROM
-			}
-		}
-		if = {
-			limit = {
-				1877 = {
-					owned_by = ROOT
-				}
-			}
-			1877 = {
 				remove_core = ROOT
 				add_core = FROM
 				cede_province = FROM
@@ -557,5 +518,159 @@ country_event = {
 			}
 			set_country_flag = low_countries_controlled
 		}
+	}
+}
+
+
+# Succession of Ducal Vassals
+country_event = {
+	id = french_inheritance.13
+	title = french_inheritance.13.t
+	desc = french_inheritance.13.d
+	picture = CITY_VIEW_eventPicture
+
+	major = yes
+
+	trigger = {
+		is_subject_of = FRA
+		is_vassal = yes
+		culture_group = french
+		ai = yes
+		is_at_war = no
+	}
+
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.9
+			luck = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_heir = no
+		}
+		modifier = {
+			factor = 0.9
+			ROOT = {
+				dynasty = FRA
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1470
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1480
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1490
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1500
+		}
+	}
+
+	option = {
+		name = french_inheritance.13.a
+		FRA = {
+			inherit = ROOT
+			country_event = {
+				id = french_inheritance.14
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = french_inheritance.14
+	title = french_inheritance.14.t
+	desc = french_inheritance.14.d
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = french_inheritance.14.a
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = french_inheritance.15
+	title = french_inheritance.15.t
+	desc = french_inheritance.15.d
+	picture = CONQUEST_eventPicture
+
+	trigger = {
+		has_country_flag = vassalize_naples
+		NAP = {
+			is_subject_of = ROOT
+			is_lesser_in_union = no
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = french_inheritance.15.a
+		add_prestige = 25
+		ROOT = {
+			create_union = NAP
+		}
+	}
+}
+
+country_event = {
+	id = french_inheritance.16
+	title = french_inheritance.16.t
+	desc = french_inheritance.16.d
+	picture = CITY_VIEW_eventPicture
+
+	trigger = {
+		tag = SWI
+		is_year = 1490
+		NOT = {
+			is_year = 1550
+		}
+		MLO = {
+			is_subject_of = FRA
+			is_lesser_in_union = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = french_inheritance.16.a
+		add_casus_belli = {
+			target = MLO
+			type = cb_vassalize_mission
+			months = 300
+		}
+		FRA = {
+			add_opinion = {
+				who = ROOT
+				modifier = meddling_in_milan
+			}
+		}
+	}
+
+	option = {
+		name = french_inheritance.16.b
+		FRA = {
+			add_opinion = {
+				who = ROOT
+				modifier = staying_out_of_milan
+			}
+		}
+		add_prestige = 5
 	}
 }

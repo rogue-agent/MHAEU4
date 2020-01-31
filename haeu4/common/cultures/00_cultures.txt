@@ -259,6 +259,9 @@ germanic = {
 			"van Serooskerken"
 		}
 	}
+	frisian = {
+		primary = FRI
+	}
 	flemish = {
 		primary = FLA
 			dynasty_names = {
@@ -1720,6 +1723,10 @@ french	= {
 	wallonian = {
 		primary = HAI
 	}
+	arpitan = {
+		primary = DAU
+	}
+
 	breton = {
 		primary = BRI
 		dynasty_names = { 
@@ -2456,7 +2463,53 @@ west_slavic = {
 			Ines Inga Inge 
 		}
 	}
-	
+
+	sorbian = {
+		graphical_culture = easterngfx
+		primary = LUS
+		male_names = {
+			August Wladyslaw Stanislaw Aleksander Henryk Michal Stefan 
+			Krzysztof Fryderyk Olbracht Jan Patryk
+			Ferdynand Aleksy Andrzej Bartlomiej Bronislaw Dawid Dominik Emil Eugeniusz 
+			Gustaw Igor Iwan Krystian Lech Lucjusz Ludwik Lukasz Maksym Mariusz Miroslaw 
+			Rafal Sylwester Szymon Zygfryd Oskar
+			Alexander Andrew Bartosz Bartolomeus Bezprym Boguchwal Bogumil Boleslaw 
+			Boleslav Boncza Bonifacius Borzyslaw Bozydar Theodat Borzywoj Borijov Budziwuj Czcibor 
+			Czyrzniech Dalimir Daniel Dobieslaw Dobrogost Dobromir Doman Domawuj Dytryk Thierry 
+			Eustachy Eustace Gaudenty Gierolt Gerald Gniewomir Gniewosz Gosciwuj Goszczon Henry 
+			Izbor Józef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jakusz John Janislaw
+			Janusz Jaroslaw Jaroslav Jerzy George Karol Charles Kazimierz Konrad
+			Christian Krzeslaw Lambert Leszek Ctibor
+			Maciej Macko Malowuj Marcin Martin Maslaw Mateusz Matthew Mieszko Mikolaj 
+			Nicholas Milobrat Milosz Miroslav Msciwoj Mszczuj Nadbor Niezamysl Odon 
+			Pawel Paul Pelka Piotr Peter Piskla Prendota Przemyslaw Premysl Przybor Sambor Sedziej 
+			Sieciech Siemomysl Siemowit Skarbimir Snowid Spytko Stanislav
+			Stephen Stoigniew Strasz Sulislaw Sulistryj Swietopelk Svatopluk Swietoslaw 
+			Szczesny Felix Tomasz Thomas Trojden Twardomir Usciech Waclaw Vaclav Wanko
+			Laurence Wielislaw Wieslaw Wincenty Vincent Wit Guy Witosz Vladislav Wojciech 
+			Wojuta Wszebor Vsebor Zbigniew Zbynek Zbyszko Zegota Ignatius Zelibrat
+			Zygmunt Sigmund Albert Wawrzyniec Sviatoslav Sedzimir Otto Krystyn Janko Imram
+		}
+		female_names = {
+			Adelajda Adleta Agnieszka Agnes Aldona Anastazja Anastasia Anna Beata Bozena Danuta 
+			Dobrawa Dobronega Elzbieta Elisabeth Eufemia Euphemia Eufrozyna Gertruda Gertrude 
+			Helena Helen Jadwiga Jolanta Yolanda Judyta Judith Katarzyna Catherine Kazimiera Kenna 
+			Konstancja Constance Krystyna Christina Kunegunda Lucja Lucia Ludmila Magdalena
+			Malgorzata Maria Kinga Grzymislawa Richeza Agafia
+			Matylda Matilda Milena Nadzieja Nawoja Pechna Rycheza Ryksa Salomea Samboja Scholastyka 
+			Smiechna Stanislawa Swietoslawa Wislawa Wojslawa
+			Wolislawa Wszebora Wszemila Zofia Sophia Zwinislawa
+		}
+		dynasty_names = {
+			Gryf Piast Jagiellon Wisniowiecki Sobieski Leszczynski 
+			Poniatowski Radziwill Zamoyski Potocki Lubomirski 
+			Premyslovci Podebrad 
+			Chodkiewicz Czartoryski Lanckoronski Mielzynski Oginski
+			Ostrogski Ostroróg Pac Sapieha Sanguszko Tarnowski Teczynski
+			Tyszkiewicz Kurnatowski Taczanowski Gosiewski Opalinski
+		}
+	}
+
 	dynasty_names = {
 		Gryf Piast Jagiellon Wisniowiecki Sobieski Leszczynski 
 		Poniatowski Radziwill Zamoyski Potocki Lubomirski 

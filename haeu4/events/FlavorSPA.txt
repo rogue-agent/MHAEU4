@@ -249,6 +249,9 @@ country_event = {
 				name = forced_conversion
 				duration = 3650
 			}
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
 		}	
 		random_country = {
 			limit = {
@@ -261,7 +264,7 @@ country_event = {
 					}
 				}
 			}
-			country_event = {  id = flavor_spa.3151 days = 10 tooltip = "flavor_spa.EVTTOOLTIP3150" }
+			country_event = {  id = flavor_spa.3151 days = 180 tooltip = "flavor_spa.EVTTOOLTIP3150" }
 		}
 		set_country_flag = torquemada_expelled
 		add_reform_desire = 0.02
@@ -273,6 +276,10 @@ country_event = {
 		custom_tooltip = flavor_spa.c.3150.tt
 		add_reform_desire = -0.01
 		add_stability_or_adm_power = yes
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -15
+		}
 		add_ruler_modifier = {
 			name = religious_tolerance
 		}
@@ -294,8 +301,13 @@ country_event = {
 		random_owned_province = {
 			add_base_tax = 1
 		}
+		random_owned_province = {
+			add_base_production = 1
+		}
+		random_owned_province = {
+			add_base_manpower = 1
+		}
 	}
-
 }
 
 # Christopher Columbus
@@ -875,6 +887,24 @@ country_event = {
 			}
 			add_unrest = 5
 		}
+		random_owned_province = {
+			limit = {
+				culture = andalucian
+			}
+			add_base_tax = -1
+		}
+		random_owned_province = {
+			limit = {
+				culture = andalucian
+			}
+			add_base_manpower = -1
+		}
+		random_owned_province = {
+			limit = {
+				culture = andalucian
+			}
+			add_base_production = -1
+		}
 		random_country = {
 			limit = {
 				religion_group = muslim
@@ -886,12 +916,16 @@ country_event = {
 					}
 				}
 			}
-			country_event = {  id = flavor_spa.3161 days = 10 tooltip = "flavor_spa.EVTTOOLTIP3160" }
+			country_event = {  id = flavor_spa.3161 days = 180 tooltip = "flavor_spa.EVTTOOLTIP3160" }
 		}
 	}
 	option = {		# Let them be as they are needed for the economy
 		name = "flavor_spa.EVTOPTB3160"
 		add_papal_influence = -25
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -15
+		}
 	}
 }
 
@@ -909,6 +943,12 @@ country_event = {
 		ai_chance = { factor = 90 }
 		random_owned_province = {
 			add_base_tax = 1
+		}
+		random_owned_province = {
+			add_base_production = 1
+		}
+		random_owned_province = {
+			add_base_manpower = 1
 		}
 	}
 
@@ -1731,10 +1771,30 @@ country_event = {
 						ruler_has_personality = cruel_personality
 						ruler_has_personality = malevolent_personality
 						ruler_has_personality = zealot_personality
-						tag = FROM
 					}
 				}
 				country_event = {
+					id = jewish.3
+					days = 180
+				}
+			}
+			random_country = {
+				limit = {
+					religion_group = muslim
+					NOT = {
+						ruler_has_personality = cruel_personality
+						ruler_has_personality = malevolent_personality
+						ruler_has_personality = zealot_personality
+					}
+					any_owned_province = {
+						sea_zone = {
+							any_neighbor_province = {
+								owned_by = ROOT
+							}
+						}
+					}
+				}
+				country_event = { 
 					id = jewish.3
 					days = 180
 				}
@@ -1753,7 +1813,7 @@ country_event = {
 		add_prestige = 10
 		add_estate_loyalty = {
 			estate = estate_church
-			loyalty = -10
+			loyalty = -15
 		}
 	}
 }
@@ -2117,6 +2177,9 @@ country_event = {
 			}
 			change_religion = catholic
 			remove_core = GRA
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
 		}
 		#Repeat of effect from earlier persecutions:
 		random_country = {

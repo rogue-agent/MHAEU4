@@ -63,6 +63,9 @@ country_event = {
 	
 	option  = { #Get inherited
 		name = "succession.7.a"
+		every_owned_province = {
+			set_province_flag = bavarian_inheritance
+		}
 		random_country = {
 			limit = {
 				primary_culture = bavarian
@@ -91,13 +94,12 @@ country_event = {
 	
 	option = { #That's good
 		name = "succession.8.a"
-		every_province = {
+		every_owned_province = {
 			limit = {
-				culture = bavarian
-				owned_by = ROOT
-				NOT = { is_core = ROOT }
+				has_province_flag = bavarian_inheritance
 			}
 			add_core = ROOT
+			clr_province_flag = bavarian_inheritance
 		}
 	}
 }

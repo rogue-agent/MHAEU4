@@ -216,10 +216,18 @@ country_event = {
 		}
 		declare_war_with_cb = {
 			who = MOS
-			casus_belli = cb_horde_vs_civ
+			casus_belli = cb_kazan_muscovy
 		}
 		1778 = {
 			add_core = KAZ
+		}
+		capital_scope = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 10
+				speed = 0.1
+				cost = 0
+			}
 		}
 		MOS = {
 			set_country_flag = mos_denied_demands_kaz
@@ -318,7 +326,7 @@ country_event = {
 		NOT = { exists = RUS }
 		is_subject = no
 		tag = MOS
-		government = principality
+		has_reform = principality
 		1957 = {
 			owned_by = MOS
 		}
@@ -343,6 +351,15 @@ country_event = {
 				type = pretender_rebels
 			}
 			change_controller = REB
+		}
+		random_owned_province = {
+			limit = {
+				NOT = { province_id = 266 }
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 1
+			}
 		}
 	}
 }
@@ -371,8 +388,8 @@ country_event = {
 		NOT = { exists = RUS }
 		tag = MOS
 		is_subject = no
-		government = principality
-		NOT = { has_ruler = "Dmitry I Shemyaka" }
+		has_reform = principality
+		NOT = { has_ruler = "Dmitry Shemyaka" }
 		NOT = { REB = { controls = 1957 } }
 	}
 	
@@ -388,7 +405,7 @@ country_event = {
 				factor = 60
 				AND = {
 					has_dlc = "Rights of Man"
-					ruler_has_personality = intricate_webweaver_personality
+					ruler_has_personality = intricate_web_weaver_personality
 				}
 			}
 
@@ -577,6 +594,15 @@ country_event = {
 		4251 = {
 			change_controller = REB
 		}
+		random_owned_province = {
+			limit = {
+				NOT = { province_id = 4251 }
+			}
+			spawn_rebels = {
+				type = noble_rebels
+				size = 1
+			}
+		}
 		set_country_flag = ivan_mozhaysky_rebelled
 	}
 }
@@ -604,7 +630,7 @@ country_event = {
 		tag = MOS
 		NOT = { exists = RUS }
 		NOT = { is_year = 1460 }
-		government = principality
+		has_reform = principality
 		is_subject = no
 	}
 	
@@ -687,7 +713,7 @@ country_event = {
 		tag = MOS
 		NOT = { exists = RUS }
 		NOT = { is_year = 1460 }
-		government = principality
+		has_reform = principality
 		4251 = {
 			NOT = {
 				controlled_by = REB
@@ -752,7 +778,7 @@ country_event = {
 	
 	trigger = {
 		is_year = 1452
-		NOT = ( is_year = 1460 }
+		NOT = { is_year = 1460 }
 		KAZ = { has_country_flag = qasim_created }
 		QAS = {
 			AND = {
@@ -761,7 +787,7 @@ country_event = {
 			}
 		}
 		tag = MOS
-		government = principality
+		has_reform = principality
 		is_subject = no
 		NOT = { is_subject_of = KAZ }
 		NOT = { exists = RUS }
@@ -1006,14 +1032,14 @@ country_event = {
 		name = "MOS_civil_war.100.a"
 		if = {
 			limit = {
-				has_ruler = "Dmitry I Shemyaka"
+				has_ruler = "Dmitry Shemyaka"
 			}
 			add_stability = -1
 		}
 		if = {
 			limit = {
 				NOT = {
-					has_ruler = "Dmitry I Shemyaka"
+					has_ruler = "Dmitry Shemyaka"
 				}
 			}
 			add_stability_or_adm_power = yes

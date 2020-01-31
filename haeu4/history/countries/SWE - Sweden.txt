@@ -3,7 +3,9 @@ add_government_reform = feudalism_reform
 technology_group = western
 unit_type = western
 primary_culture = swedish
+historical_neutral = NOV
 religion = catholic
+add_accepted_culture = finno-swede
 capital = 1	#Stockholm
 
 national_focus = MIL

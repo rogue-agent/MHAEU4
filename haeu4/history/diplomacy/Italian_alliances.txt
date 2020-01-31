@@ -572,3 +572,19 @@ royal_marriage = {
 	start_date = 1750.1.1
 	end_date = 1785.1.1
 }
+
+# Naples and Taranto
+vassal = {
+	first = NAP
+	second = TRN
+	start_date = 1088.1.1
+	end_date = 1465.3.30
+}
+
+# Savoy and Valais
+vassal = {
+	first = SAV
+	second = VLS
+	start_date = 1384.1.1
+	end_date = 1529.1.1
+}

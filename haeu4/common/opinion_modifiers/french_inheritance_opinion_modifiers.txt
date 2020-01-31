@@ -39,3 +39,15 @@ opinion = -50
 years = 25
 yearly_decay = 2
 }
+
+meddling_in_milan = {
+    opinion = -50
+    years = 25
+    yearly_decay = 2
+}
+
+staying_out_of_milan = {
+    opinion = 25
+    years = 25
+    yearly_decay = 1
+}

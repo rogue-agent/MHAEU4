@@ -357,69 +357,8 @@ country_event = {
 	}
 }
 
-#Advance of the Turks.
-country_event = {
-	id = flavor_hun.9
-	title = flavor_hun.9.t
-	desc = flavor_hun.9.d
-	picture = BATTLE_eventPicture
-	
-	fire_only_once = yes
-
-	trigger = {
-		tag = HUN
-		truce_with = TUR
-		exists = HAB
-		HAB = {
-			is_emperor = yes
-		}
-		TUR = {
-			any_owned_province = {
-				OR = {
-					area = alfold_area
-					area = transdanubia_area
-				}
-				previous_owner = HUN
-			}
-		}
-		NOT = { is_year = 1650 }
-	}
-	
-	mean_time_to_happen = {
-		months = 12
-	}
-	
-	option = {
-		name = flavor_hun.9.a
-		every_owned_province = {
-			limit = {
-				NOT = { is_core = TRA }
-				OR = {
-					area = transylvania_area
-					area = southern_transylvania_area
-					area = alfold_area #Additional just to be sure:
-					area = wallachia_area 
-					area = moldavia_area
-					area = bulgaria_area
-					area = red_ruthenia_area
-					region = ruthenia_region
-					region = crimea_region
-				}
-			}
-			add_core = TRA
-		}
-		every_owned_province = {
-			limit = {
-				NOT = { is_core = TRA }
-			}
-			add_permanent_claim = HAB
-		}
-	}
-	
-}
-
 #magyar Peasant Revolt
-#Gyï¿½rgy Dï¿½zsa
+#György Dózsa
 country_event = {
 	id = flavor_hun.11
 	title = flavor_hun.11.t
@@ -485,7 +424,7 @@ country_event = {
 	}
 }
 
-#Tamï¿½s Bakï¿½cz
+#Tamás Bakócz
 country_event = {
 	id = flavor_hun.12
 	title = flavor_hun.12.t
@@ -516,7 +455,7 @@ country_event = {
 		add_prestige = 5
 		define_advisor = {
 			type = statesman
-			name = "Tamï¿½s Bakï¿½cz"
+			name = "Tamás Bakócz"
 			culture = hungarian
 			discount = yes
 			skill = 2
@@ -847,6 +786,13 @@ country_event = {
 	
 	option = {
 		name = flavor_hun.17.a
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 50
+				ruler_has_personality = embezzler_personality
+			}
+		}
 		remove_country_modifier = hun_black_army
 		add_prestige = -10
 		if = {
@@ -867,20 +813,24 @@ country_event = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				has_country_modifier = nobles_paying_black_army
+			}
+			remove_country_modifier = nobles_paying_black_army
+		}
 	}
 	option = {
 		name = flavor_hun.17.b
-		add_prestige = 10
-		add_years_of_income = -1
-		if = {
-			limit = {
-				has_estate = estate_nobles
-			}
-			add_estate_loyalty = {
-				estate = estate_nobles
-				loyalty = -5
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 50
+				ruler_has_personality = embezzler_personality
 			}
 		}
+		add_prestige = 10
+		add_years_of_income = -1
 	}
 }
 
@@ -1327,7 +1277,7 @@ country_event = {
 	}
 }
 
-#Tï¿½mas Nï¿½dasdy
+#Tamás Nádasdy
 country_event = {
 	id = flavor_hun.23
 	title = flavor_hun.23.t
@@ -1351,7 +1301,7 @@ country_event = {
 		name = flavor_hun.23.a
 		add_adm_power = 50
 		define_advisor = {
-			name = "Tï¿½mas Nï¿½dasdy"
+			name = "Tamás Nádasdy"
 			culture = hungarian
 			type = master_of_mint
 			skill = 3
@@ -1362,7 +1312,7 @@ country_event = {
 		name = flavor_hun.23.b
 		add_dip_power = 50
 		define_advisor = {
-			name = "Tï¿½mas Nï¿½dasdy"
+			name = "Tamás Nádasdy"
 			culture = hungarian
 			type = diplomat
 			skill = 3
@@ -1373,109 +1323,12 @@ country_event = {
 		name = flavor_hun.23.c
 		add_mil_power = 50
 		define_advisor = {
-			name = "Tï¿½mas Nï¿½dasdy"
+			name = "Tamás Nádasdy"
 			type = fortification_expert
 			culture = hungarian
 			skill = 3
 			discount = yes
 		}
-	}
-}
-
-#Voivodes of Transylvania Abolish their title
-#Triggers after the advance of the Turks
-country_event = {
-	id = flavor_hun.24
-	title = flavor_hun.24.t
-	desc = flavor_hun.24.d
-	picture = BAD_WITH_MONARCH_eventPicture
-	
-	fire_only_once = yes
-	
-	trigger = {
-		tag = HUN
-		exists = HAB
-		is_subject = no
-		government = monarchy
-		NOT = { exists = TRA }
-		NOT = { num_of_cities = 25 }
-		any_owned_province = {
-			is_core = TRA
-		}
-		any_owned_province = {
-			is_permanent_claim = HAB
-		}
-		TUR = {
-			owns = 153 #Pest
-			num_of_cities = HAB #Ottomans are bigger than Austria
-		}
-		HAB = {
-			num_of_cities = HUN #Austria is bigger than Hungary
-		}
-		capital_scope = {
-			OR = {
-				area = transdanubia_area
-				area = slovakia_area
-				area = croatia_area
-			}
-			is_permanent_claim = HAB
-		}
-		calc_true_if = {
-			all_owned_province = {
-				is_core = TRA
-			}
-			amount = 6
-		}
-	}
-	
-
-	mean_time_to_happen = {
-		months = 24
-	}
-	
-	option = {
-		name = flavor_hun.24.a
-		ai_chance = { factor = 25 }
-		set_global_flag = hungary_inherited
-		change_tag = TRA
-		define_ruler = {
-			name = "Jï¿½nos"
-			culture = hungarian
-			dynasty = "Zï¿½polya"
-			claim = 95
-			ADM = 3
-			DIP = 3
-			MIL = 3
-		}
-		if = {
-			limit = {
-				has_states_general_mechanic = yes
-			}
-			change_statists_vs_orangists = 200
-		}
-		every_owned_province = {
-			limit = {
-				is_permanent_claim = HAB
-			}
-			cede_province = HAB
-			hidden_effect = {
-				add_core = HAB
-				add_core = HUN
-				set_province_flag = royal_hungary_flag
-			}
-		}
-		HAB = {
-			country_event = { id = flavor_hun.25 }
-		}
-		if = {
-			limit = { has_custom_ideas = no }
-			country_event = { id = ideagroups.1 } #Swap Ideas
-		}
-	}
-	option = {
-		name = flavor_hun.24.b
-		ai_chance = { factor = 75 }
-		release = TRA
 	}
 }
 
@@ -1755,7 +1608,7 @@ country_event = {
 }
 
 
-# Tamï¿½s Erdï¿½dy
+# Tamás Erdódy
 country_event = {
 	id = flavor_hun.28
 	title = flavor_hun.28.t
@@ -1778,7 +1631,7 @@ country_event = {
 	option = {
 		name = flavor_hun.28.a
 		define_advisor = {
-			name = "Tamï¿½s Erdï¿½dy"
+			name = "Tamás Erdódy"
 			culture = hungarian
 			skill = 3
 			discount = yes
@@ -1789,7 +1642,7 @@ country_event = {
 	option = {
 		name = flavor_hun.28.b
 		define_general = {
-			name = "Tamï¿½s Erdï¿½dy"
+			name = "Tamás Erdódy"
 			shock = 3
 			fire = 3
 			manuever = 2
@@ -1800,7 +1653,7 @@ country_event = {
 }
 
 
-# Matthias Dï¿½vay
+# Matthias Dévay
 country_event = {
 	id = flavor_hun.29
 	title = flavor_hun.29.t
@@ -1853,7 +1706,7 @@ country_event = {
 	option = {
 		name = flavor_hun.29.a
 		define_advisor = {
-			name = "Matthias Dï¿½vay"
+			name = "Matthias Dévay"
 			skill = 3
 			discount = yes
 			religion = protestant
@@ -1875,7 +1728,7 @@ country_event = {
 			clr_province_flag = magyar_reform
 		}
 		define_advisor = {
-			name = "Thomas Szalahï¿½zy"
+			name = "Tamás Szalaházy"
 			culture = hungarian
 			religion = catholic
 			skill = 3

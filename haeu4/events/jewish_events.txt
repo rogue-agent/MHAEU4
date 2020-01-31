@@ -42,7 +42,7 @@ country_event = {
 			ruler_has_personality = tolerant_personality
 		}
 		modifier = {
-			factor = 0.9
+			factor = 0.7
 			has_idea_group = humanist_ideas
 		}
 		modifier = {
@@ -293,7 +293,7 @@ country_event = {
 			ruler_has_personality = tolerant_personality
 		}
 		modifier = {
-			factor = 0.9
+			factor = 0.7
 			has_idea_group = humanist_ideas
 		}
 		modifier = {
@@ -535,7 +535,7 @@ country_event = {
 			ruler_has_personality = tolerant_personality
 		}
 		modifier = {
-			factor = 0.9
+			factor = 0.7
 			has_idea_group = humanist_ideas
 		}
 		modifier = {

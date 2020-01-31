@@ -1,4 +1,4 @@
-version="1.0"
+version="1.1"
 tags={
 	"Fixes"
 	"Historical"
@@ -7,4 +7,4 @@ tags={
 }
 picture="thumbnail.png"
 name="Historically accurate EU4"
-supported_version="1.29.3"
+supported_version="1.29.4"

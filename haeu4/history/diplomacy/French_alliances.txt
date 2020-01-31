@@ -22,7 +22,7 @@ union = {
 	end_date = 1461.1.1
 }
 
-# Provence and Lorraine under Renï¿½ of Anjou
+# Provence and Lorraine under René of Anjou
 union = {
 	first = PRO
 	second = LOR
@@ -748,13 +748,6 @@ vassal = {
 
 vassal = {
 	first = FRA
-	second = AUV
-	start_date = 1361.1.1
-	end_date = 1610.1.1
-}
-
-vassal = {
-	first = FRA
 	second = AMG
 	start_date = 960.1.1
 	end_date = 1497.6.3
@@ -765,4 +758,10 @@ vassal = {
 	second = FOI
 	start_date = 960.1.1
 	end_date = 1497.6.3
+}
+union = {
+	first = BUR
+	second = PIC
+	start_date = 1419.8.15
+	end_date = 1477.3.6
 }

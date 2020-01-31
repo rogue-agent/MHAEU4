@@ -89,28 +89,12 @@ country_event = {
 	
 	option = {		#Styria inherits Austria
 		name = "death_albertine_line.a"
-		AUT = {
-			every_subject_country = {
-				every_owned_province = {
-					add_core = ROOT
-					cede_province = ROOT
-				}
-			}
-			every_owned_province = {
-				add_core = STY
-				cede_province = STY
-			}
-			clr_country_flag = ladislaus_returns
+		HUN = {
+			grant_independence = yes
 		}
 		if = {
 			limit = {
 				OR = {
-					AUT = {
-						has_casus_belli = {
-							type = cb_restore_personal_union
-							target = CRO
-						}
-					}
 					CRO = {
 						is_subject_of = AUT
 					}
@@ -120,6 +104,10 @@ country_event = {
 				create_union = CRO
 			}
 		}
+		AUT = {
+			clr_country_flag = ladislaus_returns
+		}
+		inherit = AUT
 		hidden_effect = {
 			HUN = {
             	country_event = {
@@ -187,9 +175,10 @@ country_event = {
 	desc = "ladislaus_dies.d"
 	picture = DEATH_OF_HEIR_eventPicture
 
-	fire_only_once = yes
-
 	trigger = {
+		NOT = {
+			has_country_flag = ladislaus_killed
+		}
 		OR = {
 			tag = STY
 			tag = AUT
@@ -257,6 +246,7 @@ country_event = {
 			}
 			kill_ruler = yes
 		}
+		set_country_flag = ladislaus_killed
 	}
 }
 
@@ -459,17 +449,20 @@ country_event = {
 
 	option = { # Let us cede the lands to Spain
 		name = spanish_low_countries.a
-		every_owned_province = {
-			limit = {
-				OR = {
-					region = low_countries_region
-					region = france_region
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						region = low_countries_region
+						region = france_region
+					}
 				}
+				remove_core = HAB
+				add_core = SPA
+				cede_province = SPA
 			}
-			remove_core = HAB
-			add_core = SPA
-			cede_province = SPA
 		}
+		custom_tooltip = austria_hungary.9.a.tooltip
 		SPA = {
 			add_opinion = {
 				who = ROOT
@@ -528,17 +521,20 @@ country_event = {
 				liberty_desire = 50
 			}
 		}
-		every_owned_province = {
-			limit = {
-				OR = {
-					region = low_countries_region
-					region = france_region
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						region = low_countries_region
+						region = france_region
+					}
 				}
+				remove_core = HAB
+				add_core = CAS
+				cede_province = CAS
 			}
-			remove_core = HAB
-			add_core = CAS
-			cede_province = CAS
 		}
+		custom_tooltip = austria_hungary.10.a.tooltip
 		CAS = {
 			add_opinion = {
 				who = ROOT
@@ -853,7 +849,7 @@ country_event = {
 	}
 }
 
-# Bohemian Ladislaus Dies
+# Bohemian Ladislaus Dies 1
 country_event = {
 	id = austria_hungary.18
 	title = "ladislaus_dies.t"
@@ -900,5 +896,634 @@ country_event = {
 			}
 			kill_ruler = yes
 		}
+	}
+}
+
+# Bohemian Ladislaus Dies 2
+country_event = {
+	id = austria_hungary.19
+	title = "ladislaus_dies.t"
+	desc = "ladislaus_dies_2.d"
+	picture = DEATH_OF_HEIR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = AUT
+		OR = {
+			has_heir = "Ladislaus Postumus"
+			has_ruler = "Ladislaus Postumus"
+		}
+		BOH = {
+			exists = yes
+			is_lesser_in_union = no
+			NOT = {
+				has_heir = "Ladislaus Postumus"
+				has_ruler = "Ladislaus Postumus"
+			}
+			OR = {
+				has_country_flag = boh_hussites_mission_decline
+				has_country_flag = ladislaus_in_bohemia
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = ladislaus_dies_hungary.a
+		if = { 
+			limit = { 
+				has_heir = "Ladislaus Postumus"
+			}
+			kill_heir = yes
+		}
+		if = { 
+			limit = { 
+				has_ruler = "Ladislaus Postumus"
+			}
+			kill_ruler = yes
+		}
+	}
+}
+
+# Ladislaus Leukemia
+country_event = {
+	id = austria_hungary.20
+	title = ladislaus_dies.t
+	desc = austria_hungary.20.d
+	picture = DEATH_OF_HEIR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		has_ruler = "Ladislaus Postumus"
+	}
+
+	mean_time_to_happen = {
+		months = 36
+		modifier = {
+			factor = 0.5
+			is_year = 1460
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1470
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1480
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1490
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 1500
+		}
+	}
+
+	option = {
+		name = austria_hungary.20.a
+		kill_ruler = yes
+	}
+}
+
+# Question of the Austrian Lands - Hungary
+country_event = {
+	id = austria_hungary.21
+	title = austria_hungary.21.t
+	desc = austria_hungary.21.d
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = STY
+			tag = HAB
+		}
+		HUN = {
+			is_subject_of = ROOT
+			any_owned_province = {
+				culture = austrian
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = austria_hungary.21.a
+		ai_chance = { factor = 100 }
+		custom_tooltip = austria_hungary.21.tooltip
+		hidden_effect = {
+			HUN = {
+				every_owned_province = {
+					limit = {
+						culture = austrian
+					}
+					add_core = ROOT
+					cede_province = ROOT
+					remove_core = HUN
+				}
+			}
+		}
+		HUN = {
+			add_liberty_desire = 15
+		}
+	}
+
+	option = {
+		name = austria_hungary.21.b
+		ai_chance = { factor = 0 }
+		add_prestige = -10
+	}
+}
+
+# Question of the Austrian Lands - Bohemia
+country_event = {
+	id = austria_hungary.22
+	title = austria_hungary.21.t
+	desc = austria_hungary.22.d
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = STY
+			tag = HAB
+		}
+		BOH = {
+			is_subject_of = ROOT
+			any_owned_province = {
+				culture = austrian
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = austria_hungary.21.a
+		ai_chance = { factor = 100 }
+		custom_tooltip = austria_hungary.22.tooltip
+		hidden_effect = {
+			BOH = {
+				every_owned_province = {
+					limit = {
+						culture = austrian
+					}
+					add_core = ROOT
+					cede_province = ROOT
+					remove_core = BOH
+				}
+			}
+		}
+		BOH = {
+			add_liberty_desire = 15
+		}
+	}
+
+	option = {
+		name = austria_hungary.21.b
+		ai_chance = { factor = 0 }
+		add_prestige = -10
+	}
+}
+
+# János Zápolya in Transylvania
+country_event = {
+	id = austria_hungary.23
+	title = austria_hungary.23.t
+	desc = austria_hungary.23.d
+	picture = BORDER_TENSION_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = TUR
+		any_owned_province = {
+			is_core = TRA
+		}
+		is_at_war = no
+		is_subject = no
+		TRA = {
+			exists = no
+		}
+		owns = 153
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = austria_hungary.23.a
+		ai_chance = {
+			factor = 100
+		}
+		release = TRA
+		HUN = {
+			hidden_effect = {
+				every_owned_province = {
+				limit = {
+					is_core = TRA
+				}
+				cede_province = TRA
+				}
+			}
+			every_owned_province = {
+				limit = {
+					NOT = { is_core = TRA }
+					OR = {
+						area = transylvania_area
+						area = southern_transylvania_area
+						area = alfold_area #Additional just to be sure:
+						area = wallachia_area 
+						area = moldavia_area
+						area = bulgaria_area
+						area = red_ruthenia_area
+						region = ruthenia_region
+						region = crimea_region
+					}
+				}
+				add_core = TRA
+			}
+			country_event = {
+				id = austria_hungary.25
+				days = 1
+			}
+		}
+		create_subject = {
+			subject_type = march
+			subject = TRA
+		}
+		TRA = {
+			define_ruler = {
+				name = "János"
+				dynasty = "Zápolya"
+				adm = 3
+				dip = 3
+				mil = 3
+				claim = 95
+			}
+		}
+		alfold_area = {
+			every_province_in_state = {
+				add_permanent_claim = TRA
+			}
+		}
+		transdanubia_area = {
+			every_province_in_state = {
+				add_permanent_claim = TRA
+			}		
+		}
+		slovakia_area = {
+			every_province_in_state = {
+				add_permanent_claim = TRA
+			}		
+		}
+		transylvania_area = {
+			every_province_in_state = {
+				add_permanent_claim = TRA
+			}		
+		}
+		southern_transylvania_area = {
+			every_province_in_state = {
+				add_permanent_claim = TRA
+			}		
+		}
+	}
+
+	option = {
+		name = austria_hungary.23.b
+		ai_chance = {
+			factor = 0
+		}
+		random_owned_province = {
+			limit = {
+				is_core = TRA
+			}
+			spawn_rebels = {
+				size = 3
+				leader = "János Zápolya"
+				type = separatist_rebels
+				culture = hungarian
+			}
+		}
+	}
+}
+
+# The Fall of Hungary
+country_event = {
+	id = austria_hungary.24
+	title = austria_hungary.24.t
+	desc = austria_hungary.24.d
+	picture = BORDER_TENSION_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		exists = HAB
+		exists = TRA
+		TRA = {
+			is_subject_of = TUR
+		}
+		is_subject = no
+		government = monarchy
+		NOT = {
+			num_of_cities = 25
+		}
+		NOT = {
+			has_ruler = "Ladislaus Postumus"
+		}
+		TUR = {
+			any_owned_province = {
+				is_core = HUN
+			}
+			owns = 153
+			num_of_cities = HAB
+		}
+		HAB = {
+			num_of_cities = HUN
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			dynasty = "von Habsburg"
+		}
+	}
+
+	option = {
+		name = austria_hungary.24.a
+		ai_chance = {
+			factor = 90
+		}
+		HAB = {
+			create_union = HUN
+			country_event = {
+				id = austria_hungary.26
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = austria_hungary.24.b
+		ai_chance = {
+			factor = 10
+		}
+		add_stability = -1
+		every_owned_province = {
+			add_permanent_claim = HAB
+		}
+	}
+}
+
+# Transylvania Breaks Away
+country_event = {
+	id = austria_hungary.25
+	title = austria_hungary.25.t
+	desc = austria_hungary.25.d
+	picture = BORDER_TENSION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria_hungary.25.a
+		add_prestige = -25
+	}
+}
+
+# Royal Hungary
+country_event = {
+	id = austria_hungary.26
+	title = austria_hungary.26.t
+	desc = austria_hungary.26.d
+	picture = BORDER_TENSION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria_hungary.26.a
+		add_prestige = 5
+	}
+}
+
+# Paying for the Black Army
+country_event = {
+	id = austria_hungary.27
+	title = austria_hungary.27.t
+	desc = austria_hungary.27.d
+	picture = LAND_MILITARY_eventPicture
+
+	trigger = {
+		tag = HUN
+		has_country_modifier = hun_black_army
+		NOT = {
+			has_country_modifier = nobles_paying_black_army
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = austria_hungary.27.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				ruler_has_personality = greedy_personality
+			}
+		}
+		add_years_of_income = 0.25
+		add_country_modifier = {
+			name = nobles_paying_black_army
+			duration = 5400
+		}
+	}
+
+	option = {
+		name = austria_hungary.27.b
+		if = {
+			limit = {
+				has_estate = estate_nobles
+			}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 5
+			}
+		}
+	}
+}
+
+# Venice Pays the Black Army
+country_event = {
+	id = austria_hungary.28
+	title = austria_hungary.28.t
+	desc = austria_hungary.28.d
+	picture = LAND_MILITARY_eventPicture
+
+	trigger = {
+		tag = HUN
+		VEN = {
+			exists = yes
+			monthly_income = 5
+			is_bankrupt = no
+			NOT = {
+				alliance_with = TUR
+				war_with = HUN
+			}
+		}
+		TUR = {
+			exists = yes
+			num_of_cities = VEN
+			is_subject = no
+		}
+		has_country_modifier = hun_black_army
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = austria_hungary.28.a
+		custom_tooltip = austria_hungary.28.a.tooltip
+		VEN = {
+			country_event = {
+				id = austria_hungary.29
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = austria_hungary.28.b
+		add_prestige = 5
+	}
+}
+
+# Hungary Asks Us to Support the Black Army
+country_event = {
+	id = austria_hungary.29
+	title = austria_hungary.29.t
+	desc = austria_hungary.29.d
+	picture = LAND_MILITARY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria_hungary.29.a
+		add_years_of_income = -0.5
+		add_truce_with = HUN
+		HUN = {
+			add_opinion = {
+				who = VEN
+				modifier = paid_for_black_army
+			}
+			add_truce_with = VEN
+			country_event = {
+				id = austria_hungary.30
+				days = 30
+			}
+		}
+	}
+
+	option = {
+		name = austria_hungary.29.b
+		HUN = {
+			add_opinion = {
+				who = VEN
+				modifier = did_not_pay_for_black_army
+			}
+			country_event = {
+				id = austria_hungary.31
+				days = 30
+			}
+		}
+	}
+}
+
+# Venice Pays for the Black Army
+country_event = {
+	id = austria_hungary.30
+	title = austria_hungary.30.t
+	desc = austria_hungary.30.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria_hungary.30.a
+		add_years_of_income = 0.5
+		tooltip = {
+			add_opinion = {
+				who = VEN
+				modifier = paid_for_black_army
+			}
+			add_truce_with = VEN
+			VEN = {
+				add_truce_with = HUN
+			}
+		}
+	}
+}
+
+# Venice Does Not Pay for the Black Army
+country_event = {
+	id = austria_hungary.31
+	title = austria_hungary.31.t
+	desc = austria_hungary.31.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria_hungary.31.a
+		tooltip = {
+			add_opinion = {
+				who = VEN
+				modifier = did_not_pay_for_black_army
+			}
+		}
+		add_prestige = -5
+	}
+}
+
+# Foreign Recruits for the Black Army
+country_event = {
+	id = austria_hungary.32
+	title = austria_hungary.32.t
+	desc = austria_hungary.32.d
+	picture = LAND_MILITARY_eventPicture
+
+	trigger = {
+		tag = HUN
+		has_country_modifier = hun_black_army
+	}
+
+	mean_time_to_happen = {
+		months = 36
+	}
+
+	option = {
+		name = austria_hungary.32.a
+		add_yearly_manpower = 1
 	}
 }

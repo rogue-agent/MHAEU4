@@ -17,58 +17,46 @@ country_event = {
 		is_subject = no
 		war_with = MAM
 		is_neighbor_of = MAM
-       		is_year = 1500
+       	is_year = 1500
 		NOT = {
 			is_year = 1600
 		}
-        	adm_power = 300
-           	controls = 361
-		if = {
-			limit = {
-				MAM = {
-					owns_core_province = 377
-				}
-			}
-			controls = 377
-		}
-		if = {
-			limit = {
-				MAM = {
-					owns_core_province = 382
-				}
-			}
-			controls = 382
-		}        
-            	MAM = {
+		MAM = {
 			ai = yes
-			was_player = no
 			is_subject = no
-            		owns_core_province = 361
-            		num_of_owned_provinces_with = {
-				value = 7
+			capital_scope = {
 				controlled_by = TUR
-            		}
+			}
 		}
 		NOT = { has_country_flag = mamluk_accepted }
-       		NOT = { has_country_flag = mamluk_refused }
+       	NOT = { has_country_flag = mamluk_refused }
 	}
 
 	mean_time_to_happen = {
-		days = 30
+		days = 1
 	}
 
 	option = {
 		name = "mamluk.a" 
-                set_country_flag = mamluk_accepted
-                add_adm_power = -300
-                add_dip_power = -200
-                add_mil_power = -200
+		set_country_flag = mamluk_accepted
+		add_adm_power = -200
+		add_dip_power = -200
+		add_mil_power = -200
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = MAM
+				}
+			}
+			white_peace = MAM
+		}
 		MAM = {
-                	every_owned_province = {
+            every_owned_province = {
 				limit = {
 					AND = {
-					is_core = MAM
-                    			culture = al_misr_arabic
+						is_core = MAM
+                    	culture = al_misr_arabic
 					}
 				}
 				cede_province = TUR
@@ -81,29 +69,26 @@ country_event = {
 					duration = 73000
 		        }
 				add_core = TUR
-				add_local_autonomy = 100
-		}
-                	every_owned_province = {
+			}
+            every_owned_province = {
 				limit = {
 					AND = {
 						is_core = MAM
-                				NOT = { culture = al_misr_arabic }
+                		NOT = { culture = al_misr_arabic }
 					}
 				}
 				cede_province = TUR
                 		add_core = TUR
-				add_local_autonomy = 75
 			}
-                	every_owned_province = {
+            every_owned_province = {
 				limit = {
 					NOT = { is_core = MAM }
 				}
 				cede_province = TUR
-				add_local_autonomy = 75
-	      		}
+	      	}
 		}
-              	ai_chance = {
-			factor = 80
+    	ai_chance = {
+			factor = 100
 		}
 	}
 	
@@ -112,7 +97,7 @@ country_event = {
                 set_country_flag = mamluk_refused
                 add_stability_or_adm_power = yes
                 ai_chance = {
-			factor = 20
+			factor = 0
 			modifier = {
 				factor = 0
 				is_rival = MAM
@@ -138,30 +123,38 @@ country_event = {
 		is_subject = no
 		war_with = NOV
 		is_neighbor_of = NOV
-        adm_power = 200
-        controls = 310  
         NOV = {
 			ai = yes
-			was_player = no
 			is_subject = no
-			owns_core_province = 310
+			capital_scope = {
+				controlled_by = MOS
+			}
 		}
-        	NOT = { has_country_flag = novgorod_accepted }
-        	NOT = { has_country_flag = novgorod_refused }
+        NOT = { has_country_flag = novgorod_accepted }
+    	NOT = { has_country_flag = novgorod_refused }
 	}
 
 	mean_time_to_happen = {
-		days = 30
+		days = 1
 	}
 
 	option = {
 		name = "novgorod.a" 
-                set_country_flag = novgorod_accepted
-                add_adm_power = -200
-                add_dip_power = -100
-                add_mil_power = -100
+		set_country_flag = novgorod_accepted
+		add_adm_power = -100
+		add_dip_power = -100
+		add_mil_power = -100
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = NOV
+				}
+			}
+			white_peace = NOV
+		}
 		NOV = {
-                	every_owned_province = {
+            every_owned_province = {
 				limit = {
 					AND = {
 					is_core = NOV
@@ -174,7 +167,6 @@ country_event = {
 					name = novgorod_rebels
 					duration = 7300
 				}
-				add_local_autonomy = 50
 			}
                 	every_owned_province = {
 				limit = {
@@ -189,18 +181,16 @@ country_event = {
 					name = novgorod_rebels
 					duration = 7300
 		        	}
-				add_local_autonomy = 50
 			}
                 	every_owned_province = {
 				limit = {
 					NOT = { is_core = NOV }
 				}
 				cede_province = MOS
-				add_local_autonomy = 50
 			}
 		}
               	ai_chance = {
-			factor = 80
+			factor = 100
 	      	}
 	}
 	
@@ -209,7 +199,7 @@ country_event = {
                 set_country_flag = novgorod_refused
                 add_stability_or_adm_power = yes
                 ai_chance = {
-			factor = 20
+			factor = 0
 			modifier = {
 				factor = 0
 				is_rival = NOV
@@ -235,34 +225,38 @@ country_event = {
 		is_subject = no
 		war_with = QAR
 		is_neighbor_of = QAR
-        adm_power = 200
-        controls = 416       
         QAR = {
 			ai = yes
-			was_player = no
 			is_subject = no
-        	owns_core_province = 416
-        	num_of_owned_provinces_with = {
-			value = 7
-			controlled_by = AKK
-        	}
-		}
+			capital_scope = {
+				controlled_by = AKK
+			}
+		}	
 		NOT = { has_country_flag = qara_accepted }
-        	NOT = { has_country_flag = qara_refused }
+        NOT = { has_country_flag = qara_refused }
 	}
 
 	mean_time_to_happen = {
-		days = 30
+		days = 1
 	}
 
 	option = {
 		name = "qara.a" 
-                set_country_flag = qara_accepted
-                add_adm_power = -200
-                add_dip_power = -100
-                add_mil_power = -100
+		set_country_flag = qara_accepted
+		add_adm_power = -100
+		add_dip_power = -100
+		add_mil_power = -100
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = QAR
+				}
+			}
+			white_peace = QAR
+		}
 		QAR = {
-                	every_owned_province = {
+            every_owned_province = {
 				limit = {
 					AND = {
 					is_core = QAR
@@ -275,7 +269,6 @@ country_event = {
 					name = qara_rebels
 					duration = 7300
 		        	}
-				add_local_autonomy = 75
 			}
                 	every_owned_province = {
 				limit = {
@@ -290,7 +283,6 @@ country_event = {
 					name = qara_rebels
 					duration = 7300
 		        	}
-				add_local_autonomy = 50
 			}
                 	every_owned_province = {
 				limit = {
@@ -301,11 +293,14 @@ country_event = {
 					name = qara_rebels
 					duration = 7300
 		        	}
-				add_local_autonomy = 50
 			}
 		}
+		every_subject_country = {
+			add_liberty_desire = -50
+		}
+		add_yearly_manpower = 5
 		ai_chance = {
-			factor = 80
+			factor = 100
 		}
 	}
 	
@@ -314,7 +309,7 @@ country_event = {
                 set_country_flag = qara_refused
                 add_stability_or_adm_power = yes
                 ai_chance = {
-			factor = 20
+			factor = 0
 			modifier = {
 				factor = 0
 				is_rival = QAR
@@ -340,44 +335,36 @@ country_event = {
 		is_subject = no
 		war_with = QAR
 		is_neighbor_of = QAR
-        	is_year = 1500
-		NOT = {
-			is_year = 1600
-		}
-        	adm_power = 200
-        	controls = 416
-		if = {
-			limit = {
-				QAR = {
-					owns_core_province = 418
-				}
-			}
-			controls = 418
-		}
-        	QAR = {
+        QAR = {
 			ai = yes
-			was_player = no
 			is_subject = no
-            		owns_core_province = 416
-            		num_of_owned_provinces_with = {
-				value = 7
+			capital_scope = {
 				controlled_by = ARL
-        		}
+			}
 		}		
-        	NOT = { has_country_flag = qara_accepted_2 }
-        	NOT = { has_country_flag = qara_refused_2 }
+        NOT = { has_country_flag = qara_accepted_2 }
+    	NOT = { has_country_flag = qara_refused_2 }
 	}
 
 	mean_time_to_happen = {
-		days = 30
+		days = 1
 	}
 
 	option = {
 		name = "qara_2.a" 
-                set_country_flag = qara_accepted_2
-                add_adm_power = -200
-                add_dip_power = -100
-                add_mil_power = -100
+		set_country_flag = qara_accepted_2
+		add_adm_power = -100
+		add_dip_power = -100
+		add_mil_power = -100
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = QAR
+				}
+			}
+			white_peace = QAR
+		}
 		QAR = {
                 	every_owned_province = {
 				limit = {
@@ -392,7 +379,6 @@ country_event = {
 					name = qara_rebels
 					duration = 7300
 		        	}
-				add_local_autonomy = 75
 			}
                 	every_owned_province = {
 				limit = {
@@ -407,27 +393,29 @@ country_event = {
 					name = qara_rebels
 					duration = 7300
 		        	}
-				add_local_autonomy = 50
 			}
                 	every_owned_province = {
 				limit = {
 					NOT = { is_core = QAR }
 				}
 				cede_province = ARL
-				add_local_autonomy = 50
 			}
 		}
-                ai_chance = {
-			factor = 80
-	        }
+		every_subject_country = {
+			add_liberty_desire = -50
+		}
+		add_yearly_manpower = 5
+        ai_chance = {
+			factor = 100
+	    }
 	}
 	
 	option	= {  
 		name = "qara_2.b"
-                set_country_flag = qara_refused_2
-                add_stability_or_adm_power = yes
-                ai_chance = {
-			factor = 20
+        set_country_flag = qara_refused_2
+        add_stability_or_adm_power = yes
+        ai_chance = {
+			factor = 0
 			modifier = {
 				factor = 0
 				is_rival = QAR
@@ -453,44 +441,36 @@ country_event = {
 		is_subject = no
 		war_with = AKK
 		is_neighbor_of = AKK
-        	is_year = 1500
-		NOT = {
-			is_year = 1600
-		}
-        	adm_power = 200
-		controls = 418
-		if = {
-			limit = {
-				AKK = {
-					owns_core_province = 416
-				}
-			}
-			controls = 416
-		}     
-		AKK = {
+        AKK = {
 			ai = yes
-			was_player = no
 			is_subject = no
-            		owns_core_province = 418
-            		num_of_owned_provinces_with = {
-				value = 7
+			capital_scope = {
 				controlled_by = ARL
-            		}
-		}
+			}
+		}	
 		NOT = { has_country_flag = aq_accepted }
-       		NOT = { has_country_flag = aq_refused }
+       	NOT = { has_country_flag = aq_refused }
 	}
 
 	mean_time_to_happen = {
-		days = 30
+		days = 1
 	}
 
 	option = {
 		name = "aq.a" 
-                set_country_flag = aq_accepted
-                add_adm_power = -200
-                add_dip_power = -100
-                add_mil_power = -100
+		set_country_flag = aq_accepted
+		add_adm_power = -100
+		add_dip_power = -100
+		add_mil_power = -100
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = AKK
+				}
+			}
+			white_peace = AKK
+		}
 		AKK = {
                 	every_owned_province = {
 				limit = {
@@ -505,7 +485,6 @@ country_event = {
 					name = aq_rebels
 					duration = 7300
 		        	}
-				add_local_autonomy = 75
 			}
                 	every_owned_province = {
 				limit = {
@@ -520,7 +499,6 @@ country_event = {
 					name = aq_rebels
 					duration = 7300
 		        	}
-				add_local_autonomy = 50
 			}
                 	every_owned_province = {
 				limit = {
@@ -531,11 +509,14 @@ country_event = {
 					name = aq_rebels
 					duration = 7300
 		        	}
-				add_local_autonomy = 50
 		        }
 		}
+		every_subject_country = {
+			add_liberty_desire = -50
+		}
+		add_yearly_manpower = 5
 		ai_chance = {
-			factor = 80
+			factor = 100
 		}
 	}
 
@@ -544,7 +525,7 @@ country_event = {
                 set_country_flag = aq_refused
                 add_stability_or_adm_power = yes
                 ai_chance = {
-			factor = 20
+			factor = 0
 			modifier = {
 				factor = 0
 				is_rival = AKK
@@ -570,17 +551,12 @@ country_event = {
 		is_subject = no
 		war_with = QAR
 		is_neighbor_of = QAR
-        	is_year = 1450
-		NOT = {
-			is_year = 1550
-		}    
-        	QAR = {
+        QAR = {
 			ai = yes
-			was_player = no
 			is_subject = no
 		}
 		NOT = { has_country_flag = qara_accepted }
-        	NOT = { has_country_flag = qara_refused }
+        NOT = { has_country_flag = qara_refused }
 	}
 
 	mean_time_to_happen = {
@@ -617,7 +593,16 @@ country_event = {
 
 	option = {
 		name = "qara_dies.a" 
-                set_country_flag = qara_accepted
+        set_country_flag = qara_accepted
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = QAR
+				}
+			}
+			white_peace = QAR
+		}
 		QAR = {
 			if = {
 				limit = {
@@ -642,7 +627,6 @@ country_event = {
 				}
 				cede_province = AKK
                 		add_core = AKK
-				add_local_autonomy = 25
 			}
                 	every_owned_province = {
 				limit = {
@@ -653,15 +637,17 @@ country_event = {
 				}
 				cede_province = AKK
                 		add_core = AKK
-				add_local_autonomy = 25
 			}
                 	every_owned_province = {
 				limit = {
 					NOT = { is_core = QAR }
 				}
 				cede_province = AKK
-				add_local_autonomy = 25
 			}
 		}
+		every_subject_country = {
+			add_liberty_desire = -50
+		}
+		add_yearly_manpower = 5
 	}
 }

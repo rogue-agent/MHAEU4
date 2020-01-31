@@ -15,7 +15,11 @@ ENG_ideas = {
 	}
 	
 	trigger = {
-		tag = ENG
+		OR = {
+			tag = ENG
+			tag = YRK
+			tag = LNC
+		}
 	}
 	free = yes		#will be added at load.
 	
@@ -129,6 +133,7 @@ MOS_ideas = {
 	start = {
 		diplomatic_upkeep = 1
 		shock_damage = 0.10
+		max_states = 10
 	}
 
 	bonus = {
@@ -170,6 +175,7 @@ RUS_ideas = {
 	start = {
 		core_creation = -0.10
 		global_manpower_modifier = 0.33
+		max_states = 10
 	}
 
 	bonus = {
@@ -4062,7 +4068,10 @@ BOS_ideas = {
 	}
 	
 	trigger = {
-		tag = BOS
+		OR = {
+			tag = BOS
+			tag = HUM
+		}
 	}
 	free = yes
 	
@@ -10444,7 +10453,6 @@ ARL_ideas = {
 	}
 	trigger = {
 		tag = ARL
-		religion = shiite
 	}
 	free = yes
 	

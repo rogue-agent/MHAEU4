@@ -878,6 +878,7 @@ country_event = {
 	option = {
 		name = flavor_boh.15.a
 		ai_chance = { factor = 50 }
+		set_country_flag = ladislaus_in_bohemia
 		define_heir = {
 			name = "Ladislaus Postumus"
 				dynasty = "von Habsburg"
@@ -894,7 +895,6 @@ country_event = {
 		name = flavor_boh.15.b
 		ai_chance = { factor = 50 }
 		add_stability = -2
-		set_country_flag = ladislaus_in_bohemia
 		if = {
 			limit = {
 				AUT = {
@@ -1096,5 +1096,177 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+
+# The Succession of Jirí
+country_event = {
+	id = flavor_boh.17
+	title = flavor_boh.17.t
+	desc = flavor_boh.17.d
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	major = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BOH
+		government = monarchy
+		NOT = {
+			has_ruler = "Jirí"
+			dynasty = "von Habsburg"
+			is_rival = POL
+			is_rival = PLC
+			is_year = 1500
+		}
+		has_country_flag = boh_supported_hussites
+		OR = {
+			POL = {
+				exists = yes
+			}
+			PLC = {
+				exists = yes
+			}
+		}
+		OR = {
+			POL = {
+				dynasty = "Jagiellon"
+			}
+			PLC = {
+				dynasty = "Jagiellon"
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = flavor_boh.17.a
+		ai_chance = {
+			factor = 25
+			modifier = {
+				is_rival = HUN
+				factor = 90
+			}
+		}
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			remove_heir = yes
+		}
+		define_heir = {
+			name = "Wladyslaw"
+			dynasty = "Jagiellon"
+			culture = polish
+			adm = 1
+			dip = 4
+			mil = 1
+		}
+		kill_ruler = yes
+		if = {
+			limit = {
+				POL = {
+					exists = yes
+					dynasty = "Jagiellon"
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = polish_king_in_bohemia
+			}
+		}
+		if = {
+			limit = {
+				PLC = {
+					exists = yes
+					dynasty = "Jagiellon"
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = polish_king_in_bohemia
+			}
+		}
+	}
+
+	option = {
+		name = flavor_boh.17.b
+		ai_chance = {
+			factor = 75
+			modifier = {
+				is_rival = HUN
+				factor = 10
+			}
+		}
+		if = {
+			limit = {
+				POL = {
+					exists = yes
+					dynasty = "Jagiellon"
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = no_polish_king_in_bohemia
+			}
+		}
+		if = {
+			limit = {
+				PLC = {
+					exists = yes
+					dynasty = "Jagiellon"
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = no_polish_king_in_bohemia
+			}
+		}
+	}
+}
+
+# The Hungarian Throne
+country_event = {
+	id = flavor_boh.18
+	title = flavor_hun.10.t
+	desc = flavor_boh.18.d
+	picture = DIPLOMACY_eventPicture
+
+	major = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BOH
+		government = monarchy
+		has_ruler = "Wladyslaw"
+		dynasty = "Jagiellon"
+		NOT = {
+			is_year = 1500
+			HUN = {
+				is_subject_of = BOH
+			}
+		}
+		has_country_flag = boh_supported_hussites
+		HUN = {
+			exists = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = flavor_hun.10.a
+		add_casus_belli = {	
+		    target = HUN
+		    type = cb_restore_personal_union
+		    months = 300
+	    }	
 	}
 }
