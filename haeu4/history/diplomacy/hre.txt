@@ -8,3 +8,10 @@
 1745.1.21 = { emperor = TUS }
 1765.1.1 = { emperor = HAB }
 1806.7.12 = { emperor = --- } 
+
+union = {
+	first = BOH
+	second = MVA
+	start_date = 1440.7.1 #ladislaus
+	end_date = 1457.11.10
+}

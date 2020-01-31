@@ -4,8 +4,8 @@ latent_trade_goods = {
 	coal
 }
 
-owner = BOU
-controller = BOU
+owner = AUV
+controller = AUV
 capital = "Clermont"
 is_city = yes
 culture = occitain
