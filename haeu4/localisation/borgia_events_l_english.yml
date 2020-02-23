@@ -59,3 +59,8 @@
  borgia.1.a.tooltip: "Cesare Borgia will invade the Romagna. Should his armies succeed, he will become a powerful ally of the Pope."
  fighting_borgia: "Fighting Cesare Borgia"
  desc_fighting_borgia: "The Italian condottiero Cesare Borgia has invaded our country and laid siege to our cities, whoses defenses have been deeply shaken by his assault."
+ borgia.15.t: "The Condottieri"
+ borgia.15.d: "For almost all of the 15th century, warfare by the Italian city-states was conducted through condottieri, Italian mercenary captains who wielded vast multinational armies on the behalf of powerful sovereigns. The condottieri led practically the entire fighting forces of the Italian city-states, and were paid exorbitantly for their services. However, the beginning of the Italian wars and foreign intervention in peninsular affairs after 1490 led many of the condottieri to abandon the service of the Italian city-states, instead taking up contract with far greater powers like Spain and France."
+ borgia.15.a: "These mercenaries can be of use to us."
+ italian_condottieri: "Italian Condottieri"
+ desc_italian_condottieri: "For just the right price, skilled mercenary captains known as the condottieri will fight on our behalf and commit to the defense of the state."

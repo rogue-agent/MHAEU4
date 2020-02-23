@@ -647,9 +647,6 @@ country_event = {
 
 	trigger = {
 		tag = BOH
-		NOT = {
-			dynasty = "von Habsburg"
-		}
 		OR = {
 			STY = {
 				exists = yes

@@ -10,24 +10,10 @@ historical_rival = CHA
 
 1398.1.1 = {
 	monarch = {
-		name = "An" #Tran Thieu De
-		dynasty = "Tran"
+		name = "Yên" #Tran Thieu De
+		dynasty = "Trân"
 		adm = 0
 		dip = 3
-		mil = 2
-	}
-}
-
-1398.1.1 = {
-	heir = {
-		name = "Quy Ly"
-		monarch_name = "Quy Ly"
-		dynasty = "Ho"
-		birth_date = 1370.1.1
-		death_date = 1400.6.1
-		claim = 95
-		adm = 1
-		dip = 2
 		mil = 2
 	}
 }
@@ -35,7 +21,7 @@ historical_rival = CHA
 1400.1.1 = {
 	monarch = {
 		name = "Quy Ly"
-		dynasty = "Ho"
+		dynasty = "Hô"
 		adm = 1
 		dip = 2
 		mil = 2
@@ -44,9 +30,9 @@ historical_rival = CHA
 
 1400.1.1 = {
 	heir = {
-		name = "Han Thuong"
-		monarch_name = "Han Thuong"
-		dynasty = "Ho"
+		name = "Hán Thuong"
+		monarch_name = "Hán Thuong"
+		dynasty = "Hô"
 		birth_date = 1380.1.1
 		death_date = 1407.1.1
 		claim = 95
@@ -58,8 +44,8 @@ historical_rival = CHA
 
 1400.6.1 = {
 	monarch = {
-		name = "Han Thuong"
-		dynasty = "Ho"
+		name = "Hán Thuong"
+		dynasty = "Hô"
 		adm = 1
 		dip = 0
 		mil = 1
@@ -68,8 +54,8 @@ historical_rival = CHA
 
 1407.1.1 = {
 	monarch = {
-		name = "Ngoi" #Hau Tran Jian Dinh De
-		dynasty = "Tran"
+		name = "Ngôi" #Hau Tran Jian Dinh De
+		dynasty = "Trân"
 		adm = 2
 		dip = 2
 		mil = 1
@@ -78,9 +64,9 @@ historical_rival = CHA
 
 1407.1.1 = {
 	heir = {
-		name = "Quy Khoang" #Hau Tran
-		monarch_name = "Quy Khoang"
-		dynasty = "Tran"
+		name = "Quy Khoáng" #Hau Tran
+		monarch_name = "Quy Khoáng"
+		dynasty = "Trân"
 		birth_date = 1380.1.1
 		death_date = 1427.1.1
 		claim = 95
@@ -92,8 +78,8 @@ historical_rival = CHA
 
 1409.1.1 = {
 	monarch = {
-		name = "Quy Khoang" #Hau Tran
-		dynasty = "Tran"
+		name = "Quy Khoáng" #Hau Tran
+		dynasty = "Trân"
 		adm = 0
 		dip = 2
 		mil = 2
@@ -105,7 +91,7 @@ historical_rival = CHA
 1427.1.1 = {
 	monarch = {
 		name = "Loi" #Lê Loi
-		dynasty = "Le"
+		dynasty = "Lê"
 		adm = 3
 		dip = 3
 		mil = 5
@@ -115,8 +101,8 @@ historical_rival = CHA
 
 1427.1.1 = {
 	heir = {
-		name = "Nguyen Long" #Lê Thai Tong
-		monarch_name = "Nguyen Long"
+		name = "Nguyên Long" #Lê Thai Tong
+		monarch_name = "Nguyên Long"
 		dynasty = "Lê"
 		birth_date = 1423.1.1
 		death_date = 1442.9.8
@@ -129,7 +115,7 @@ historical_rival = CHA
 
 1438.1.1 = {
 	monarch = {
-		name = "Nguyen Long" #Lê Thai Tong
+		name = "Nguyên Long" #Lê Thai Tong
 		dynasty = "Lê"
 		adm = 0
 		dip = 0
@@ -137,57 +123,65 @@ historical_rival = CHA
 	}
 }
 
-1441.1.1 = {
+1440.1.1 = {
+	queen = {
+		name = "Thi Anh"
+		dynasty = "Nguyên"
+		birth_date = 1422.1.1
+		death_date = 1459.10.4
+		adm = 2
+		dip = 2
+		mil = 4
+		female = yes
+	}
+}
+
+1442.8.8 = {
+	monarch = {
+		name = "Thi Anh"
+		dynasty = "Nguyên"
+		birth_date = 1422.1.1
+		death_date = 1459.10.25
+		adm = 2
+		dip = 2
+		mil = 4
+		female = yes
+	}
+	add_ruler_personality = cruel_personality
+
 	heir = {
 		name = "Bang Co" #Lê Nhan Tong
 		monarch_name = "Bang Co"
 		dynasty = "Lê"
 		birth_date = 1441.1.1
-		death_date = 1459.10.29
+		death_date = 1459.10.25
 		claim = 95
-		adm = 1
-		dip = 1
-		mil = 2
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+
+	set_ruler_flag = empress_dowager
+	add_ruler_modifier = {
+		name = the_empress_dowager
 	}
 }
 
-1442.9.8 = {
+1459.10.25 = {
 	monarch = {
-		name = "Bang Co" #Lê Nhan Tong
-		dynasty = "Lê"
-		adm = 3
-		dip = 3
-		mil = 1
-	}
-}
-
-1459.1.1 = {
-	monarch = {
-		name = "Nghi Dan"
+		name = "Nghi Dân"
 		dynasty = "Lê"
 		adm = 0
 		dip = 0
-		mil = 2
-	}
-}
-
-1459.1.1 = {
-	heir = {
-		name = "Tu Thanh" #Lê Thanh Tong
-		monarch_name = "Tu Thanh"
-		dynasty = "Lê"
-		birth_date = 1442.1.1
-		death_date = 1497.3.4
-		claim = 95
-		adm = 5
-		dip = 4
-		mil = 4
+		mil = 0
+		birth_date = 1439.6.1
+		death_date = 1460.6.29
 	}
 }
 
 1460.6.29 = {
 	monarch = {
-		name = "Tu Thanh" #Lê Thanh Tong
+		name = "Tu Thành" #Lê Thanh Tong
 		dynasty = "Lê"
 		adm = 5
 		dip = 4

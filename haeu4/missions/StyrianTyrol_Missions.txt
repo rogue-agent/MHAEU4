@@ -1,7 +1,7 @@
 hab_reform_austria = {
 	slot = 1 #upper left column
 	generic = no #if a mission without generic = yes wants this slot then it overrides this.
-	ai = no
+	ai = yes
 	potential = {
 		OR = {
 			tag = TIR
@@ -16,7 +16,25 @@ hab_reform_austria = {
 		icon = mission_have_two_subjects
 		required_missions = {  } #None
 		trigger = {
-			NOT = { exists = AUT }
+			if = {
+				limit = {
+					OR = {
+						tag = TIR
+						tag = STY
+					}
+				}
+				NOT = {
+					exists = AUT
+				}
+			}
+			if = {
+				limit = {
+					tag = AUT
+				}
+				NOT = {
+					exists = STY
+				}
+			}
 		}
 		effect = {
 			inner_austria_area = {

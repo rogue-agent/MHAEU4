@@ -47,6 +47,82 @@
 #
 # --------------------------------------------------------------
 
+ottoman_civil_war_wargoal = {
+	type = take_capital
+
+	attacker = {
+		badboy_factor = 0
+		prestige_factor = 1
+		peace_cost_factor = 0.75
+
+		allowed_provinces = {
+			is_core = ROOT
+		}
+		
+		peace_options = {
+			po_demand_provinces
+			po_return_cores
+		}
+		
+		prov_desc = ALL_CORES
+	}
+	
+	defender = {
+		badboy_factor = 0
+		prestige_factor = 1
+		peace_cost_factor = 0.75
+
+		allowed_provinces = {
+			is_core = FROM
+		}
+		
+		peace_options = {
+			po_demand_provinces
+			po_return_cores
+		}
+		
+		prov_desc = ALL_CORES	
+	}
+}
+
+kazakh_revolt_wargoal = {
+	type = superiority
+
+	attacker = {
+		badboy_factor = 0
+		prestige_factor = 1
+		peace_cost_factor = 0.75
+
+		allowed_provinces = {
+			is_core = ROOT
+		}
+		
+		peace_options = {
+			po_demand_provinces
+			po_return_cores
+		}
+		
+		prov_desc = ALL_CORES
+	}
+	
+	defender = {
+		badboy_factor = 0.25
+		prestige_factor = 1
+		peace_cost_factor = 0.75
+
+		allowed_provinces = {
+			is_core = FROM
+		}
+		
+		peace_options = {
+			po_demand_provinces
+			po_return_cores
+		}
+		
+		prov_desc = ALL_CORES	
+	}
+}
+
 kazan_muscovy_wargoal = {
 	type = superiority
 
@@ -109,7 +185,7 @@ surrender_of_maine_wargoal = {
 	defender = {
 		badboy_factor = 0.25
 		prestige_factor = 1
-		peace_cost_factor = 0.5
+		peace_cost_factor = 0.3
 
 		allowed_provinces = {
 			is_core = FROM

@@ -59,6 +59,10 @@ country_event = {
 			factor = 0.7
 			NOT = { legitimacy = 35 }
 		}
+		modifier = {
+			factor = 100
+			tag = PAL
+		}
 	}
 	
 	option  = { #Get inherited

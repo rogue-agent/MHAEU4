@@ -98,7 +98,7 @@ country_event = {
         create_alliance = FROM
         add_country_modifier = {
             name = treaty_of_gaeta
-            duration = 7300
+            duration = 9125
         }
         FROM = {
 			add_opinion = {
@@ -186,11 +186,13 @@ country_event = {
             143 = {
                 NOT = {
                     controlled_by = TUR
+                    owned_by = TUR
                 }
             }
             4174 = {
                 NOT = {
                     controlled_by = TUR
+                    owned_by = TUR
                 }
             }
             4175 = {

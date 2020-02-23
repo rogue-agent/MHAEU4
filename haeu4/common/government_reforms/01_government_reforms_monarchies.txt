@@ -662,7 +662,7 @@ mughal_government = {
 	}
 
 	assimilation_cultures = {
-		altaic = {
+		karluk = {
 			artillery_cost = -0.1
 		}
 		baltic = {
@@ -683,7 +683,7 @@ mughal_government = {
 		caucasian = {
 			mercenary_discipline = 0.05
 		}
-		gaelic = {
+		ipe_gaelic = {
 			shock_damage = 0.05
 		}
 		central_indic = {
@@ -734,6 +734,9 @@ mughal_government = {
 		japanese_g = {
 			land_morale = 0.1
 		}
+		mongolic = {
+			global_regiment_recruit_speed = -0.1
+		}
 		korean_g = {
 			idea_cost = -0.05
 		}
@@ -755,9 +758,9 @@ mughal_government = {
 		mande = {
 			tolerance_heretic = 1
 		}
-#		mon_khmer = {
-#			build_cost = -0.05
-#		}
+		ipe_mon_khmer = {
+			build_cost = -0.05
+		}
 		pacific = {
 			global_sailors_modifier = 0.1
 		}
@@ -776,16 +779,16 @@ mughal_government = {
 		sudanese = {
 			caravan_power = 0.1
 		}
-		tartar = {
+		kipchak = {
 			cavalry_cost = -0.15
 		}
-		southeastasian_group = {
+		ipe_tai = {
 			development_cost = -0.05
 		}
 		tibetan_group = {
 			prestige_per_development_from_conversion = 0.5
 		}
-		finno_ugric = {
+		ipe_finno_ugric = {
 			prestige_decay = -0.01
 		}
 		west_african = {

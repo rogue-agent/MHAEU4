@@ -11,8 +11,9 @@ country_decisions = {
 				was_never_end_game_tag_trigger = yes
 			}
 			OR = {
-				culture_group = altaic
-				culture_group = tartar
+				culture_group = mongolic
+				culture_group = kipchak
+				culture_group = karluk
 			}
 			NOT = { has_country_flag = mongol_empire_flag }
 			NOT = { tag = HLR }
@@ -204,7 +205,7 @@ country_decisions = {
 			NOT = { tag = ROM }
 			NOT = { tag = MUG }
 			NOT = { tag = ARB }
-			NOT = { dynasty = "Gurkani" }
+			NOT = { dynasty = "Timurid" }
 		}
 		provinces_to_highlight = {
 			region = persia_region

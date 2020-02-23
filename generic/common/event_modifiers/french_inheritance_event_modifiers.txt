@@ -1,0 +1,14 @@
+# Dummy
+dummy_3 = {
+	local_unrest = 5
+}
+
+# Threatened by France
+threatened_france = {
+	diplomatic_reputation = 1
+}
+
+# Treaty of Senlis
+treaty_of_senlis = {
+	ae_impact = -0.25
+}

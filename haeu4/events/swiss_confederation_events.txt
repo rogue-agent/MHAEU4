@@ -161,3 +161,28 @@ country_event = {
 		add_imperial_influence = 5
 	}
 }
+
+country_event = {
+	id = swiss_confederation.6
+	title = swiss_confederation.6.t
+	desc = swiss_confederation.6.d
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SWI
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = swiss_confederation.6.a
+		add_country_modifier = {
+			name = swiss_prussia
+			duration = 25200
+		}
+	}
+}

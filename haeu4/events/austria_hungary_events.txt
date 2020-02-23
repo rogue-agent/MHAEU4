@@ -14,13 +14,13 @@ country_event = {
 
 	trigger = {
 		tag = HUN
-		has_regency = yes
-		has_consort_regency = no
-		is_lesser_in_union = no
 		NOT = { has_leader = "János Hunyadi" }
 		is_year = 1445
 		NOT = { is_year = 1470 }
 		has_government_attribute = heir
+		NOT = {
+			has_country_flag = normal_hungary_interregnum
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -51,74 +51,6 @@ country_event = {
 	}
 }
 
-# Death of the Albertine Line
-country_event = {
-	id = austria_hungary.6
-	title = "death_albertine_line.t"
-	desc = "death_albertine_line.d"
-	picture = CITY_VIEW_eventPicture
-	
-	major = yes
-	
-	fire_only_once = yes
-	
-	trigger = {
-		tag = STY
-		dynasty = "von Habsburg"
-		AUT = {
-			exists = yes
-			ai = yes
-		}
-		HUN = {
-			NOT = {
-				has_heir = "Ladislaus Postumus"
-				has_ruler = "Ladislaus Postumus"
-				has_country_flag = interregnum_flag
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-    immediate = {
-        set_country_flag = inherited_austria_1
-		set_country_flag = inherited_austria_2
-    }
-	
-	option = {		#Styria inherits Austria
-		name = "death_albertine_line.a"
-		HUN = {
-			grant_independence = yes
-		}
-		if = {
-			limit = {
-				OR = {
-					CRO = {
-						is_subject_of = AUT
-					}
-				}
-			}
-			HUN = {
-				create_union = CRO
-			}
-		}
-		AUT = {
-			clr_country_flag = ladislaus_returns
-		}
-		inherit = AUT
-		hidden_effect = {
-			HUN = {
-            	country_event = {
-                	id = austria_hungary.7
-                	days = 30
-            	}
-        	}
-		}
-	}
-}
-
 # Austrian Ladislaus Dies
 country_event = {
 	id = austria_hungary.4
@@ -137,7 +69,6 @@ country_event = {
 		}
 		AUT = {
 			exists = yes
-			is_subject = no
 			NOT = { has_heir = "Ladislaus Postumus" }
 			NOT = { has_ruler = "Ladislaus Postumus" }
 			has_country_flag = ladislaus_returns
@@ -222,7 +153,6 @@ country_event = {
 		HUN = {
 			NOT = { has_country_flag = interregnum_flag }
 			exists = yes
-			is_subject = no
 			NOT = { has_heir = "Ladislaus Postumus" }
 			NOT = { has_ruler = "Ladislaus Postumus" }
 		}
@@ -250,6 +180,134 @@ country_event = {
 	}
 }
 
+# Death of the Albertine Line
+country_event = {
+	id = austria_hungary.6
+	title = "death_albertine_line.t"
+	desc = "death_albertine_line.d"
+	picture = CITY_VIEW_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = STY
+		dynasty = "von Habsburg"
+		AUT = {
+			exists = yes
+			ai = yes
+		}
+		HUN = {
+			NOT = {
+				has_heir = "Ladislaus Postumus"
+				has_ruler = "Ladislaus Postumus"
+				has_country_flag = interregnum_flag
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        set_country_flag = inherited_austria_1
+		set_country_flag = inherited_austria_2
+
+		hidden_effect = {
+			if = {
+				limit = {
+					HUN = {
+						is_lesser_in_union = yes
+						is_subject_of = AUT
+					}
+				}
+				HUN = {
+					grant_independence = yes
+				}
+				CRO = {
+					set_country_flag = croatia_inherited
+				}
+			}
+			if = {
+				limit = {
+					AUT = {
+						has_casus_belli = {
+							type = cb_restore_personal_union
+							target = HUN
+						}
+					}
+				}
+				CRO = {
+					set_country_flag = croatia_inherited
+				}
+			}
+			if = {
+				limit = {
+					BOH = {
+						is_lesser_in_union = yes
+						is_subject_of = AUT
+					}
+				}
+				BOH = {
+					grant_independence = yes
+				}
+			}
+		}
+    }
+	
+	option = {		#Styria inherits Austria
+		name = "death_albertine_line.a"
+		hidden_effect = {
+			if = {
+				limit = {
+					CRO = {
+						has_country_flag = croatia_inherited
+						OR = {
+							is_subject_of = AUT
+							AUT = {
+								has_casus_belli = {
+									type = cb_restore_personal_union
+									target = CRO
+								}
+							}
+						}
+					}
+				}
+				CRO = {
+					grant_independence = yes
+				}
+			}
+			AUT = {
+				every_subject_country = {
+					limit = {
+						is_lesser_in_union = yes
+						NOT = {
+							tag = CRO
+						}
+					}
+					country_event = {
+						id = austria_hungary.33
+						days = 1
+					}
+				}
+			}
+		}
+		AUT = {
+			clr_country_flag = ladislaus_returns
+		}
+		inherit = AUT
+		hidden_effect = {
+			HUN = {
+            	country_event = {
+                	id = austria_hungary.7
+                	days = 30
+            	}
+        	}
+		}
+	}
+}
 
 # Mátyás Corvinus or a Habsburg king
 country_event = {
@@ -261,6 +319,19 @@ country_event = {
 	major = yes
 
     is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					CRO = {
+						has_country_flag = croatia_inherited
+					}
+				}
+			}
+			create_union = CRO
+		}
+	}
 
 	option = {
 		name = flavor_hun.2.a
@@ -376,7 +447,7 @@ country_event = {
 	option = {
 		name = flavor_hun.2.c
 		trigger = {
-            is_subject = no
+            is_lesser_in_union = no
 			has_ruler = yes
 			NOT = { has_ruler = "Ladislaus Postumus" }
 			NOT = { dynasty = STY }
@@ -959,12 +1030,14 @@ country_event = {
 
 	fire_only_once = yes
 
+	major = yes
+
 	trigger = {
 		has_ruler = "Ladislaus Postumus"
 	}
 
 	mean_time_to_happen = {
-		months = 36
+		days = 60
 		modifier = {
 			factor = 0.5
 			is_year = 1460
@@ -972,18 +1045,6 @@ country_event = {
 		modifier = {
 			factor = 0.5
 			is_year = 1470
-		}
-		modifier = {
-			factor = 0.5
-			is_year = 1480
-		}
-		modifier = {
-			factor = 0.5
-			is_year = 1490
-		}
-		modifier = {
-			factor = 0.5
-			is_year = 1500
 		}
 	}
 
@@ -1110,6 +1171,8 @@ country_event = {
 
 	fire_only_once = yes
 
+	major = yes
+
 	trigger = {
 		tag = TUR
 		any_owned_province = {
@@ -1132,33 +1195,43 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
+		162 = {
+			add_core = TRA
+		}
+		4125 = {
+			add_core = TRA
+		}
+		155 = {
+			add_core = TRA
+		}
+		1953 = {
+			add_core = TRA
+		}
+		1952 = {
+			add_core = TRA
+		}
+		157 = {
+			add_core = TRA
+		}
+		4127 = {
+			add_core = TRA
+		}
+		1951 = {
+			add_core = TRA
+		}
+		158 = {
+			add_core = TRA
+		}
+		4128 = {
+			add_core = TRA
+		}
 		release = TRA
+		TRA = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			adopt_reform_progress = ROOT
+		}
 		HUN = {
-			hidden_effect = {
-				every_owned_province = {
-				limit = {
-					is_core = TRA
-				}
-				cede_province = TRA
-				}
-			}
-			every_owned_province = {
-				limit = {
-					NOT = { is_core = TRA }
-					OR = {
-						area = transylvania_area
-						area = southern_transylvania_area
-						area = alfold_area #Additional just to be sure:
-						area = wallachia_area 
-						area = moldavia_area
-						area = bulgaria_area
-						area = red_ruthenia_area
-						region = ruthenia_region
-						region = crimea_region
-					}
-				}
-				add_core = TRA
-			}
 			country_event = {
 				id = austria_hungary.25
 				days = 1
@@ -1389,6 +1462,7 @@ country_event = {
 			NOT = {
 				alliance_with = TUR
 				war_with = HUN
+				has_truce = HUN
 			}
 		}
 		TUR = {
@@ -1431,6 +1505,13 @@ country_event = {
 
 	option = {
 		name = austria_hungary.29.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 25
+				is_rival = HUN
+			}
+		}
 		add_years_of_income = -0.5
 		add_truce_with = HUN
 		HUN = {
@@ -1448,6 +1529,13 @@ country_event = {
 
 	option = {
 		name = austria_hungary.29.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 75
+				is_rival = HUN
+			}
+		}
 		HUN = {
 			add_opinion = {
 				who = VEN
@@ -1526,5 +1614,22 @@ country_event = {
 	option = {
 		name = austria_hungary.32.a
 		add_yearly_manpower = 1
+	}
+}
+
+# Styria Inherits Personal Unions
+country_event = {
+	id = austria_hungary.33
+	title = austria_hungary.33.t
+	desc = austria_hungary.33.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria_hungary.33.a
+		STY = {
+			create_union = ROOT
+		}
 	}
 }

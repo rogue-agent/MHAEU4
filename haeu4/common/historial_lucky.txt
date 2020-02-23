@@ -44,6 +44,12 @@ FRA = {
 	always = yes
 }
 
+STY = {
+	NOT = { 
+		exists = HAB
+	}
+}
+
 HAB = {
 	always = yes
 }
@@ -84,6 +90,7 @@ QNG = {
 BRA = {
 	always = yes
 }
+
 SWE = {
 	NOT = { 
 		is_year = 1700
@@ -96,15 +103,11 @@ POL = {
 	}
 }
 
-
-
 PLC = {
 	NOT = { 
 		is_year = 1700
 	}
 }
-
-
 
 ARL = {
 	NOT = {
@@ -113,18 +116,14 @@ ARL = {
 	}
 }
 
-
-
 PER = {
 	NOT = {
 		is_year = 1700
 	}
 }
 
-
-
 TAU = {
 	NOT = {
-		is_year = 1720
+		is_year = 1700
 	}
 }

@@ -3,8 +3,8 @@
 owner = LIV
 controller = LIV
 culture = livonian
-capital = "Salatsi"
 religion = catholic
+capital = "Fellin"
 trade_goods = livestock
 hre = no
 base_tax = 3 

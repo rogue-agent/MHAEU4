@@ -260,6 +260,17 @@ country_event = {
 
 	option = {		# Support the House of Lancaster
 		name = electric_war_of_the_roses.1.b
+		trigger = {
+			NOT = {
+				calc_true_if = {
+					all_country = {
+						ai = no
+					}
+					amount = 2
+				}
+			}
+		}
+
 		ai_chance = {
 			factor = 0
 		}
@@ -590,8 +601,6 @@ country_event = {
 	picture = WAR_OF_THE_ROSES_eventPicture
 	
 	trigger = {
-		is_neighbor_of = ENG
-
 		OR = {
 			capital_scope = {
 				region = british_isles_region
@@ -604,21 +613,10 @@ country_event = {
 		}
 		NOT = { has_country_flag = support_for_war_of_the_roses }
 		NOT = { has_country_flag = no_support_for_rose_rebels_lancaster }
-		ENG = {
-			any_owned_province = {
-				OR = {
-					any_neighbor_province = {
-						owned_by = ROOT
-					}
-					has_port = yes
-				}
-				unit_in_siege = no
-			}
-		}
 	}
 	
 	mean_time_to_happen = {
-		months = 60
+		months = 12
 		modifier = {
 			factor = 0.75
 			ENG = { has_country_modifier = rebel_leaders_executed }
@@ -719,7 +717,6 @@ country_event = {
 	picture = WAR_OF_THE_ROSES_eventPicture
 	
 	trigger = {
-		is_neighbor_of = ENG
 		OR = {
 			capital_scope = {
 				region = british_isles_region
@@ -732,22 +729,11 @@ country_event = {
 		}
 		NOT = { has_country_flag = support_for_war_of_the_roses }
 		NOT = { has_country_flag = no_support_for_rose_rebels_york }
-		ENG = {
-			any_owned_province = {
-				OR = {
-					any_neighbor_province = {
-						owned_by = ROOT
-					}
-					has_port = yes
-				}
-				unit_in_siege = no
-			}
-		}
 	}
 
 	
 	mean_time_to_happen = {
-		months = 60
+		months = 12
 		modifier = {
 			factor = 0.75
 			ENG = { has_country_modifier = rebel_leaders_executed }

@@ -99,3 +99,21 @@ kept_wallachia = {
     years = 50
     yearly_decay = 2
 }
+
+impaled_saxons = {
+    opinion = -100
+    years = 50
+    yearly_decay = 2
+}
+
+supported_sahkulu = {
+    opinion = -100
+    years = 50
+    yearly_decay = 2
+}
+
+executed_cem = {
+    opinion = 100
+    years = 50
+    yearly_decay = 2
+}

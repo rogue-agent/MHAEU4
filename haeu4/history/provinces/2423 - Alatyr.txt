@@ -3,7 +3,7 @@
 owner = MOS
 controller = MOS
 culture = mordvin
-religion = orthodox
+religion = tengri_pagan_reformed
 hre = no
 base_tax = 3 
 base_production = 3

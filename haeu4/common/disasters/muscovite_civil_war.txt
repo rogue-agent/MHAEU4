@@ -83,7 +83,7 @@ muscovite_civil_war = {
                     has_ruler_modifier = mos_civil_war_troubles
                 }
             }
-            has_ruler = "Dmitry Shemyaka"
+            dynasty = "Shemyaka"
         }
 	}
 

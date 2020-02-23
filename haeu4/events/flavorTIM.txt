@@ -109,6 +109,15 @@ country_event = {
 	option = {
 		name = "flavor_tim.2.a" # My time has come!
 		trigger = { dynasty = Gurkani }
+		add_liberty_desire = 50
+		add_opinion = {
+			who = TIM
+			modifier = timurid_succession_crisis
+		}
+		set_ai_attitude = {
+			attitude = attitude_hostile
+			who = TIM
+		}
 		custom_tooltip = flavor_tim.2.a.tt
 	}
 	option = {

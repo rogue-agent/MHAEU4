@@ -12,3 +12,8 @@ threatened_france = {
 treaty_of_senlis = {
 	ae_impact = -0.25
 }
+
+# Furia Francese
+furia_francese = {
+	land_morale = 0.2
+}

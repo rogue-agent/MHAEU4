@@ -330,6 +330,10 @@ eng_french_conquest = {
 						tooltip = eng_war_france.tooltip
 						has_country_flag = rb_gave_up_maine
 					}
+					AND = {
+						is_year = 1450
+						is_rival = FRA
+					}
 				}
 			}
 			else_if = {

@@ -69,6 +69,7 @@ add_army_professionalism = 0.05
 	clear_scripted_personalities = yes
 	add_ruler_personality = well_connected_personality
 	add_ruler_personality = architectural_visionary_personality
+	set_ruler_flag = king_of_naples
 	heir = {
 		name = "Joan"
 		monarch_name = "Joan II"

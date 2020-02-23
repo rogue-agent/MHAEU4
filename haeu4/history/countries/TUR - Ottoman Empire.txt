@@ -47,6 +47,7 @@ religious_school = hanafi_school
 	add_ruler_personality = conqueror_personality
 	#add_ruler_personality = lawgiver_personality
 	add_piety = -0.2
+	set_ruler_flag = cem_rebellion
 }
 
 1446.1.1 = {

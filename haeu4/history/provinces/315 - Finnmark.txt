@@ -3,13 +3,13 @@
 owner = NOR
 controller = NOR
 culture = sapmi
-capital = "Alta"
-religion = catholic
+religion = tengri_pagan_reformed
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
 trade_goods = fish
+capital = "Vardø"
 is_city = yes
 add_core = NOR
 add_core = SMI

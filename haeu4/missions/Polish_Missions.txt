@@ -46,9 +46,7 @@ polish_missions_main_slot = {
 					has_country_flag = supported_prussian_confederation_flag
 					exists = DNZ
 					DNZ = {
-						is_subject = no
-						is_at_war = no
-						NOT = { total_development = 100 }
+						is_subject_of = ROOT
 					}
 				}
 				country_event = { id = flavor_teu.3 }

@@ -1,0 +1,23 @@
+#Dummy
+dummy_5 = {
+	local_unrest = 5
+}
+
+#Wrongful Rulers
+wrongful_rulers = {
+    local_unrest = 5
+    trade_goods_size_modifier = -0.25
+}
+
+#Rightful Rulers
+rightful_rulers = {
+    local_unrest = -2
+    trade_goods_size_modifier = 0.25
+}
+
+#Nobles Paying the Black Army
+nobles_paying_black_army = {
+    global_tax_modifier = 0.1
+    war_taxes_cost_modifier = -0.5
+    manpower_recovery_speed = -0.15
+}

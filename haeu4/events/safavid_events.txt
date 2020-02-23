@@ -60,6 +60,82 @@ country_event = {
 			name = rise_of_safavids
 			duration = -1
 		}
+		capital_scope = {
+			add_unit_construction = {
+				type = infantry
+				amount = 3
+				speed = 0.1
+				cost = 0
+			}
+			add_unit_construction = {
+				type = cavalry
+				amount = 2
+				speed = 0.1
+				cost = 0
+			}
+		}
+		tabriz_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ARL
+		}
+		shirvan_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ARL
+		}
+		armenia_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ARL
+		}
+		azerbaijan_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ARL
+		}
+		iraq_e_ajam_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ARL
+		}
+		luristan_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ARL
+		}
+		tabarestan_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ARL
+		}
+		isfahan_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ARL
+		}
+		hidden_effect = {
+			set_ai_personality = {
+				personality = ai_militarist
+				locked = no
+			}
+		}
 	}
 
 	option = {
@@ -138,6 +214,12 @@ country_event = {
 			}
 		}
 		set_country_flag = father_of_ismail
+		hidden_effect = {
+			set_ai_personality = {
+				personality = ai_militarist
+				locked = no
+			}
+		}
 	}
 
 	option = {
@@ -148,7 +230,7 @@ country_event = {
 		capital_scope = {
 			spawn_rebels = {
 				type = pretender_rebels
-				size = 2
+				size = 1
 				leader = "Haidar Safavi"
 			}		
 		}
@@ -208,13 +290,19 @@ country_event = {
 			capital_scope = {
 				add_unit_construction = {
 					type = infantry
-					amount = 3
+					amount = 4
 					speed = 0.1
 					cost = 0
 				}
 				add_unit_construction = {
 					type = cavalry
-					amount = 2
+					amount = 3
+					speed = 0.1
+					cost = 0
+				}
+				add_unit_construction = {
+					type = artillery
+					amount = 3
 					speed = 0.1
 					cost = 0
 				}
@@ -242,6 +330,12 @@ country_event = {
 			}
 		}
 		clr_country_flag = father_of_ismail
+		hidden_effect = {
+			set_ai_personality = {
+				personality = ai_militarist
+				locked = no
+			}
+		}
 	}
 
 	option = {
@@ -252,7 +346,7 @@ country_event = {
 		capital_scope = {
 			spawn_rebels = {
 				type = pretender_rebels
-				size = 3
+				size = 1
 				leader = "Haidar Safavi"
 			}		
 		}
@@ -272,6 +366,7 @@ country_event = {
 		NOT = {
 			has_country_modifier = qizilbash_support
 		}
+		religion = shiite
 	}
 
 	mean_time_to_happen = {
@@ -349,7 +444,7 @@ country_event = {
 				limit = {
 					has_dlc = "Rights of Man"
 				}
-				add_ruler_personality = naive_personality
+				hidden_effect = { add_ruler_personality = naive_personality }
 			}
 			set_country_flag = pirbudag_appointed
 			add_opinion = {
@@ -371,7 +466,7 @@ country_event = {
 		random_owned_province = {
 			spawn_rebels = {
 				type = pretender_rebels
-				size = 3
+				size = 1
 				leader = "Pirbudag Qara Qoyunlu"
 			}
 		}
@@ -502,7 +597,7 @@ country_event = {
 	trigger = {
 		tag = ARL
 		has_country_modifier = rise_of_safavids
-		total_development = 300
+		total_development = TUR
 	}
 
 	mean_time_to_happen = {
@@ -600,6 +695,412 @@ country_event = {
 				}
 			}
 			add_liberty_desire = 100
+		}
+	}
+}
+
+country_event = {
+	id = safavid.13
+	title = safavid.13.t
+	desc = safavid.13.d
+	picture = RELIGIOUS_WARS_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = QAR
+		TIM = {
+			NOT = {
+				has_ruler_modifier = shahrukhs_empire
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = safavid.13.a
+		persia_region = {
+			limit = {
+				NOT = {
+					is_core = ROOT
+				}
+				NOT = {
+					is_permanent_claim = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+country_event = {
+	id = safavid.14
+	title = safavid.14.t
+	desc = safavid.14.d
+	picture = HORSE_ON_HORSEBACK_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SHY
+		TIM = {
+			NOT = {
+				has_ruler_modifier = shahrukhs_empire
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = safavid.14.a
+		TRS = {
+			every_owned_province = {
+				limit = {
+					NOT = {
+						is_core = SHY
+					}
+					NOT = {
+						is_permanent_claim = SHY
+					}
+				}
+				add_permanent_claim = SHY
+			}
+		}
+		TIM = {
+			every_owned_province = {
+				limit = {
+					is_core = TRS
+				}
+				add_permanent_claim = SHY
+			}
+		}
+	}
+}
+
+country_event = {
+	id = safavid.15
+	title = safavid.15.t
+	desc = safavid.15.d
+	picture = CITY_VIEW_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SHY
+		owns = 1970
+		NOT = {
+			capital = 1970
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = safavid.15.a
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = southern_capital
+		set_capital = 1970
+		1970 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+		}
+	}
+
+	option = {
+		name = safavid.15.b
+		ai_chance = {
+			factor = 0
+		}
+		add_prestige = 10
+	}
+}
+
+country_event = {
+	id = safavid.16
+	title = safavid.16.t
+	desc = safavid.16.d
+	picture = HORSE_ON_HORSEBACK_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SHY
+		any_owned_province = {
+			is_core = SIB
+		}
+		has_country_flag = southern_capital
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	option = {
+		name = safavid.16.a
+		ai_chance = {
+			factor = 75
+		}
+		clr_country_flag = southern_capital
+		set_country_flag = khazak_rising
+		release = SIB
+		SIB = {
+			change_government = tribal
+			add_government_reform = steppe_horde
+			adopt_reform_progress = ROOT
+			every_owned_province = {
+				remove_core = SHY
+			}
+		}
+		SIB = {
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.6
+					cavalry = 0.4
+				}
+			}
+		}
+	}
+
+	option = {
+		name = safavid.16.b
+		ai_chance = {
+			factor = 25
+		}
+		clr_country_flag = southern_capital
+		random_owned_province = {
+			limit = {
+				is_core = SIB
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 1
+				friend = SIB
+			}
+		}
+	}
+}
+
+country_event = {
+	id = safavid.17
+	title = safavid.17.t
+	desc = safavid.17.d
+	picture = HORSE_ON_HORSEBACK_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SHY
+		any_owned_province = {
+			culture = khazak
+		}
+		NOT = {
+			adm = 3
+			dip = 3
+			mil = 3
+			primary_culture = khazak
+		}
+		has_country_flag = khazak_rising
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = khazak_rising
+			release = KZH
+			if = {
+				limit = {
+					456 = {
+						owned_by = KZH
+					}
+				}
+				456 = {
+					cede_province = SHY
+				}
+			}
+			if = {
+				limit = {
+					1969 = {
+						owned_by = KZH
+					}
+				}
+				1969 = {
+					cede_province = SHY
+				}
+			}
+			if = {
+				limit = {
+					2352 = {
+						owned_by = KZH
+					}
+				}
+				2352 = {
+					cede_province = SHY
+				}
+			}
+			if = {
+				limit = {
+					2361 = {
+						owned_by = KZH
+					}
+				}
+				2361 = {
+					cede_province = SHY
+				}
+			}
+			if = {
+				limit = {
+					476 = {
+						owned_by = KZH
+					}
+				}
+				476 = {
+					cede_province = SHY
+				}
+			}
+			if = {
+				limit = {
+					2351 = {
+						owned_by = KZH
+					}
+				}
+				2351 = {
+					cede_province = SHY
+				}
+			}
+			if = {
+				limit = {
+					2353 = {
+						owned_by = KZH
+					}
+				}
+				2353 = {
+					cede_province = SHY
+				}
+			}
+			if = {
+				limit = {
+					2358 = {
+						owned_by = KZH
+					}
+				}
+				2358 = {
+					cede_province = SHY
+				}
+			}
+			if = {
+				limit = {
+					2359 = {
+						owned_by = KZH
+					}
+				}
+				2359 = {
+					cede_province = SHY
+				}
+			}
+			KZH = {
+				change_government = tribal
+				add_government_reform = steppe_horde
+				adopt_reform_progress = ROOT
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.6
+						cavalry = 0.4
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = safavid.17.a
+		ai_chance = {
+			factor = 100
+		}
+		declare_war_with_cb = {
+			who = KZH
+			casus_belli = cb_kazakh_revolt
+		}
+		every_owned_province = {
+			limit = {
+				culture = khazak
+			}
+			add_province_modifier = {
+				name = revolting_kazakhs
+				duration = 3600
+			}
+		}
+	}
+
+	option = {
+		name = safavid.17.b
+		ai_chance = {
+			factor = 0
+		}
+		add_prestige = -25
+		add_truce_with = KZH
+		every_owned_province = {
+			limit = {
+				culture = khazak
+			}
+			add_province_modifier = {
+				name = revolting_kazakhs
+				duration = 3600
+			}
+		}
+	}
+}
+
+country_event = {
+	id = safavid.18
+	title = safavid.18.t
+	desc = safavid.18.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+
+	trigger = {
+		OR = {
+			tag = GEO
+			tag = IME
+			tag = SME
+		}
+		NOT = {
+			is_year = 1450
+			has_country_modifier = the_ruin_of_georgia
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = safavid.18.a
+		if = {
+			limit = {
+				tag = GEO
+			}
+			every_owned_province = {
+				add_devastation = 50
+			}
+			add_war_exhaustion = 5
+			add_yearly_manpower = -3
+		}
+		add_country_modifier = {
+			name = the_ruin_of_georgia
+			duration = 9125
 		}
 	}
 }

@@ -124,7 +124,8 @@ country_event = {
 	desc = "flavor_fra.EVTDESC3105"
 	picture = COURT_eventPicture
 	
-	
+	major = yes
+
 	fire_only_once = yes
 	trigger = {
 		tag = FRA
@@ -160,6 +161,14 @@ country_event = {
 	
 	option = {		# Let us claim what is rightfully Ours!
 		name = "flavor_fra.EVTOPTA3105"
+		set_country_flag = league_of_venice_possible
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 50
+				alliance_with = NAP
+			}
+		}
 		every_province = {
 			limit = {
 				OR = {
@@ -169,11 +178,8 @@ country_event = {
 					area = apulia_area
 					province_id = 120
 				}
-				OR = {
-					owned_by = NAP 
-					owned_by = ARA
-					owned_by = CAS
-					owned_by = SPA
+				NOT = {
+					province_id = 118
 				}
 			}
 			add_claim = FRA
@@ -213,10 +219,18 @@ country_event = {
 				modifier = fra_claimed_naples
 			}
 		}
+		custom_tooltip = league_of_venice_possible_naples_tooltip
 		set_country_flag = claimed_naples
 	}
 	option = {		# Let us drop our claims for good!
 		name = "flavor_fra.EVTOPTB3105"
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 50
+				alliance_with = NAP
+			}
+		}
 		every_known_country = {
 			limit = {
 				OR = {

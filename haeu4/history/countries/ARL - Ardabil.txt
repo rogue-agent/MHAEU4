@@ -8,6 +8,7 @@ capital = 424 #Ardabil
 government_rank = 1
 add_army_professionalism = 0.05
 religious_school = shafii_school
+historical_rival = MSY
 
 1443.1.1 = {
 	monarch = {

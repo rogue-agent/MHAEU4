@@ -95,6 +95,13 @@ country_decisions = {
 			}
 		}
 		effect = {
+			if = {
+				limit = {
+					owns = 416
+					tag = ARL
+				}
+				set_capital = 416
+			}
 			change_tag = PER
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes

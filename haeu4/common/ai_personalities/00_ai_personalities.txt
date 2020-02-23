@@ -69,10 +69,6 @@ ai_capitalist = {
 			tag = MNG
 		}
 		modifier = {
-			factor = 1.5
-			tag = KOR
-		}		
-		modifier = {
 			factor = 100
 			tag = MAM
 			luck = no
@@ -171,7 +167,7 @@ ai_diplomat = {
 			tag = MNG
 		}
 		modifier = {
-			factor = 1.5
+			factor = 10
 			tag = KOR
 		}
 		modifier = {
@@ -203,6 +199,11 @@ ai_diplomat = {
 				culture_group = latin
 				total_development = 50
 			}
+		}
+		modifier = {
+			factor = 10
+			is_part_of_hre = yes
+			government = theocracy
 		}
 		modifier = {
 			factor = 10
@@ -321,8 +322,12 @@ ai_militarist = {
 				tag = MOS
 				tag = RUS
 				tag = TUR
+				tag = AMS
+				tag = RME
+				tag = TEK
 				tag = CSU
 				tag = ARL
+				tag = PER
 			}
 		}			
 		modifier = {

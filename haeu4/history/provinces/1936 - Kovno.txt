@@ -2,14 +2,14 @@
 
 owner = LIT
 controller = LIT
-culture = samogitian
-capital = "Kaunas"
+culture = lithuanian
 religion = catholic
+capital = "Kovno"
 estate = estate_nobles
 trade_goods = livestock
 hre = no
-base_tax = 3
-base_production = 3
+base_tax = 2
+base_production = 2
 base_manpower = 1
 is_city = yes
 fort_15th = yes

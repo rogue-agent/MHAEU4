@@ -13,6 +13,20 @@
 # TRIGGERED - Triggered from within the code or by event effects
 # --------------------------------------------------------------
 
+# Ottoman Civil War
+cb_ottoman_civil_war = {
+	is_triggered_only = yes
+
+	war_goal = ottoman_civil_war_wargoal
+}
+
+# Kazakh Revolt
+cb_kazakh_revolt = {
+	is_triggered_only = yes
+
+	war_goal = kazakh_revolt_wargoal
+}
+
 # Kazani Invasion of Muscovy
 cb_kazan_muscovy = {
 	is_triggered_only = yes

@@ -97,7 +97,7 @@ country_event = {
 		name = borgia.2.a
 		add_ruler_modifier = {
 			name = fighting_borgia
-			duration = 1800
+			duration = 1825
 		}
 	}
 }
@@ -627,5 +627,32 @@ country_event = {
 	option = {
 		name = borgia.14.a
 		add_prestige = 25
+	}
+}
+
+country_event = {
+	id = borgia.15
+	title = borgia.15.t
+	desc = borgia.15.d
+	picture = MILITARY_CAMP_eventPicture
+
+	trigger = {
+		culture_group = latin
+		NOT = {
+			has_country_modifier = italian_condottieri
+			is_year = 1490
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = borgia.15.a
+		add_country_modifier = {
+			name = italian_condottieri
+			duration = 18250
+		}
 	}
 }

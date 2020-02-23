@@ -52,7 +52,10 @@ national_focus = ADM
 	clear_scripted_personalities = yes
 	add_ruler_personality = careful_personality
 	add_ruler_personality = intricate_web_weaver_personality
-	set_country_flag = ugra_standoff
+	add_country_modifier = {
+		name = mongol_masters
+		duration = -1
+	}
 }
 
 1430.1.1 = { leader = {	name = "Dmitry Shemyaka"	type = general	fire = 3	shock = 4	manuever = 3	siege = 0	death_date = 1453.1.1 } }

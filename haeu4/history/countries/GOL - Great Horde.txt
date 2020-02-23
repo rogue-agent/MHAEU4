@@ -17,6 +17,10 @@ religious_school = hanafi_school
 		dip = 0
 		mil = 2
 	}
+	add_country_modifier = {
+		name = muscovite_tribute
+		duration = -1
+	}
 }
 
 1435.1.1 = {

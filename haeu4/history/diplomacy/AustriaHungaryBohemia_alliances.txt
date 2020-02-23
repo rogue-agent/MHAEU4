@@ -685,3 +685,60 @@ vassal = {
 	start_date = 1331.1.1
 	end_date = 1506.1.1
 }
+
+vassal = {
+	first = BOH
+	second = BRL
+	start_date = 1433.1.1
+	end_date = 1450.1.1
+}
+
+# Alliances of the Hussite Wars
+alliance = {
+	first = STY
+	second = BRA
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
+alliance = {
+	first = STY
+	second = SAX
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
+alliance = {
+	first = STY
+	second = TRI
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
+alliance = {
+	first = STY
+	second = MAI
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
+alliance = {
+	first = STY
+	second = KOL
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
+alliance = {
+	first = STY
+	second = PAL
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
+alliance = {
+	first = STY
+	second = PAP
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}

@@ -1,0 +1,297 @@
+namespace = ugra
+normal_or_historical_nations = yes
+
+country_event = {
+	id = ugra.1
+	title = ugra.1.t
+	desc = ugra.1.d
+	picture = HORSE_ON_HORSEBACK_eventPicture
+
+	trigger = {
+		OR = {
+			tag = GOL
+			tag = GLH
+		}
+		is_at_war = no
+		is_subject = no
+		NOT = {
+			truce_with = MOS
+		}
+		MOS = {
+			exists = yes
+			is_subject = no
+			has_country_flag = ugra_standoff
+			NOT = {
+				is_subject_of_type = tributary_state
+				alliance_with = ROOT
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+		modifier = {
+			factor = 0.5
+			total_development = 200
+		}
+		modifier = {
+			factor = 0.5
+			MOS = {
+				NOT = {
+					total_development = 200
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ugra.1.a
+		custom_tooltip = ugra.1.a.tooltip
+		ai_chance = {
+			factor = 100
+		}
+		MOS = {
+			clr_country_flag = ugra_standoff
+			country_event = {
+				id = ugra.2
+				days = 30
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = horde_demanded_tribute
+			}
+		}
+	}
+
+	option = {
+		name = ugra.1.b
+		ai_chance = {
+			factor = 0
+		}
+		add_horde_unity = -25
+		add_prestige = -25
+		MOS = {
+			country_event = {
+				id = ugra.3
+				days = 30
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = no_horde_demanded_tribute
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ugra.2
+	title = ugra.2.t
+	desc = ugra.2.d
+	picture = HORSE_ON_HORSEBACK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ugra.2.a
+		ai_chance = {
+			factor = 67
+			modifier = {
+				factor = 75
+				is_at_war = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					NOT = {
+						total_development = 100
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				is_year = 1500
+			}
+		}
+		custom_tooltip = ugra.2.a.tooltip
+		add_adm_power = -100
+		add_dip_power = -100
+		add_mil_power = -100
+		add_prestige = -25
+		add_truce_with = FROM
+		FROM = {
+			country_event = {
+				id = ugra.4
+				days = 30
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = gave_tribute
+			}
+		}
+	}
+	
+	option = {
+		name = ugra.2.b
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 25
+				is_at_war = yes
+			}
+			modifier = {
+				factor = 100
+				FROM = {
+					NOT = {
+						total_development = 100
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				is_year = 1500
+			}
+		}
+		custom_tooltip = ugra.2.b.tooltip
+		clr_country_flag = ugra_standoff
+		FROM = {
+			country_event = {
+				id = ugra.5
+				days = 30
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = refused_tribute
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ugra.3
+	title = ugra.3.t
+	desc = ugra.3.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ugra.3.a
+		add_prestige = 25
+		add_legitimacy = 25
+	}
+}
+
+country_event = {
+	id = ugra.4
+	title = ugra.4.t
+	desc = ugra.4.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ugra.4.a
+		add_horde_unity = 25
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 25
+		add_truce_with = FROM
+	}
+}
+
+country_event = {
+	id = ugra.5
+	title = ugra.5.t
+	desc = ugra.5.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = ugra.5.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				MOS = {
+					NOT = {
+						total_development = 100
+					}
+				}
+			}
+			modifier = {
+				factor = 75
+				MOS = {
+					is_at_war = yes
+				}
+			}
+		}
+		add_horde_unity = 25
+		capital_scope = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 10
+				speed = 0.1
+				cost = 0
+			}
+		}
+		declare_war_with_cb = {
+			who = FROM
+			casus_belli = cb_force_tributary
+		}
+		FROM = {
+			country_event = {
+				id = ugra.6
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = ugra.5.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				MOS = {
+					total_development = 500
+				}
+			}	
+			modifier = {
+				factor = 25
+				MOS = {
+					is_at_war = yes
+				}
+			}
+		}
+		add_horde_unity = -25
+		add_prestige = -25
+		FROM = {
+			country_event = {
+				id = ugra.3
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ugra.6
+	title = ugra.6.t
+	desc = ugra.6.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ugra.6.a
+		add_government_power = {
+			government_mechanic = russian_mechanic
+			which = MIL
+			amount = 100
+		}
+	}
+}

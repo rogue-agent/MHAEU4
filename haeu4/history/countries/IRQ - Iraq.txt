@@ -4,7 +4,7 @@ primary_culture = al_iraqiya_arabic
 religion = shiite
 technology_group = muslim
 capital = 410	# Bagdad
-religious_school = jafari_school
+religious_school = ismaili_school
 
 1433.1.1 = {
     monarch = {

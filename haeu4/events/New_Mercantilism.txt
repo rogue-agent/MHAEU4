@@ -48,7 +48,7 @@ country_event = {
 		name = new_mercantilism.1.a
 		add_country_modifier = {
 			name = price_revolution
-			duration = 36000
+			duration = 36500
 		}
 		hidden_effect = {
 			every_known_country = {

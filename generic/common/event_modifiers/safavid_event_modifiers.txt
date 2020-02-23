@@ -1,0 +1,23 @@
+rise_of_safavids = {
+	land_morale = 0.1
+	discipline = 0.05
+	manpower_recovery_speed = 0.25
+	ae_impact = -0.25
+	siege_ability = 0.1
+}
+
+qizilbash_support = {
+	shock_damage = 0.1
+	manpower_recovery_speed = 0.25
+	land_maintenance_modifier = -0.1
+}
+
+conquer_the_sheep = {
+	land_morale = 0.1
+	discipline = 0.05
+	manpower_recovery_speed = 0.25
+}
+
+jahan_shahs_empire = {
+	reduced_liberty_desire = 30
+}

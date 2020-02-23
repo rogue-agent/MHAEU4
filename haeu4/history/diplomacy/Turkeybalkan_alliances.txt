@@ -6,6 +6,21 @@ guarantee = {
 	end_date = 1468.1.1
 }
 
+#Zeta guaranteed by Venice
+guarantee = {
+	first = VEN
+	second = MON
+	start_date = 1444.3.2
+	end_date = 1448.1.1
+}
+
+alliance = {
+	first = ALB
+	second = MON
+	start_date = 1444.3.2
+	end_date = 1482.1.1
+}
+
 #Trebizond guaranteed by Georgia
 guarantee = {
 	first = GEO
@@ -111,19 +126,11 @@ alliance = {
 	end_date = 1800.1.1
 }
 
-# Athens, a Byzantine vassal
-vassal = {
-	first = BYZ
-	second = ATH
-	start_date = 1444.6.1
-	end_date = 1453.5.29
-}
-
 # Athens, a Morean vassal
 vassal = {
 	first = MOE
 	second = ATH
-	start_date = 1453.5.30
+	start_date = 1444.1.1
 	end_date = 1458.8.1
 }
 
@@ -282,12 +289,6 @@ vassal = {
 vassal = {
 	first = BYZ
 	second = MOE
-	start_date = 1400.3.1
-	end_date = 1450.7.7
-}
-vassal = {
-	first = MOE
-	second = ATH
-	start_date = 1400.3.1
-	end_date = 1453.7.7
+	start_date = 1383.1.1
+	end_date = 1453.5.29
 }

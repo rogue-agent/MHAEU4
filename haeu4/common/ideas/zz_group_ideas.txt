@@ -869,6 +869,44 @@ latin_ideas = {
 	}
 }
 
+taino_ideas = {
+	start = {
+		stability_cost_modifier = -0.1
+		development_cost = -0.1
+	}
+
+	bonus = {
+		land_morale = 0.20
+	}
+
+	trigger = {
+		primary_culture = arawak
+	}
+	free = yes
+
+	cacicazgo = {
+		global_manpower_modifier = 0.15
+	}
+	taino_agriculture = {
+		production_efficiency = 0.1	
+	}
+	ways_of_the_behiques = {
+		global_unrest = -2
+	}
+	the_mountains_of_hispaniola = {
+		leader_land_manuever = 1
+	}
+	worship_the_zemis = {
+		prestige = 1
+	}
+	the_taino_spirit = {
+		discipline = 0.05
+	}
+	standardize_the_taino_language = {
+		technology_cost = -0.05
+	}
+}
+
 native_ideas = {
 	start = {
 		manpower_recovery_speed = 0.15

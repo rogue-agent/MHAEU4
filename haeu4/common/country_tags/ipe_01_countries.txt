@@ -27,6 +27,7 @@ OSN = "countries/Osnabruck.txt"
 HOY = "countries/Hoya.txt"
 CLB = "countries/Calenberg.txt"
 PDB = "countries/Paderborn.txt"
+BRG = "countries/Berg.txt"
 
 # Balkans
 HUM = "countries/Hum.txt"
@@ -35,6 +36,7 @@ HUM = "countries/Hum.txt"
 ANC = "countries/Ancona.txt"
 RMG = "countries/Romagna.txt"
 TRN = "countries/Taranto.txt"
+TSI = "countries/Two_Sicilies.txt"
 
 # France
 ANG = "countries/Angoumois.txt"
@@ -66,3 +68,21 @@ LNC = "countries/Lancaster.txt"
 # Caucasus
 OSS = "countries/Ossetia.txt"
 KBR = "countries/Kabardia.txt"
+KAH = "countries/Kakheti.txt"
+ABK = "countries/Abkhazia.txt"
+
+# Hispaniola
+HIT = "countries/Higuey.txt"
+JRT = "countries/Jaragua.txt"
+MGT = "countries/Magua.txt"
+MNT = "countries/Maguana.txt"
+MRT = "countries/Marien.txt"
+BOR = "countries/Boriken.txt"
+
+# Low Countries
+BLG = "countries/Belgium.txt"
+
+# Anatolia
+RME = "countries/Rumelia.txt"
+AMS = "countries/Rum_Revolt.txt"
+TEK = "countries/Tekke.txt"

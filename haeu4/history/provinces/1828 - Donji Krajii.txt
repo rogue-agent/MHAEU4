@@ -3,7 +3,7 @@
 owner = BOS # Part of the Bosnian kingdom
 controller = BOS
 culture = serbian
-religion = orthodox
+religion = catholic
 capital = "Jajce"
 trade_goods = livestock
 hre = no

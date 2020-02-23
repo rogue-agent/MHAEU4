@@ -346,7 +346,7 @@ country_event = {
 		}
 		1957 = {
 			spawn_rebels = {
-				size = 2
+				size = 1
 				leader = "Dmitry Shemyaka"
 				type = pretender_rebels
 			}
@@ -389,7 +389,9 @@ country_event = {
 		tag = MOS
 		is_subject = no
 		has_reform = principality
-		NOT = { has_ruler = "Dmitry Shemyaka" }
+		NOT = {
+			dynasty = "Shemyaka"
+		}
 		NOT = { REB = { controls = 1957 } }
 	}
 	
@@ -498,7 +500,7 @@ country_event = {
 		random_owned_province = {
 			spawn_rebels = {
 				type = noble_rebels
-				size = 2
+				size = 1
 			}
 		}
 	}
@@ -998,7 +1000,7 @@ country_event = {
 			limit = { has_province_flag = revolt_2 }
 			spawn_rebels = {
 				type = pretender_rebels
-				size = 2
+				size = 1
 			}
 			clr_province_flag = revolt_2
 		}
@@ -1032,14 +1034,14 @@ country_event = {
 		name = "MOS_civil_war.100.a"
 		if = {
 			limit = {
-				has_ruler = "Dmitry Shemyaka"
+				dynasty = "Shemyaka"
 			}
 			add_stability = -1
 		}
 		if = {
 			limit = {
 				NOT = {
-					has_ruler = "Dmitry Shemyaka"
+					dynasty = "Shemyaka"
 				}
 			}
 			add_stability_or_adm_power = yes
