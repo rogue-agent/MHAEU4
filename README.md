@@ -1,8 +1,7 @@
 Historically accurate eu4
 
-This mod is a co-operation between Brian (nguyenforthewin13) and Thomas (Rogue-agent)
+A mod that used to be a collaboration and composition of other mods to make the experience of Europa Universalis more interesting and historically accurate. 
 
-This mod contains:
-1. Cultures Fixed
-2. Important Political Events
-3. Historically accurate world
+Today the mod is called More Historically Accurate Europa Universalis or MHAEU for short.
+
+This mod tries to make the vanilla definition of EU more historically accurate and interesting, still trying to be true to the Vanilla experience.
