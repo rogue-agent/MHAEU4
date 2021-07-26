@@ -1,0 +1,105 @@
+country_decisions = {
+
+	iberian_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = IBE }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = FRA }		# Basque is a valid culture for both FRA and SPA
+			NOT = { tag = KNI }		# Maltese is part of iberian culture group
+			NOT = { tag = GRA }
+			culture_group = iberian
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
+			}
+			
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			adm_tech = 15
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = GRA }
+			
+			owns = 206
+			owns = 210
+			owns = 211
+			owns = 212
+			owns = 213	# Barcelona
+			owns = 214	# Aragón
+			owns = 215	# Castilla La Vieja
+			owns = 216	# Salamanca
+			owns = 217
+			owns = 224	# Andalucia
+			owns = 219	# Toledo
+			owns = 220	# Valencia
+			owns = 226
+			owns = 227
+			owns = 228
+			owns = 229
+			owns = 230
+			is_core = 206
+			is_core = 210
+			is_core = 211
+			is_core = 212
+			is_core = 226
+			is_core = 227
+			is_core = 228
+			is_core = 229
+			is_core = 230
+			is_core = 213	# Barcelona
+			is_core = 214	# Aragón
+			is_core = 215	# Castilla La Vieja
+			is_core = 216	# Salamanca
+			is_core = 217
+			is_core = 224	# Andalucia
+			is_core = 219	# Toledo
+			is_core = 220	# Valencia			
+		}
+		effect = {
+			change_tag = IBE
+			iberia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = IBE
+			}	
+			
+			random_owned_province = {
+				add_base_tax = 1
+			}
+			
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					owns = 217	# Madrid
+					NOT = { capital = 217 }
+				}
+				set_capital = 217
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 200
+	}
+	
+}
+	
+	

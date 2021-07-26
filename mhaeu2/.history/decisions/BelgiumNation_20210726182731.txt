@@ -1,0 +1,66 @@
+country_decisions = {
+
+	belgium_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				primary_culture = flemish
+				primary_culture = wallonian
+			}
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = NED }
+			NOT = { exists = BEL }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			adm_tech = 10
+			owns_core_province = 92 #Brabant
+		}
+		effect = {
+
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			add_accepted_culture = wallonian
+			add_accepted_culture = flemish
+			BEL = {
+				set_capital = 92 # Kassel
+			}
+			low_countries_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BEL
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = BEL
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

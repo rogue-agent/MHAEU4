@@ -1,0 +1,247 @@
+country_decisions = {
+
+	eng_commonwealth = {
+		major = yes
+		potential = {
+			NOT = { exists = ANG }
+			NOT = { tag = HLR }
+			tag = ENG
+		}
+		allow = {
+			OR = {
+				AND = {
+				FRA = {
+					NOT = { num_of_cities = 40 } #Original 31 +10
+				}
+				senior_union_with = FRA
+				}
+				AND = {
+					NOT = { exists = FRA }
+					owns_or_subject_of = 183 # Paris
+					owns_or_subject_of = 177 # Maine
+					owns_or_subject_of = 191 # Nivernais
+					owns_or_subject_of = 171 # Nantais
+				}
+			}
+			adm_tech = 12
+			is_subject = no
+			stability = 1
+			is_at_war = no
+			owns_core_province = 236				# London
+			NOT = { num_of_unions = 2 }
+			
+		}
+		effect = {
+			change_tag = ANG
+			inherit = FRA
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+					is_emperor = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			add_accepted_culture = cosmopolitan_french
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			if = {
+				limit = {
+					france_region = {
+						NOT = { owned_by = ENG }
+						NOT = { owned_by = FRA }
+						NOT = { owned_by = ANG }
+					}
+				}
+				france_region = {
+					add_permanent_claim = ANG
+				}
+			}
+			random_owned_province = {
+				limit = { culture = english }
+				add_base_tax = 1
+			}
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	fra_commonwealth = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = ANG }
+			NOT = { tag = HLR }
+			tag = FRA
+			ENG = {
+				exists = yes
+				ai = yes
+				was_player = no
+			}
+			OR = {
+				ai = no
+				senior_union_with = ENG
+			}			
+		}
+		allow = {
+			ENG = { NOT = { num_of_cities = 35 } } #Original 14+10
+			adm_tech = 10
+			is_subject = no
+			stability = 1
+			is_at_war = no
+			owns_core_province = 183				# Paris
+			senior_union_with = ENG
+			NOT = { num_of_unions = 2 }
+		}
+		effect = {
+			change_tag = ANG
+			inherit = ENG
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+					is_emperor = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			add_accepted_culture = english
+			if = {
+				limit = {
+					british_isles_region = {
+						NOT = { owned_by = ENG }
+						NOT = { owned_by = FRA }
+						NOT = { owned_by = ANG }
+					}
+				}
+				british_isles_region = {
+					add_permanent_claim = ANG
+				}
+			}
+			random_owned_province = {
+				limit = { culture = cosmopolitan_french }
+				add_base_tax = 1
+			}
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 200
+	}
+	
+	acommonwealth_enforced = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = ANG }
+			FRA = {
+				NOT = { senior_union_with = ENG }
+				NOT = { junior_union_with = ENG }
+			}
+			ENG = {
+				NOT = { senior_union_with = FRA }
+				NOT = { junior_union_with = FRA }
+			}
+			OR = {
+				tag = FRA
+				tag = ENG
+			}
+			OR = {
+				ai = no
+				NOT = { exists = ENG }
+				NOT = { exists = FRA }
+			}
+		}
+		allow = {
+			adm_tech = 15
+			is_subject = no
+			stability = 2
+			is_at_war = no
+			owns_core_province = 183				# Syracuse
+			owns_core_province = 236				# Messina
+		}
+		effect = {
+			change_tag = ANG
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+					is_emperor = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			add_accepted_culture = cosmopolitan_french
+			add_accepted_culture = english
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			if = {
+				limit = {
+					france_region = {
+						NOT = { owned_by = ENG }
+						NOT = { owned_by = FRA }
+						NOT = { owned_by = ANG }
+					}
+				}
+				france_region = {
+					add_permanent_claim = ANG
+				}
+			}
+			if = {
+				limit = {
+					british_isles_region = {
+						NOT = { owned_by = ENG }
+						NOT = { owned_by = FRA }
+						NOT = { owned_by = ANG }
+					}
+				}
+				british_isles_region = {
+					add_permanent_claim = ANG
+				}
+			}
+			random_owned_province = {
+				limit = { has_owner_culture = yes }
+				add_base_tax = 1
+			}
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 200
+	}
+	
+}

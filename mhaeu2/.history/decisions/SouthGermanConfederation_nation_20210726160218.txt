@@ -10,7 +10,9 @@ country_decisions = {
 			culture_group = germanic
 		}
 		provinces_to_highlight = {
-			region = south_german_region
+			OR = {
+				region = south_german_region
+			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -22,25 +24,9 @@ country_decisions = {
 			num_of_cities = 15
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			OR = {
-				owns_or_subject_of = 134
-				owns_or_subject_of = 165
-				owns_or_subject_of = 77
-			}
-			OR = {
-				owns_or_subject_of = 65
-				owns_or_subject_of = 75
-			}
-			OR = {
-				owns_or_subject_of = 1872
-				owns_or_subject_of = 67
-				owns_or_subject_of = 4712
-			}
-			OR = {
-				owns_or_subject_of = 1868
-				owns_or_subject_of = 76
-			}
-			
+			owns_or_subject_of = 134
+			owns_or_subject_of = 65
+			owns_or_subject_of = 1872
 		}
 		effect = {
 			every_subject_country = {

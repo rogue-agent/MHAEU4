@@ -9,5 +9,5 @@ tags={
 	"New Nations"
 }
 name="MHAEU 2.1"
-supported_version="1.31.4"
+supported_version="1.31.5"
 remote_file_id="2352463131"

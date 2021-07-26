@@ -33,7 +33,6 @@
 			 OR = {
 				 AND = {
 					 region = north_german_region
-					 region = low_countries_region
 					 NOT = { area = bohemia_area }
 					 NOT = { area = erzgebirge_area }
 					 NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -64,27 +63,11 @@
 					 NOT = { unrest = 1 }
 				 }
 			 }
-			 OR = {
-			 	owns_or_subject_of = 50
-			 	owns_or_subject_of = 92
-			 }
-			 OR = {
-			 	owns_or_subject_of = 45
-			 	owns_or_subject_of = 44
-			 }
-			 OR = {
-			 	owns_or_subject_of = 61
-			 	owns_or_subject_of = 94
-			 }
-			 OR = {
-			 	owns_or_subject_of = 85
-			 	owns_or_subject_of = 84
-			}
-			OR = {
-			 	owns_or_subject_of = 43
-			 	owns_or_subject_of = 1744
-			}
-			owns_or_subject_of = 57
+			 owns_or_subject_of = 50
+			 owns_or_subject_of = 45
+			 owns_or_subject_of = 44
+			 owns_or_subject_of = 61
+			 owns_or_subject_of = 43
 		 }
 		 effect = {
 			 every_subject_country = {

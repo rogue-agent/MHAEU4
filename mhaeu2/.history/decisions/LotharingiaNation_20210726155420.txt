@@ -22,16 +22,13 @@ country_decisions = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-			province_id = 4696
-			province_id = 202
-			province_id = 192
-			province_id = 193
-			province_id = 90
-			province_id = 98
-			province_id = 97
-			province_id = 91
-			province_id = 191
-			province_id = 1878
+			region = low_countries_region
+			area = bourgogne_area
+			area = west_burgundy_area
+			area = savoy_dauphine_area
+			area = lorraine_area
+			area = piedmont_area
+			area = provence_area
 		}
 		allow = {
 			is_at_war = no

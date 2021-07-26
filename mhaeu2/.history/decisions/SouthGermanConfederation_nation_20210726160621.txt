@@ -36,10 +36,6 @@ country_decisions = {
 				owns_or_subject_of = 67
 				owns_or_subject_of = 4712
 			}
-			OR = {
-				owns_or_subject_of = 1868
-				owns_or_subject_of = 76
-			}
 			
 		}
 		effect = {
