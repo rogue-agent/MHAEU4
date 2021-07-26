@@ -1,4 +1,0 @@
-# 10 - Jämtland
-
-culture = jamtlandic
-capital = "Berg"

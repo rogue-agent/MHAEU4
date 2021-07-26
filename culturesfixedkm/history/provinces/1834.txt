@@ -1,4 +1,0 @@
-#1834-Dörpt
-
-culture = setosian
-capital = "Tartto"

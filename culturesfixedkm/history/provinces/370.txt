@@ -1,4 +1,0 @@
-# 370 - Reyjkjavik
-
-culture = icelandic
-capital = "Reykjavík"

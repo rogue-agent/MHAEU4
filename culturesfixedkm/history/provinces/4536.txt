@@ -1,4 +1,0 @@
-# 4536 - LYDA
-
-culture = yotvingian
-capital = "Lida"

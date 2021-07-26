@@ -1,4 +1,0 @@
-# 1978 - Shetlandsøyene
-
-culture = norn
-capital = "Thurso"

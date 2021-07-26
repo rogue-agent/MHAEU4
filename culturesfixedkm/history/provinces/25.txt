@@ -1,4 +1,0 @@
-# 25 - Gotland
-
-culture = gutnish
-capital = "Visby"

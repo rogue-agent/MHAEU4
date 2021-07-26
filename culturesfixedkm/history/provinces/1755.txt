@@ -1,4 +1,0 @@
-# 1755 - Ustyug
-
-culture = chud
-capital = "Nyuksenitsa"

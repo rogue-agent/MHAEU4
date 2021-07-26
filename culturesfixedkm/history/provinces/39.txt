@@ -1,4 +1,0 @@
-# 39 - Goldingen
-
-culture = livonian
-capital = "Vindau"

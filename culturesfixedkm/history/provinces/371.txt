@@ -1,4 +1,0 @@
-# 371 - Akureyri
-
-culture = icelandic
-capital = "Akureyri"

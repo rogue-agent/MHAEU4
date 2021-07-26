@@ -1,4 +1,0 @@
-#4258-Onega
-
-culture = karelian
-capital = "Oonekka"

@@ -1,0 +1,46 @@
+country_decisions = {
+
+	form_byx = {
+		major = yes
+		potential = {
+			NOT = { exists = BYX }
+			NOT = { tag = BYX }
+			normal_or_historical_nations = yes
+			primary_culture = byzantine
+		}
+		provinces_to_highlight = {
+			culture = byzantine
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			AND = {
+				CAPITAL = 151
+				religion = muslim
+			}
+		}
+		effect = {
+			change_tag = BYX
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				set_government_rank = 3
+			}
+			change_technology_group = muslim
+			change_government = monarchy
+			add_government_reform = iqta
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = byzanta_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

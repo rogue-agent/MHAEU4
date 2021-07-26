@@ -1,4 +1,0 @@
-# 313 - Soroka
-
-culture = karelian
-capital = "Ääninen"

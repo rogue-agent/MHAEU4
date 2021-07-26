@@ -1,4 +1,0 @@
-# 1859 - Strasburg
-
-culture = prussian
-capital = "Strasburg"

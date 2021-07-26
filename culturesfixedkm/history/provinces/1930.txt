@@ -1,4 +1,0 @@
-# 1930 - 
-
-culture = finno-swede
-capital = "Mariehamn"

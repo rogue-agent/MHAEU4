@@ -1,4 +1,0 @@
-# 4165 - Göinge
-
-culture = scanian
-capital = "Christianstad"

@@ -1,4 +1,0 @@
-# 34 - Ingria
-
-culture = ingrian
-capital = "Ingria"

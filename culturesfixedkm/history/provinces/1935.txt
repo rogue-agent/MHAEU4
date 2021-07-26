@@ -1,4 +1,0 @@
-# 1935 - Mitau
-
-culture = semigallians
-capital = "Talsi"

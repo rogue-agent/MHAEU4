@@ -1,4 +1,0 @@
-# 309 - Olonets
-
-culture = ludic
-capital = "Äänislinna"

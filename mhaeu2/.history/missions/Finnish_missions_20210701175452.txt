@@ -1,0 +1,195 @@
+finnish_missions_one = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = FIN
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	fin_finnish_independence = {
+		icon = mission_conquer_finland
+		required_missions = { }
+		position = 1
+		trigger = {
+			is_subject = no
+			army_size_percentage = 1
+		}
+		effect = {
+			finland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			bothnia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			laponia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			norrland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			pomor_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_karelia = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			karelia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	fin_expand_finland = {
+		icon = mission_rb_colonise_canada
+		required_missions = { fin_finnish_independence }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = finland_area
+				area = bothnia_area
+				area = laponia_area
+				area = norrland_area
+				area = pomor_area
+				area = north_karelia
+				area = karelia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+				
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				OR = {
+					area = finland_area
+					area = bothnia_area
+					area = laponia_area
+					area = norrland_area
+					area = pomor_area
+					area = north_karelia
+					area = karelia_area
+				}
+			}
+		}
+		effect = {
+			add_mil_power = 100
+			add_country_modifier = {
+				name = "fin_the_conquests"
+				duration = 7300
+			}
+			scandinavia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	fin_finnish_them = {
+		icon = mission_rb_unite_the_clans
+		required_missions = { fin_expand_finland }
+		position = 3
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1
+				province_id = 28
+				province_id = 17
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			1 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			28 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			17 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			add_army_tradition = 30
+			custom_tooltip = every_scandi_province_becomes_finnish_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = scandinavia_region
+					}
+					change_culture = finnish
+				}
+			}
+			add_country_modifier = {
+				name = "fin_finnish_hegemony"
+				duration = -1
+			}
+		}
+	}
+
+	fin_hakkapeliitta = {
+		icon = mission_conquer_the_doab
+		required_missions = { }
+		position = 4
+
+		trigger = {
+			num_of_cavalry = 10
+			cavalry_fraction = 0.4
+		}
+		effect = {
+			add_country_modifier = {
+				name = "fin_cavalry"	
+				duration = 9125
+			}
+		}
+	}
+
+	fin_white_death = {
+		icon = mission_protect_white_sea_trade
+		required_missions = { fin_hakkapeliitta }
+		position = 5
+
+		trigger = {
+			full_idea_group = defensive_ideas
+		}
+		effect = {
+			add_army_tradition = 20
+			add_country_modifier = {
+				name = "fin_white_death_modifier"
+				duration = -1
+			}
+		}
+	}
+}

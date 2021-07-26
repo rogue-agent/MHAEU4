@@ -1,4 +1,0 @@
-# 369 - Orkneoe
-
-culture = norn
-capital = "Kyrk"

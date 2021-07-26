@@ -1,4 +1,0 @@
-# 4262 - Totma
-
-culture = chud
-capital = "Totma"

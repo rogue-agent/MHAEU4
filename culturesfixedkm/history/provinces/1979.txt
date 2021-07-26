@@ -1,4 +1,0 @@
-# 1979 - Føroyar
-
-culture = faroese
-capital = "Tórshavn"

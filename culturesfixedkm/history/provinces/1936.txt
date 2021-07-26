@@ -1,4 +1,0 @@
-# 1936 - Kaunas
-
-culture = samogitian
-capital = "Kaunas"

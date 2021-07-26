@@ -1,3 +1,0 @@
-fear_in_the_ranks = {
-	discipline = 0.05
-}

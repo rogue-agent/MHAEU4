@@ -1,4 +1,0 @@
-#37-Liefland
-
-culture = livonian
-capital = "Salatsi"

@@ -1,4 +1,0 @@
-# 6 - Lund
-
-culture = scanian
-capital = "Lunden"

@@ -1,4 +1,0 @@
-# 4537 - Naugardukas
-
-culture = yotvingian
-capital = "Dzjatlava"

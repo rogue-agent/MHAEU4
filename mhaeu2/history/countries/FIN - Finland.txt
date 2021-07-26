@@ -1,0 +1,35 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+religion = catholic
+primary_culture = finnish
+add_accepted_culture = karelian
+add_accepted_culture = finno-swede
+historical_rival = SWE
+capital = 27	# Finland
+
+1444.11.11 = {
+    monarch = {
+		country_of_origin = SWE
+		name = "Karl "
+		dynasty = "Knutsson"
+		birth_date = 1440.8.7
+		death_date = 1470.5.14
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+1470.11.11 = {
+    monarch = {
+		country_of_origin = SWE
+		name = "Sten "
+		dynasty = "Sture"
+		birth_date = 1440.8.7
+		death_date = 1503.12.14
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

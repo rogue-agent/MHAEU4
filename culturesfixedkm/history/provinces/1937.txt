@@ -1,4 +1,0 @@
-# 1937 - Gardinas
-
-culture = yotvingian
-capital = "Hrodna"

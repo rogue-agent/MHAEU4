@@ -1,9 +1,0 @@
-#4152 - Kuusamo incl Maanselkä and Kitka
-
-owner = FIN
-controller = FIN
-add_core = FIN
-add_core = SWE
-religion = catholic
-capital = "Maanselkä"
-is_city = yes

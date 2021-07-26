@@ -1,4 +1,0 @@
-# 1105 - Paamiut
-
-culture = greenlandic
-capital = "Paamiut"

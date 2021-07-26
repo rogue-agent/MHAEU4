@@ -1,4 +1,0 @@
-# 9 - Ångermanland
-
-culture = swedish
-capital = "Tuna"

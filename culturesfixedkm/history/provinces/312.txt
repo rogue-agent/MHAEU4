@@ -1,4 +1,0 @@
-# 312 - Beloozero
-
-culture = veps
-capital = "Volokta"

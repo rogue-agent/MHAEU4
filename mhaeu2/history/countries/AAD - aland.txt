@@ -1,0 +1,12 @@
+government = republic
+add_government_reform = merchant_republic
+technology_group = western
+primary_culture = finno-swede
+religion = protestant
+add_accepted_culture = finnish
+add_accepted_culture = swedish
+historical_friend = FIN
+historical_friend = SWE
+historical_friend = SCA
+capital = 1930
+government_rank = 1

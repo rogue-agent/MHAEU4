@@ -1,0 +1,80 @@
+---1.0---
+Finland, Grand duchal vassal under sweden.
+Oresound tolls, Annoy sweden with them (historical)
+Alencon, Duchal vassal under the French throne, with ideas
+Armangac, Duchal vassal under the French throne, with ideas
+Berry, Duchal vassal under the French throne, with ideas
+Bourbonnais, Duchal vassal under the French throne, with ideas
+Auvergne, Duchal personal union under the Bourbonnais throne, with ideas
+Maine, Duchal vassal under the English throne
+Burgund, Duchal junior partner under the Burgundian throne, thanks to Count Flandy, with ideas
+
+---1.1---
+Mesembria, A new province added to Byzantium
+Epirus, Greek duchy
+Athens, Duchal vassal under Morea
+Ösel-Wiek, Bischopric vassal under Livonian order
+Kurland, Bischopric vassal under Livonian order
+Dörpt, Bischopric vassal under Livonian order
+Wallis, Bischopric vassal under Savoy, with ideas
+Wroclaw, Bischopric vassal, thanks to Luvencedus!, with missions and ideas
+Changes to Finnish culture
+Changes to German culture group
+Changes to Slavic culture groups
+New Faroese culture
+New Icelandic culture
+New Norn culture
+---1.2---
+Bug Fixes
+
+---1.3---
+compat update
+
+---1.4---
+compat update
+
+---1.5---
+South German confederation formable, with ideas and missions
+
+---1.6---
+bug fixes
+
+---1.7---
+compat update
+
+---2.0---
+North German Confederation formable
+Byzanta, when the Byzantines chose God over dust
+New Finnish missions
+New Swedish missions
+Åland releasable
+New Norwegian missions
+Scania releasable with Scanian culture
+Gotaland releasable
+Gotland releasable with Gutnish culture
+Ingria releasable with Ingrian culture
+More Karelian cores and culture provinces
+More Sapmi cores and culture provinces and new missions
+
+---2.1---
+New Avignon ideas
+New Alencon ideas
+New Berry ideas
+New Foix ideas
+New Bourbonnais ideas
+New Armagnac ideas
+New Picardy ideas
+New Champagne ideas
+New Berg ideas
+
+---2.1.1---
+compat update
+
+---2.1.2---
+bug fixes
+
+---2.1.3---
+bug fixes
+
+---2.1.4---
+bug fixes

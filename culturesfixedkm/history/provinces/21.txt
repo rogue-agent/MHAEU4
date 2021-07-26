@@ -1,4 +1,0 @@
-# 21 - Hålogaland
-
-culture = sapmi
-capital = "Fauski"
