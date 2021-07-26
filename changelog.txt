@@ -79,3 +79,17 @@ bug fixes
 
 ---2.1.4---
 bug fixes
+compat update
+
+---2.2---
+Formable Angevin Empire
+Formable Iberian Union
+Formable Carthago
+Formable Belgium
+Fixed Germany formable
+Fixed French formable
+Fixed NGF formable
+Fixed Lotharingia formable
+Fixed Roman Empire formable
+Fixed SGF formable
+
