@@ -24,6 +24,7 @@ Changes to Slavic culture groups
 New Faroese culture
 New Icelandic culture
 New Norn culture
+
 ---1.2---
 Bug Fixes
 
