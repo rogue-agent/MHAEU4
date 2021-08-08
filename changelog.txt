@@ -93,3 +93,7 @@ Fixed Lotharingia formable
 Fixed Roman Empire formable
 Fixed SGF formable
 
+---2.2.1---
+Fixed Ottoman missions
+Fixed Lotharingia formable
+

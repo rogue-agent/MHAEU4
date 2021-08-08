@@ -8,6 +8,6 @@ tags={
 	"Missions And Decisions"
 	"New Nations"
 }
-name="MHAEU 2.1"
+name="MHAEU 2.2"
 supported_version="1.31.5"
 remote_file_id="2352463131"

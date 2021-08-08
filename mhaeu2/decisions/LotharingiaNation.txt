@@ -57,7 +57,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = LOT
-			dynasty = "de Lotaringia"
+			set_dynasty = "de Lotaringia"
 			swap_non_generic_missions = yes
 			if = {
 				limit = {
