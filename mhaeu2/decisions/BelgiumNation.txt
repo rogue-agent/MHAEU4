@@ -7,6 +7,31 @@ country_decisions = {
 				primary_culture = flemish
 				primary_culture = wallonian
 			}
+			OR = {
+				OR = {
+					tag = FLA
+					tag = BRB
+					tag = LIE
+				}
+				OR = {
+					capital = 87
+					capital = 88
+					capital = 90
+					capital = 1865
+					capital = 4769
+					capital = 1743
+					capital = 181
+					capital = 94
+					capital = 93
+					capital = 1866
+					capital = 91
+					capital = 92
+					capital = 2974
+					capital = 1744
+					capital = 1742
+				}
+			}
+			
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = ROM }
@@ -23,24 +48,44 @@ country_decisions = {
 			
 		}
 		allow = {
-			is_subject = no
 			is_at_war = no
 			adm_tech = 10
-			owns_core_province = 92 #Brabant
+			OR = {
+				OR = {
+					tag = FLA
+					tag = BRB
+					tag = LIE
+				}
+				OR = {
+					capital = 87
+					capital = 88
+					capital = 90
+					capital = 1865
+					capital = 4769
+					capital = 1743
+					capital = 181
+					capital = 94
+					capital = 93
+					capital = 1866
+					capital = 91
+					capital = 92
+					capital = 2974
+					capital = 1744
+					capital = 1742
+				}
+			}
 		}
 		effect = {
-
 			if = {
 				limit = {
 					NOT = { government_rank = 2 }
 				}
 				set_government_rank = 2
 			}
+			change_government = republic
+			add_government_reform = american_republic
 			add_accepted_culture = wallonian
 			add_accepted_culture = flemish
-			BEL = {
-				set_capital = 92 # Brussel
-			}
 			low_countries_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
