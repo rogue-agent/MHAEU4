@@ -16,7 +16,9 @@ country_decisions = {
 				capital = 1878
 			}
 		}
+		
 		provinces_to_highlight = {
+			OR = {
 			province_id = 1878
 			province_id = 4696
 			province_id = 202
@@ -28,11 +30,10 @@ country_decisions = {
 			province_id = 91
 			province_id = 191
 			province_id = 1878
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
 			}
+			NOT = { owned_by = ROOT }
 		}
+
 		allow = {
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
