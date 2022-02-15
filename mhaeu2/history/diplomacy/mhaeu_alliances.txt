@@ -1,0 +1,48 @@
+vassal = {
+	first = LIV
+	second = OSW
+	start_date = 1444.1.1
+	end_date = 1466.3.6
+}
+
+vassal = {
+	first = LIV
+	second = DRP
+	start_date = 1444.1.1
+	end_date = 1539.1.1
+}
+
+vassal = {
+	first = LIV
+	second = KUR
+	start_date = 1444.1.1
+	end_date = 1539.1.1
+}
+
+union = {
+	first = BOH
+	second = MVA
+	start_date = 1440.7.1 #ladislaus
+	end_date = 1457.11.10
+}
+vassal = {
+	first = SAV
+	second = VLS
+	start_date = 1388.1.1
+	end_date = 1497.6.3
+}
+
+vassal = {
+	first = BYZ
+	second = MOE
+	start_date = 1383.1.1
+	end_date = 1453.5.29
+}
+
+# Finland, Vassal under Sweden (1323-1743)
+vassal = {
+	first = SWE
+	second = FIN
+	start_date = 1444.1.1 # duchy came under swedish rule
+	end_date = 1743.1.1 # Treaty of Åbo
+}

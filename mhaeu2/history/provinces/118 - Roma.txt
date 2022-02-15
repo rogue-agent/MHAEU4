@@ -1,19 +1,19 @@
 #118 - Roma
 
+add_core = CSR
 owner = PAP
 controller = PAP
 culture = umbrian 
 religion = catholic
 hre = no
-base_tax = 11
-base_production = 11
+base_tax = 9
+base_production = 9
 trade_goods = paper
-base_manpower = 9
+base_manpower = 7
 capital = "Roma"
 is_city = yes
 fort_15th = yes #Castel Sant'Angelo
 add_core = PAP
-add_core = CSR
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
@@ -26,13 +26,11 @@ center_of_trade = 1
 
 1408.1.1 = { owner = NAP controller = NAP add_core = NAP } # Ladislas takes control of Ancona
 1414.8.6 = { owner = PAP controller = PAP remove_core = NAP }
-1750.1.1 = { add_core = CSR } 
 1750.1.1 = { add_core = ITA } 
 1809.4.10 = { controller = FRA } # Occupied by French troops
-1809.10.14 = { owner = FRA add_core = FRA } # Treaty of Schï¿½nbrunn
+1809.10.14 = { owner = FRA add_core = FRA } # Treaty of Schönbrunn
 1814.4.11 = {
 	owner = PAP
 	controller = PAP
 	remove_core = FRA
-	remove_core = CSR
 } # # Treaty of Fontainebleau, Napoleon abdicates unconditionally

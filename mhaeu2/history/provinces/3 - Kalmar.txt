@@ -1,9 +1,9 @@
 #Eastern and Northern Smï¿½land - Includes parts under ï¿½stgï¿½talag
 
+add_core = GGT
 add_core = SWE
 owner = SWE
 controller = SWE
-add_core = GGT
 culture = swedish
 religion = catholic
 hre = no
@@ -33,6 +33,6 @@ discovered_by = ottoman
 1598.8.1 = { controller = PLC } # Sigismund tries to reconquer his crown
 1599.5.12 = { controller = SWE } # Duke Karl get it back
 1611.8.3 = { controller = DAN } # The War of Kalmar-Captured by Christian IV
-1613.1.20 = { controller = SWE }# The Peace of Knï¿½red
-1623.1.1 = { base_manpower = 4 } # Smï¿½land did a huge contribution in number of regiments
+1613.1.20 = { controller = SWE }# The Peace of Knäred
+1623.1.1 = { base_manpower = 4 } # Småland did a huge contribution in number of regiments
 

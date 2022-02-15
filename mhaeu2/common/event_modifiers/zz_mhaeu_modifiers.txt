@@ -1,0 +1,10 @@
+##################################################################################################
+# scriptable and usable for event-system below.
+##################################################################################################
+
+walls_of_constantinople = {
+	local_defensiveness = 0.20
+}
+oeresund_toll = {
+	province_trade_power_modifier = 0.40
+}

@@ -1,9 +1,10 @@
 #369 - Orkney
 
-owner = NOR
-controller = NOR
+
 culture = norn
 religion = catholic
+owner = NOR
+controller = NOR
 hre = no
 base_tax = 1 
 base_production = 1

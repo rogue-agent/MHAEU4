@@ -1,0 +1,66 @@
+# NOT IN VANILLA
+vassal = {
+	first = FRA
+	second = ORL
+	start_date = 1344.1.1
+	end_date = 1589.1.5
+}
+
+vassal = {
+	first = FRA
+	second = ANG
+	start_date = 839.1.1
+	end_date = 1531.9.22
+}
+
+vassal = {
+	first = FRA
+	second = BOU
+	start_date = 1327.1.1
+	end_date = 1523.1.1
+}
+
+vassal = {
+	first = FRA
+	second = AMG
+	start_date = 960.1.1
+	end_date = 1497.6.3
+}
+
+vassal = {
+	first = FRA
+	second = FOI
+	start_date = 960.1.1
+	end_date = 1497.6.3
+}
+
+union = {
+	first = BOU
+	second = AUV
+	start_date = 1155.1.1
+	end_date = 1525.1.1
+}
+union = {
+	first = BUR
+	second = CBU
+	start_date = 1384.1.1
+	end_date = 1512.1.1
+}
+vassal = {
+	first = FRA
+	second = BER
+	start_date = 960.1.1
+	end_date = 1497.6.3
+}
+vassal = {
+	first = ENG
+	second = CME
+	start_date = 1424.1.1
+	end_date = 1497.6.3
+}
+vassal = {
+	first = FRA
+	second = ALE
+	start_date = 960.1.1
+	end_date = 1497.6.3
+}

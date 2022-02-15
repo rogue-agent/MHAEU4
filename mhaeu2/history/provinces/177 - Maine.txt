@@ -1,5 +1,6 @@
 # 177 Maine - Principal cities: Le Mans, Laval
 
+add_core = CME
 owner = CME
 controller = CME
 capital = "Le Mans"
@@ -15,7 +16,6 @@ add_local_autonomy = 80
 add_core = ENG
 add_core = PRO
 add_core = FRA
-add_core = CME
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

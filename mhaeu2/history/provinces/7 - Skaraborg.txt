@@ -24,5 +24,5 @@ discovered_by = ottoman
 1598.8.15 = { controller = PLC } # Sigismund tries to reconquer his crown
 1598.12.15 = { controller = SWE } # Duke Karl get it back
 1612.5.24 = { controller = DAN } # The War of Kalmar-Captured by Christian IV
-1613.1.20 = { controller = SWE }# The Peace of Knï¿½red
-1621.1.1 = { capital = "Gï¿½teborg" }
+1613.1.20 = { controller = SWE }# The Peace of Knäred
+1621.1.1 = { capital = "Göteborg" }

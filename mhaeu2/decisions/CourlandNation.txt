@@ -19,6 +19,8 @@ country_decisions = {
 				ai = no
 				is_religion_enabled = protestant
 				is_religion_enabled = reformed
+				is_religion_enabled = hussite
+				is_religion_enabled = anglican
 			}
 		}
 		provinces_to_highlight = {
@@ -38,9 +40,14 @@ country_decisions = {
 			OR = {
 				religion = reformed
 				religion = protestant
+				religion = hussite
+				religion = anglican
 			}
 			owns_core_province = 39	 # Kurland
 			owns_core_province = 1935	 # Semigallia
+			1935 = { 					# Semigallia
+				is_state = yes
+			}
 		}
 		effect = {
 			1935 = { # Semigallia

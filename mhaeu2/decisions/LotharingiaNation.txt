@@ -18,10 +18,6 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			province_id = 1878
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
 			province_id = 4696
 			province_id = 202
 			province_id = 192
@@ -32,6 +28,10 @@ country_decisions = {
 			province_id = 91
 			province_id = 191
 			province_id = 1878
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow = {
 			is_at_war = no
@@ -57,7 +57,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = LOT
-			set_dynasty = "de Lotaringia"
+			set_dynasty = "de Lothaire"
 			swap_non_generic_missions = yes
 			if = {
 				limit = {

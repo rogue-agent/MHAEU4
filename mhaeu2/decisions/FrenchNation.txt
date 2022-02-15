@@ -8,6 +8,8 @@ country_decisions = {
 			NOT = { tag = HLR }
 			NOT = { tag = FRA }
 			NOT = { tag = PAP }
+			NOT = { tag = GER }
+			NOT = { tag = PRU }
 			NOT = { tag = SPA }		# Basque is a valid culture for both FRA and SPA
 			OR = {
 				ai = no
@@ -16,6 +18,7 @@ country_decisions = {
 			OR = {
 				culture_group = french
 				primary_culture = basque
+				primary_culture = breton
 			}
 			is_colonial_nation = no
 			OR = {
@@ -34,7 +37,7 @@ country_decisions = {
 						NOT = {
 							num_of_owned_provinces_with = {
 								value = 15
-								region = france_region
+								culture_group = french
 								is_core = root
 							}
 						}
@@ -65,7 +68,7 @@ country_decisions = {
 			}
 			num_of_owned_provinces_with = {
 				value = 15
-				region = france_region
+				culture_group = french
 				is_core = root
 			}
 		}
