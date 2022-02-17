@@ -19,17 +19,17 @@ country_decisions = {
 		
 		provinces_to_highlight = {
 			OR = {
-			province_id = 1878
-			province_id = 4696
-			province_id = 202
-			province_id = 192
-			province_id = 193
-			province_id = 90
-			province_id = 98
-			province_id = 97
-			province_id = 91
-			province_id = 191
-			province_id = 1878
+				province_id = 1878
+				province_id = 4696
+				province_id = 202
+				province_id = 192
+				province_id = 193
+				province_id = 90
+				province_id = 98
+				province_id = 97
+				province_id = 91
+				province_id = 191
+				province_id = 1878
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -50,9 +50,7 @@ country_decisions = {
 			owns_or_subject_of = 191
 			owns_or_subject_of = 1878
 			OR = {
-				NOT = {
-					hre_size = 1
-				}
+				is_part_of_hre = no
 				is_emperor = yes
 			}
 		}
