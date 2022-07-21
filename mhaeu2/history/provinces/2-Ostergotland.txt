@@ -26,4 +26,4 @@ discovered_by = ottoman
 1501.8.1 = { controller = DAN } # Danish loyalists at Swedish DoW and breaking of vassalage
 1503.6.1 = { controller = SWE } # Retaken by Sweden
 1527.6.1 = { religion = protestant}
-1690.1.1 = { capital = "Norrkï¿½ping" }
+1690.1.1 = { capital = "Norrköping" }
