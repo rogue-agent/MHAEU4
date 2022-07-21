@@ -11,3 +11,11 @@ Credits:
 Count Flandy and the 1356 Developer team
 Luvencedus for Bischopric of Wroclaw
 Missions Expanded Developer team
+
+
+Manual install:
+
+Download MHAEU.zip
+Extract files to Documents folder
+Open the descriptor file MHAEU.mod with a text editor
+Change the path with your username between /users/--/Documents/
