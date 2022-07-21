@@ -97,3 +97,5 @@ Fixed SGF formable
 Fixed Ottoman missions
 Fixed Lotharingia formable
 
+---2.5---
+patched for 1.33.3
