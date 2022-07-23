@@ -29,7 +29,6 @@ country_decisions = {
 			owns_or_subject_of = 1931
 			owns_or_subject_of = 4382
 			owns_or_subject_of = 100
-			owns_or_subject_of = 4770
 			owns_or_subject_of = 97
 			owns_or_subject_of = 4383
 			owns_or_subject_of = 98

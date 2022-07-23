@@ -106,3 +106,6 @@ Patched Ottoman core from Mesambria
 ---2.5.2---
 Patched tag switching from Carthago
 Added Kingdom of Frisia
+
+---2.5.2.1---
+Patched Magna Frisia decision to historical
