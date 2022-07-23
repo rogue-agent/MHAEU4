@@ -1,0 +1,61 @@
+country_decisions = {
+
+	magna_frisia = {
+		major = yes
+		potential = {
+			AND = {
+				primary_culture = frisian
+				NOT = { tag = PAP }
+				NOT = { tag = HLR }
+				NOT = { tag = ROM }
+				NOT = { tag = NED }
+				NOT = { tag = BEL }
+				is_colonial_nation = no
+				OR = {
+					is_former_colonial_nation = no
+					AND = {
+						is_former_colonial_nation = yes
+						ai = no
+					}
+				}
+			
+			}
+		}
+		allow = {
+			is_at_war = no
+			adm_tech = 6
+			primary_culture = frisian
+			owns_or_subject_of = 55
+			owns_or_subject_of = 1931
+			owns_or_subject_of = 4382
+			owns_or_subject_of = 100
+			owns_or_subject_of = 4770
+			owns_or_subject_of = 97
+			owns_or_subject_of = 4383
+			owns_or_subject_of = 98
+				
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			change_government = monarchy
+			low_countries_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

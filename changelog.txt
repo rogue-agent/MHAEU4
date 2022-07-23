@@ -101,4 +101,8 @@ Fixed Lotharingia formable
 Patched for 1.33.3
 
 ---2.5.1---
-Patched Ottoman core from Mesembria
+Patched Ottoman core from Mesambria
+
+---2.5.2---
+Patched tag switching from Carthago
+Added Kingdom of Frisia
