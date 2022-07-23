@@ -4,12 +4,26 @@ country_decisions = {
 		major = yes
 		potential = {
 			AND = {
-				primary_culture = frisian
+				NOT = { government_rank = 2 }
+				NOT = { government_rank = 3 }
 				NOT = { tag = PAP }
 				NOT = { tag = HLR }
 				NOT = { tag = ROM }
 				NOT = { tag = NED }
 				NOT = { tag = BEL }
+				NOT = { tag = NGF }
+				NOT = { tag = SGF }
+				OR = {
+					OR = {
+						tag = FRI
+						NOT = { exists = FRI }
+					}
+					primary_culture = frisian
+				}
+				capital = { 
+					provence_id = 98 #Utrecht aka Traiectum
+					culture = frisian
+				}
 				is_colonial_nation = no
 				OR = {
 					is_former_colonial_nation = no
@@ -21,6 +35,18 @@ country_decisions = {
 			
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 55
+				province_id = 1931
+				province_id = 4382
+				province_id = 100
+				province_id = 97
+				province_id = 4383
+				province_id = 98
+			}
+			NOT = { owned_by = ROOT }
+		}
 		allow = {
 			is_at_war = no
 			adm_tech = 6
@@ -31,22 +57,15 @@ country_decisions = {
 			owns_or_subject_of = 100
 			owns_or_subject_of = 97
 			owns_or_subject_of = 4383
-			owns_or_subject_of = 98
+			owns_or_subject_of = 98 #Utrecht
+			NOT = { government_rank = 2 }
+			NOT = { government_rank = 3 }
 				
 		}
 		effect = {
-			if = {
-				limit = {
-					NOT = { government_rank = 2 }
-				}
-				set_government_rank = 2
-			}
+			change_tag = FRI
+			set_government_rank = 2
 			change_government = monarchy
-			low_countries_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
@@ -56,5 +75,6 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		
 	}
 }

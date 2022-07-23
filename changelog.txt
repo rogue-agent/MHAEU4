@@ -109,3 +109,8 @@ Added Kingdom of Frisia
 
 ---2.5.2.1---
 Patched Magna Frisia decision to historical
+
+---2.5.2.2---
+Patched Frisia decision bug
+Added Frisia decision highlights
+Made it harder to form Frisia
