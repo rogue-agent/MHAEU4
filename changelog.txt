@@ -98,4 +98,7 @@ Fixed Ottoman missions
 Fixed Lotharingia formable
 
 ---2.5---
-patched for 1.33.3
+Patched for 1.33.3
+
+---2.5.1---
+Patched Ottoman core from Mesembria
