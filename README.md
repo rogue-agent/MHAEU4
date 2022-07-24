@@ -20,6 +20,6 @@ Manual install:
 4. Change the path with your username between /users/--/Documents/
 
 
-Windows: Documents\Paradox Interactive\Europa Universalis IV\mod
-Linux: ~/.local/share/Paradox Interactive/Europa Universalis IV/mod
-Mac OS: ~/Documents/Paradox Interactive/Europa Universalis IV/mod
+Windows: Documents\Paradox Interactive\Europa Universalis IV\mod ||
+Linux: ~/.local/share/Paradox Interactive/Europa Universalis IV/mod ||
+Mac OS: ~/Documents/Paradox Interactive/Europa Universalis IV/mod ||
