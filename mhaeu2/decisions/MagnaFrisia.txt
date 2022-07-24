@@ -13,17 +13,6 @@ country_decisions = {
 				NOT = { tag = BEL }
 				NOT = { tag = NGF }
 				NOT = { tag = SGF }
-				OR = {
-					OR = {
-						tag = FRI
-						NOT = { exists = FRI }
-					}
-					primary_culture = frisian
-				}
-				capital = { 
-					provence_id = 98 #Utrecht aka Traiectum
-					culture = frisian
-				}
 				is_colonial_nation = no
 				OR = {
 					is_former_colonial_nation = no
@@ -57,10 +46,16 @@ country_decisions = {
 			owns_or_subject_of = 100
 			owns_or_subject_of = 97
 			owns_or_subject_of = 4383
-			owns_or_subject_of = 98 #Utrecht
+			capital =  98 #Utrecht aka Traiectum
 			NOT = { government_rank = 2 }
 			NOT = { government_rank = 3 }
-				
+			OR = {
+				OR = {
+					tag = FRI
+					NOT = { exists = FRI }
+				}
+				primary_culture = frisian
+			}
 		}
 		effect = {
 			change_tag = FRI

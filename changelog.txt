@@ -114,3 +114,6 @@ Patched Magna Frisia decision to historical
 Patched Frisia decision bug
 Added Frisia decision highlights
 Made it harder to form Frisia
+
+---2.5.2.3---
+Fixed Frisia decision
