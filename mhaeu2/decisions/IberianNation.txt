@@ -9,6 +9,8 @@ country_decisions = {
 			NOT = { tag = FRA }		# Basque is a valid culture for both FRA and SPA
 			NOT = { tag = KNI }		# Maltese is part of iberian culture group
 			NOT = { tag = GRA }
+			NOT = { tag = ROM }
+			NOT = { tag = BYZ }
 			culture_group = iberian
 			OR = {
 				ai = no
@@ -33,40 +35,23 @@ country_decisions = {
 			is_at_war = no
 			NOT = { exists = GRA }
 			
-			owns = 206
-			owns = 210
-			owns = 211
-			owns = 212
-			owns = 213	# Barcelona
-			owns = 214	# Aragón
-			owns = 215	# Castilla La Vieja
-			owns = 216	# Salamanca
-			owns = 217
-			owns = 224	# Andalucia
-			owns = 219	# Toledo
-			owns = 220	# Valencia
-			owns = 226
-			owns = 227
-			owns = 228
-			owns = 229
-			owns = 230
-			is_core = 206
-			is_core = 210
-			is_core = 211
-			is_core = 212
-			is_core = 226
-			is_core = 227
-			is_core = 228
-			is_core = 229
-			is_core = 230
-			is_core = 213	# Barcelona
-			is_core = 214	# Aragón
-			is_core = 215	# Castilla La Vieja
-			is_core = 216	# Salamanca
-			is_core = 217
-			is_core = 224	# Andalucia
-			is_core = 219	# Toledo
-			is_core = 220	# Valencia			
+			owns_core_province = 206
+			owns_core_province = 210
+			owns_core_province = 211
+			owns_core_province = 212
+			owns_core_province = 213	# Barcelona
+			owns_core_province = 214	# Aragón
+			owns_core_province = 215	# Castilla La Vieja
+			owns_core_province = 216	# Salamanca
+			owns_core_province = 217
+			owns_core_province = 224	# Andalucia
+			owns_core_province = 219	# Toledo
+			owns_core_province = 220	# Valencia
+			owns_core_province = 226
+			owns_core_province = 227
+			owns_core_province = 228
+			owns_core_province = 229
+			owns_core_province = 230		
 		}
 		effect = {
 			change_tag = IBE

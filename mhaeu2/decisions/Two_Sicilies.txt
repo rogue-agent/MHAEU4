@@ -1,0 +1,68 @@
+country_decisions = {
+
+	two_sicilies_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { exists = TSI }
+			NOT = { tag = HLR }
+			NOT = { tag = ITA }
+			NOT = { tag = IMA }
+			NOT = { tag = LVE }
+			NOT = { tag = CIS }
+			NOT = { tag = ADR }
+			NOT = { government_rank = 3 }
+			OR = {
+				culture_group = latin
+				capital_scope = {
+						area = sicily_area
+				}
+				capital_scope = {
+						area = western_sicily_area
+				}
+				capital_scope = {
+						area = naples_area
+				}
+				capital_scope = {
+						area = lazio_area
+				}
+				capital_scope = {
+						area = calabria_area
+				}
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 8
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = TSI }
+            owns_core_province = 121 # Napoli
+            owns_core_province = 125 # Palermo
+            owns_core_province = 120 # Abruzzi
+			owns_core_province = 124 # Messina
+            owns_core_province = 2982 # Syracusae
+			owns_core_province = 1933 # Bari
+			owns_core_province = 122 # Salento
+			owns_core_province = 123 # Calabria
+			owns_core_province = 2983 # Salerno
+			owns_core_province = 2984 # Cosenza
+			owns_core_province = 1934 # Lucania
+		}
+	 	effect = {
+			change_tag = TSI
+			change_government = monarchy
+			add_prestige = 25
+			set_capital = 121 # Napoli
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+}

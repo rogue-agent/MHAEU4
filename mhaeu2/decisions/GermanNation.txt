@@ -13,6 +13,7 @@ country_decisions = {
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = ROM }
+			NOT = { tag = BYZ }
 			NOT = { tag = FRA }
 			OR = {
 				ai = no

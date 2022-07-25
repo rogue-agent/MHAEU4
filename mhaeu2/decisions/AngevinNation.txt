@@ -5,6 +5,8 @@ country_decisions = {
 		potential = {
 			NOT = { exists = ANG }
 			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = BYZ }
 			culture_group = british
 		}
 		allow = {

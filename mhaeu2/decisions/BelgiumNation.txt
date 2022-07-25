@@ -3,6 +3,8 @@ country_decisions = {
 	belgium_nation = {
 		major = yes
 		potential = {
+			NOT = { government_rank = 2 }
+			NOT = { government_rank = 3 }
 			OR = {
 				primary_culture = flemish
 				primary_culture = wallonian

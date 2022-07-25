@@ -1,0 +1,79 @@
+country_decisions = {
+
+	celtic_union_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = GBR }
+			NOT = { tag = ENG }
+			NOT = { tag = FRA }
+			NOT = { exists = CEU }
+			NOT = { tag = EUR }
+			NOT = { tag = TNA }
+			NOT = { government_rank = 3 }
+			NOT = { tag = ANG}
+			culture_group = gaelic
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = munster_area
+				area = connacht_area
+				area = leinster_area
+				area = ulster_area
+				area = kingdom_of_the_isles_area
+				area = highlands_area
+				area = lowlands_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			adm_tech = 9
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = CEU }
+            munster_area = {
+				type = all
+				owned_by = ROOT
+			}
+			connacht_area = {
+				type = all
+				owned_by = ROOT
+			}
+			leinster_area = {
+				type = all
+				owned_by = ROOT
+			}
+			ulster_area = {
+				type = all
+				owned_by = ROOT
+			}
+			kingdom_of_the_isles_area = {
+				type = all
+				owned_by = ROOT
+			}
+			highlands_area = {
+				type = all
+				owned_by = ROOT
+			}
+			lowlands_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+	 	effect = {
+			change_tag = CEU
+			add_prestige = 25
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

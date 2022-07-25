@@ -3,9 +3,10 @@ country_decisions = {
 	carthage_nation = {
 		major = yes
 		potential = {
+			NOT = { government_rank = 1 }
 			capital_scope = {
-						region = maghreb_region
-					}
+				region = maghreb_region
+			}
 			normal_or_historical_nations = yes
 			OR = {
 				ai = no

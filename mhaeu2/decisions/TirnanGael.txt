@@ -1,0 +1,156 @@
+country_decisions = {
+
+	tir_na_ngael_nation = { #Tir na nGael
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_tir_na_ngael_flag_bt }
+			NOT = { exists = TNA }
+			NOT = { tag = GBR }			#Unlikely, but doesn't do any harm here
+			NOT = { tag = UNK }			#Unlikely, but doesn't do any harm here
+			culture_group = gaelic
+			OR = {
+				tag = IRE
+				tag = ANI
+				tag = SCO
+				tag = CEU
+				num_of_cities = 33			#At least 1/2 of Ireland and Scotland's 65 provinces to see, if not IRE, ANI, or SCO
+			}	#Don't want to be able to see this too early. First goal should be forming provincial kingdoms and then Ireland or overthrowing Scotland.
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = munster_area
+				area = connacht_area
+				area = leinster_area
+				area = ulster_area
+				area = kingdom_of_the_isles_area
+				area = highlands_area
+				area = lowlands_area
+				area = wales_area
+				area = wessex_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = TNA }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			government_rank = 2			#We dont want a rank 1 jumping to rank 3 in one go
+			owns_core_province = 4120			#Kildare, stand in for Tara
+			owns_core_province = 250			#Fife
+			munster_area = {
+				type = all
+				owned_by = ROOT
+			}
+			connacht_area = {
+				type = all
+				owned_by = ROOT
+			}
+			leinster_area = {
+				type = all
+				owned_by = ROOT
+			}
+			ulster_area = {
+				type = all
+				owned_by = ROOT
+			}
+			kingdom_of_the_isles_area = {
+				type = all
+				owned_by = ROOT
+			}
+			highlands_area = {
+				type = all
+				owned_by = ROOT
+			}
+			lowlands_area = {
+				type = all
+				owned_by = ROOT
+			}
+			wales_area = {
+				type = all
+				owned_by = ROOT
+			}
+			wessex_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			change_tag = TNA
+			remove_non_electors_emperors_from_empire_effect = yes
+			munster_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TNA
+			}
+			connacht_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TNA
+			}
+			leinster_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TNA
+			}
+			ulster_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TNA
+			}
+			lowlands_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TNA
+			}
+			scottish_marches_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TNA
+			}
+			highlands_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TNA
+			}
+			kingdom_of_the_isles_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TNA
+			}
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 30
+			swap_ideas = yes
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+}
+			

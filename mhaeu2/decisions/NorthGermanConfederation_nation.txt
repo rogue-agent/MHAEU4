@@ -3,7 +3,7 @@
 		 major = yes
 		 potential = {
 			OR = {
-			   capital_scope = {
+			  	capital_scope = {
 						region = north_german_region
 				} 
 				capital_scope = {
@@ -27,7 +27,7 @@
 					 NOT = { government = theocracy }
 				 }
 			 }
-			 culture_group = germanic
+			culture_group = germanic
 		 }
 		 provinces_to_highlight = {
 			 OR = {

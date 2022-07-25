@@ -117,3 +117,23 @@ Made it harder to form Frisia
 
 ---2.5.2.3---
 Fixed Frisia decision
+
+---2.6--- #Eire's glory
+Added Bremen-Verden formable
+Added Celtic Nation (Tir na Celtigh)
+Added Gaelic Union (Tir na nGael)
+Added Franconia Formable
+Added Two-Siciles
+Added CSR decision
+Added Easter Egg
+Added Main theme
+Changed Roman restoration decision to be more historical (removed random cities)
+Changed Low lands formable decision to be more low lands supportive
+Changed Iberia formable
+Changed Irish formable
+Fixed Frisia decision
+Fixed bugs in other formable decisions
+Fixed Welsh culture not in Gaelic group
+Fixed British formable having gaelic Scottish instead of Scottish
+Fixed SGF formable
+Fixed missing localization
