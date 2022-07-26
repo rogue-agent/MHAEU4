@@ -1,0 +1,74 @@
+country_decisions = {
+
+	swabia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			primary_culture = swabian
+			NOT = { exists = SWA }
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { tag = GER }
+			NOT = { tag = PRU }
+			NOT = { tag = HSA }
+			NOT = { government_rank = 2 }
+			NOT = { government_rank = 3 }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			adm_tech = 7
+			owns_core_province = 1872 #Brabant
+			owns_core_province = 74 #Brabant
+			owns_core_province = 70 #Brabant
+			owns_core_province = 75 #Brabant
+		}
+		effect = {
+			change_tag = SWA
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			random_owned_province = {
+				add_base_tax = 1
+			}
+			add_country_modifier = {
+				name = "decentralization_modifier"
+				duration = 7300
+			}
+			south_germany_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SWA
+			}			
+			add_prestige = 25
+			SWA = {
+				set_capital = 1872 # Kassel
+			}	
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_part_of_hre = yes
+				is_elector = no	
+			}
+		}
+	}
+}

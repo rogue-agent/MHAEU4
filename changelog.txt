@@ -137,3 +137,19 @@ Fixed Welsh culture not in Gaelic group
 Fixed British formable having gaelic Scottish instead of Scottish
 Fixed SGF formable
 Fixed missing localization
+
+---2.6.1---
+Added missing localization
+Added missing Gaelic ideas
+Added missing Celtic ideas
+Added missing Belgian ideas
+Added missing Swabian missions
+Added missing Franconian missions
+Added missing Maine missions
+Added missing NGF missions
+Added missing flags
+Added Coptic missions
+Added Swabia formable
+Changed Rûm ideas
+Changed Danish missions
+Removed Two-Sicilies, well it was already ingame, my bad.

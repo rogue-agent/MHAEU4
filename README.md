@@ -27,5 +27,5 @@ Mac OS: ~/Documents/Paradox Interactive/Europa Universalis IV/mod ||
 Version:
 - 2 (Major update)
 - 6 (Feature update)
-- 0 (Bug fixes)
-- 1 (Minor fixes)
+- 0 (Minor update)
+- 1 (bug fixes)
