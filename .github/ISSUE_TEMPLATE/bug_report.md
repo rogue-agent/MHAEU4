@@ -11,7 +11,7 @@ assignees: ''
 A clear and concise description of what the bug is.
 
 **To Reproduce**
-Steps to reproduce the behavior:
+Steps to reproduce the behaviour:
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
@@ -24,9 +24,9 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Europa Universalis version: [e.g. chrome, safari]
- - Mod Version: [e.g. 22]
+ - OS: [e.g. Windows or Arch Linux] (If Linux, include kernel version and DE)
+ - Europa Universalis version: [e.g. 1.33.2]
+ - Mod Version: [e.g. 2.5.2.3]
  - Other Mods: [e.g. Missions Expanded]
 
 
