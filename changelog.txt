@@ -154,7 +154,7 @@ Changed Rûm ideas
 Changed Danish missions
 Removed Two-Sicilies, well it was already ingame, my bad.
 
---2.6.2---
+---2.6.2---
 Added missing localization for the ideas of County of Burgundy
 Added missing localization for Celtic decision
 Added missing localization for Valais' ideas
@@ -168,3 +168,6 @@ Fixed Netherlands formable
 Removed Swabia, well it was already ingame, I'll leave in the missions tho.
 Removed Franconia, well it was already ingame, I'll leave in the missions tho.
 
+---2.6.2.1---
+Added missing localization for Danish missions
+Fixed Danish missions

@@ -5,7 +5,6 @@ DAN_missions_1 = {
 	potential = {
 		OR = { 
 			tag = DAN
-			tag = DNR
 		}
 	}
 	has_country_shield = yes
@@ -868,13 +867,13 @@ DAN_missions_german = {
 		required_missions = { }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 4800
+				province_id = 13
 				province_id = 1775
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			4800 = {
+			13 = {
 				owned_by = ROOT
 			}
 			1775 = {
