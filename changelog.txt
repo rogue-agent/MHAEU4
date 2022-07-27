@@ -143,13 +143,28 @@ Added missing localization
 Added missing Gaelic ideas
 Added missing Celtic ideas
 Added missing Belgian ideas
-Added missing Swabian missions
+Added missing NGF ideas
 Added missing Franconian missions
 Added missing Maine missions
-Added missing NGF missions
 Added missing flags
 Added Coptic missions
 Added Swabia formable
+Added Swabian missions
 Changed Rûm ideas
 Changed Danish missions
 Removed Two-Sicilies, well it was already ingame, my bad.
+
+--2.6.2---
+Added missing localization for the ideas of County of Burgundy
+Added missing localization for Celtic decision
+Added missing localization for Valais' ideas
+Added missing localization for Gaelic ideas
+Added missing localization for Celtic ideas
+Added missing localization for North German Confederation ideas
+Added missing localization for Belgian ideas
+Changed Celtic formable
+Changed Bremer-Verden formable
+Fixed Netherlands formable
+Removed Swabia, well it was already ingame, I'll leave in the missions tho.
+Removed Franconia, well it was already ingame, I'll leave in the missions tho.
+

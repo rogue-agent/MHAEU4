@@ -8,7 +8,18 @@ country_decisions = {
 			OR = {
 				tag = VER
 				tag = BRE
+				AND = {
+					num_of_cities = 3
+					OR = {
+						capital = 1874
+						capital = 54
+					}
+					NOT = {
+						num_of_cities = 4
+					}
+				}
 			}
+			
 			OR = {
 				ai = no
 				AND = {

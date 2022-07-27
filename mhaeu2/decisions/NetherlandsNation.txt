@@ -18,10 +18,7 @@ country_decisions = {
 			NOT = { tag = NED }
 			NOT = { tag = HLR }
 			NOT = { government_rank = 3 }
-			OR = {
-				culture_group = germanic
-				capital_scope = { region = low_countries_region } 
-			}
+			capital_scope = { region = low_countries_region } 
 			OR = {
 				ai = no
 				AND = {

@@ -12,7 +12,10 @@ country_decisions = {
 			NOT = { tag = TNA }
 			NOT = { government_rank = 3 }
 			NOT = { tag = ANG}
-			culture_group = gaelic
+			OR = {
+				culture_group = gaelic
+				tag = SCO
+			}
 			OR = {
 				ai = no
 				AND = {
@@ -37,7 +40,6 @@ country_decisions = {
 			adm_tech = 9
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = CEU }
             munster_area = {
 				type = all
 				owned_by = ROOT

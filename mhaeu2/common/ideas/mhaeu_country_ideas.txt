@@ -119,7 +119,7 @@ VLS_ideas = {
 	VLS_generic_ideas_5 = { #Diplomatic Politics
 		free_dip_policy = 1
 	}
-	VLS_generic_ideas_6 = {#Swiss Tolerance
+	VLS_generic_ideas_6 = { #Swiss Tolerance
 		tolerance_own = 1
 		tolerance_heretic = 2
 	}
@@ -731,6 +731,7 @@ NGF_ideas = {
 	} 
 	free = yes  
 	trigger = { tag = NGF } 
+	
 	ngc_hanseatic_tradition = { 
 		global_trade_power = 0.10 
 	} 
