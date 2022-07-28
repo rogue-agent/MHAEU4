@@ -171,3 +171,7 @@ Removed Franconia, well it was already ingame, I'll leave in the missions tho.
 ---2.6.2.1---
 Added missing localization for Danish missions
 Fixed Danish missions
+
+---2.6.2.2---
+Added missing graphics for Danish missions
+Fixed localization
