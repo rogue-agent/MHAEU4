@@ -175,3 +175,6 @@ Fixed Danish missions
 ---2.6.2.2---
 Added missing graphics for Danish missions
 Fixed localization
+
+---2.6.2.3---
+Fixed Swabia formable (moved Swabia to HRE file)
