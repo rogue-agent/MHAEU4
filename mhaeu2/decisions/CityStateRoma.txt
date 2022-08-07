@@ -44,9 +44,9 @@ country_decisions = {
 			change_tag = CSR
 			change_government = republic
 			add_prestige = 5
-			ai_will_do = {
-				factor = 400
-			}
+		}
+		ai_will_do = {
+			factor = 400
 		}
 	}
 }

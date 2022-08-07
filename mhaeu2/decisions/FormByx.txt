@@ -13,7 +13,6 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			is_free_or_tributary_trigger = yes
 			AND = {
 				CAPITAL = 151
 				religion = sunni

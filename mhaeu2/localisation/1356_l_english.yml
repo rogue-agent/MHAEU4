@@ -1,8 +1,8 @@
-l_english:
+ï»¿l_english:
  QOTN_NAME: "The Queen in the North"
  QOTN_DESC: "Margaret I, was Queen of Denmark, Norway and Sweden and founder of the Kalmar Union, which united the Scandinavian countries for over a century. On the 23rd of August 1387, Olav II of Norway and Denmark died unexpectedly at the age of 16, and Margaret was quick to secure herself as the 'all powerful lady and Queen Regent' of Denmark. The next year she was voted the same by the Nobles of Norway and finally in 1389 she was invited to take the throne of Sweden from Albert 'the German' by the rebelling Nobles. Scandinavia is there for the taking, but can you recreate her empire?"
  oi_name: "The Ottoman Interregnum"
- oi_desc: "The Ottoman Interregnum, or the Ottoman Civil War, began on 20 July 1402, when chaos reigned in the Ottoman Empire following the defeat of Sultan Bayezid I by the Central Asian warlord Timur. Although Mehmed Çelebi was confirmed as sultan by Timur, his brothers refused to recognize his authority. Today's date is 21st March 1405, and Timur draws his last breath. In the west, John the Fearless of Burgundy inherits the Duchy of Flanders from his mother and begins the ascension of the Grand Duchy of the West. The Byzantines, clinging to what little remains of their once sprawling empire, have a short respite, but can they take advantage of the situation and finally drive the Turks out of Europe?"
+ oi_desc: "The Ottoman Interregnum, or the Ottoman Civil War, began on 20 July 1402, when chaos reigned in the Ottoman Empire following the defeat of Sultan Bayezid I by the Central Asian warlord Timur. Although Mehmed Ã‡elebi was confirmed as sultan by Timur, his brothers refused to recognize his authority. Today's date is 21st March 1405, and Timur draws his last breath. In the west, John the Fearless of Burgundy inherits the Duchy of Flanders from his mother and begins the ascension of the Grand Duchy of the West. The Byzantines, clinging to what little remains of their once sprawling empire, have a short respite, but can they take advantage of the situation and finally drive the Turks out of Europe?"
  GC2_NAME: "The Grand Campaign"
  GC2_DESC: "The year is 1356 and the world is seized by turmoil. The countryside of France is ravaged by the ongoing Hundred Years War, and the last remnants of the Yuan Dynasty fight a brutal civil war in the east. The Byzantine Empire clings to life in their Greek enclaves. Today is Christmas Day, and Charles IV, King of the Romans has issued the final 8 chapters of the Golden Bull which fixed, for a period of more than four hundred years, important aspects of the constitutional structure of the Holy Roman Empire. Glory is there for those who can seize the opportunity."
  tt_name: "The Treaty of Troyes"
@@ -72,7 +72,7 @@ l_english:
  desc_golden_gate: "The walls of Constantinople have stood for hundreds of years, keeping invaders at bay. They will be needed all the more in the troubled times we live in."
  shia_persia: "Shia Persia"
  desc_shia_persia: "A new age is dawning in Persia, and Shia Islam is the way to see that age dawn."
- not_government_fixed_flag: "Has NOT enacted decision: §YRestore our Power§!"
+ not_government_fixed_flag: "Has NOT enacted decision: Â§YRestore our PowerÂ§!"
 
 
  sapmi_frontiers: "Sapmi Frontier"

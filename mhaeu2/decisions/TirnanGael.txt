@@ -3,7 +3,6 @@ country_decisions = {
 	tir_na_ngael_nation = { #Tir na nGael
 		major = yes
 		potential = {
-			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_tir_na_ngael_flag_bt }
 			NOT = { exists = TNA }
 			NOT = { tag = GBR }			#Unlikely, but doesn't do any harm here
@@ -147,7 +146,12 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 30
-			swap_ideas = yes
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 }
+			}
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400

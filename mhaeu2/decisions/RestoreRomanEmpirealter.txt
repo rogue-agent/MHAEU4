@@ -1,9 +1,11 @@
 country_decisions = {
 
-	restore_roman_empire = {
+	restore_roman_empirealter = {
 		major = yes
 		potential = {
+			NOT = { government_rank = 1 }
 			NOT = { has_country_flag = restored_rome_flag }
+			owns = 118
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -51,17 +53,17 @@ country_decisions = {
 				#africa
 				area = tripolitania_area
 				area = tunisia_area
+				area = al_wahat_area
 				area = djerba_area
 
 				#important cities
 				province_id = 318 # Ephesus
 				province_id = 118 # Roma
 				province_id = 2313 # Antioch
-				province_id = 358 # Alexandria
+				province_id = 362 # Alexandria
 				province_id = 321 # Salamis
 				province_id = 339 # Cirta
-				province_id = 2410 # Theodoro
-				province_id = 285 # Cafa
+
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -130,6 +132,10 @@ country_decisions = {
 				type = all
 				owned_by = ROOT
 			}
+			al_wahat_area = {
+				type = all
+				owned_by = ROOT
+			}
 			djerba_area = {
 				type = all
 				owned_by = ROOT
@@ -137,11 +143,9 @@ country_decisions = {
 			owns = 318 # Ephesus
 			owns = 118 # Roma
 			owns = 2313 # Antioch
-			owns = 358 # Alexandria
+			owns = 362 # Alexandria
 			owns = 321 # Salamis
 			owns = 339 # Cirta
-			owns = 2410 # Theodoro
-			owns = 285 # Cafa
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
@@ -159,7 +163,7 @@ country_decisions = {
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
-						culture_group = ROOT
+						has_owner_culture = yes
 					}
 					change_culture = roman
 				}
@@ -175,7 +179,7 @@ country_decisions = {
 				}
 			}
 			set_government_rank = 3
-			add_prestige = 50
+			add_prestige = 60
 			add_core = 118 # Rome
 			#if = {
 			#	limit = {

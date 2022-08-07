@@ -7,8 +7,19 @@ primary_culture = finnish
 add_accepted_culture = karelian
 add_accepted_culture = finno-swede
 historical_rival = SWE
-capital = 27	# Finland
+capital = 27	# Nyland
 
+1353.1.1 = {
+	monarch = {
+		name = "Bengt I"
+		dynasty = "Algotsson"
+		culture = swedish
+		birth_date = 1330.1.1
+		ADM = 3
+		DIP = 3
+		MIL = 1
+	}
+}
 1444.11.11 = {
     monarch = {
 		country_of_origin = SWE

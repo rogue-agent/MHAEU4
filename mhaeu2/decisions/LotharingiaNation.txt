@@ -5,6 +5,12 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			NOT = { has_country_flag = formed_lotharingia_flag }
+			NOT = { tag = IBE }
+			NOT = { tag = GER }
+			NOT = { tag = FRA }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = PAP }
 			OR = {
 				capital_scope = { region = low_countries_region }
 				capital_scope = { area = bourgogne_area }
@@ -56,7 +62,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = LOT
-			set_dynasty = "de Lothaire"
+			ROOT = { set_dynasty = "de Lothaire" }
 			swap_non_generic_missions = yes
 			if = {
 				limit = {

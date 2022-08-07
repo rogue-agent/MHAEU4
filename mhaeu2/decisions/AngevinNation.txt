@@ -1,8 +1,8 @@
 country_decisions = {
-
 	eng_commonwealth = {
 		major = yes
 		potential = {
+			NOT = { government_rank = 1 }
 			NOT = { exists = ANG }
 			NOT = { tag = HLR }
 			NOT = { tag = ROM }
@@ -29,9 +29,7 @@ country_decisions = {
 			is_subject = no
 			stability = 1
 			is_at_war = no
-			owns_core_province = 236				# London
-			NOT = { num_of_unions = 2 }
-			
+			owns_core_province = 236 # London
 		}
 		effect = {
 			change_tag = ANG
@@ -97,7 +95,7 @@ country_decisions = {
 			OR = {
 				ai = no
 				senior_union_with = ENG
-			}			
+			}
 		}
 		allow = {
 			ENG = { NOT = { num_of_cities = 35 } } #Original 14+10
@@ -105,9 +103,11 @@ country_decisions = {
 			is_subject = no
 			stability = 1
 			is_at_war = no
-			owns_core_province = 183				# Paris
+			owns_core_province = 183 # Paris
 			senior_union_with = ENG
-			NOT = { num_of_unions = 2 }
+			NOT = {
+				ROOT = { num_of_unions = 3 }
+			}
 		}
 		effect = {
 			change_tag = ANG
@@ -186,8 +186,8 @@ country_decisions = {
 			is_subject = no
 			stability = 2
 			is_at_war = no
-			owns_core_province = 183				# Syracuse
-			owns_core_province = 236				# Messina
+			owns_core_province = 183 # Syracuse
+			owns_core_province = 236 # Messina
 		}
 		effect = {
 			change_tag = ANG
@@ -245,5 +245,4 @@ country_decisions = {
 		}
 		ai_importance = 200
 	}
-	
 }

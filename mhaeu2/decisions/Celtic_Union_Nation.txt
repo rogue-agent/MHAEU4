@@ -72,9 +72,9 @@ country_decisions = {
 	 	effect = {
 			change_tag = CEU
 			add_prestige = 25
-			ai_will_do = {
-				factor = 400
-			}
+		}
+		ai_will_do = {
+			factor = 400
 		}
 	}
 

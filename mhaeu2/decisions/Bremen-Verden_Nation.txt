@@ -46,9 +46,9 @@ country_decisions = {
 			change_government = republic
 			add_government_reform = merchants_reform
 			add_prestige = 25
-			ai_will_do = {
-				factor = 400
-			}
+		}
+		ai_will_do = {
+			factor = 400
 		}
 	}
 }

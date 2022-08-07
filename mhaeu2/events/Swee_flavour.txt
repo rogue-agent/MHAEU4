@@ -39,7 +39,6 @@ country_event = {	# Gustavus Adolphus
 			adm = 6
 			dip = 5
 			mil = 6
-			fixed = yes
 			culture = swedish
 			age = 16
 		}

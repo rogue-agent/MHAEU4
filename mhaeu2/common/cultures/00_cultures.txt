@@ -425,7 +425,7 @@ germanic = {
 		"von Plauen" "von Ansbach" "von Kempten" "von Arnim" "von Trent" 
 		"von Innsbruck" "von Lausitz" "von Stettin" 
 		"von Abensberg"  "von Berlichingen" "von Beetzen" 
-		"Sieghardinger" "von Walbeck"
+		"Sieghardinger" "von Walbeck" "de Lothaire"
 		#Prussian
 		"von Knorring" "von Creytzen" Sack "von Taube" "Wöhrmann"
 		#Rheinlaender
@@ -884,6 +884,9 @@ scandinavian = { #Nordic
 			Tuulitar Talvikki
 		}
 	}
+	dynasty_names = {
+		 "de Lothaire"
+	}
 }
 
 finno_ugric = { #Ugric
@@ -1114,7 +1117,7 @@ finno_ugric = { #Ugric
 		"von Memel" "von Kurs" "von Rohrbach" "Penikis" "Tontegode" "Vidins" "Draguns" "Sirkants"
 		# Ugric Baltic
 		"Karasi" "Ingrija" "Saaremaa" "Revala" "Virumaa" "Läänemaa" "Vaiga" "Ingeri" "Ingeri" "Livo" "Harjumaa" "Virumaa" 
-		"Ridala" "Saaremaa" "Vaiga" "Turaida"
+		"Ridala" "Saaremaa" "Vaiga" "Turaida"  "de Lothaire"
 	}
 }
 
@@ -1509,6 +1512,9 @@ gaelic	= {
 			Stiubhart Singlear Sutherlarach
 		}
 	}
+	dynasty_names = {
+		 "de Lothaire"
+	}
 }
 	
 latin = {
@@ -1668,7 +1674,7 @@ latin = {
 		"Condulmer" "Moneta" "Parentucelli" "Valente" "Ziani" "Strozzi" "Sturzo" "di Piombino" "Monaldeschi"
 		"Sommaripa" "Borgia" "Orseolo" "Antelminelli" "Beccaria" "de Bonacolsi"
 		"Loredano" "di Malaspina" "Malipiero" "Maggi" "Mocenigo" "Pico di Mirandola" "della Rocca" "Rossi"
-		"di San Bonifazio" "de Sanseverino" "Zoagli" "Egidio"
+		"di San Bonifazio" "de Sanseverino" "Zoagli" "Egidio" "de Lothaire"
 	}
 }
 
@@ -1944,6 +1950,9 @@ iberian	= {
 			Teresa Teresa Toda Toda Urraka Urraca Ximena Ximena Plaisance
 		}
 	}
+	dynasty_names = {
+		 "de Lothaire"
+	}
 }
 	
 french	= {
@@ -2075,7 +2084,7 @@ french	= {
 		"de Rochechouart" "d'Aumont" "de Vergy" "de Saboulin" "de Gramont" "de Bissy"
 		"de Barrau" "de La Fayette" "d'Armagnac" "de Rougé" "du Quenoy" "de Ficquelmont"
 		"de Talleyrand" "de Saintignon" "von Luxemburg" "de Montmorency" "de Savoie"
-		"de Vaudemont" "de Nicolaÿ"
+		"de Vaudemont" "de Nicolaÿ"  "de Lothaire"
 	}
 	male_names = {
 		Édouard Érrard Étienne Adémar Adrien Aimery Alain 

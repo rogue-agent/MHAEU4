@@ -101,29 +101,29 @@ VLS_ideas = {
 	}
 	free = yes  #will be triggered at load
 	
-	VLS_generic_ideas_1 = { #Loyal Catholics
-		papal_influence = 2
-		global_heretic_missionary_strength = 0.01
+	VLS_generic_ideas_1 = { # Religious Black Riders
+		global_heretic_missionary_strength = 0.03
+		movement_speed = 0.05
 	}
-	VLS_generic_ideas_2 = { #Hostile Attrition
+	VLS_generic_ideas_2 = { # Hostile Attrition
 		hostile_attrition = 2
 	}
-	VLS_generic_ideas_3 = { #Bishopric & Republic
+	VLS_generic_ideas_3 = { # Bishopric & Republic
 		republican_tradition = 0.5
 		devotion = 1
 		legitimacy = 1
 	}
-	VLS_generic_ideas_4 = { #Cultural Blend
+	VLS_generic_ideas_4 = { # Cultural Blend
 		global_trade_goods_size_modifier = 0.1
 	}
-	VLS_generic_ideas_5 = { #Diplomatic Politics
+	VLS_generic_ideas_5 = { # Diplomatic Politics
 		free_dip_policy = 1
 	}
-	VLS_generic_ideas_6 = { #Swiss Tolerance
+	VLS_generic_ideas_6 = { # Swiss Tolerance
 		tolerance_own = 1
 		tolerance_heretic = 2
 	}
-	VLS_generic_ideas_7 = { #Additional Diplomats
+	VLS_generic_ideas_7 = { # Additional Diplomats
 		diplomats = 1
 		improve_relation_modifier = 0.1
 	}

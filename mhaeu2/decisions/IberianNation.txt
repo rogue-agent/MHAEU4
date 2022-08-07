@@ -7,7 +7,7 @@ country_decisions = {
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = FRA }		# Basque is a valid culture for both FRA and SPA
-			NOT = { tag = KNI }		# Maltese is part of iberian culture group
+			NOT = { tag = KNI }		# Maltese is not part of iberian culture group
 			NOT = { tag = GRA }
 			NOT = { tag = ROM }
 			NOT = { tag = BYZ }
@@ -32,9 +32,7 @@ country_decisions = {
 		allow = {
 			adm_tech = 15
 			is_subject = no
-			is_at_war = no
-			NOT = { exists = GRA }
-			
+			is_at_war = no			
 			owns_core_province = 206
 			owns_core_province = 210
 			owns_core_province = 211
