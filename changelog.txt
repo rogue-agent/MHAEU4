@@ -196,4 +196,12 @@ Fixed Åland flag
 Fixed Lotharingia decision
 Fixed Sweden flavour events
 Fixed Roman Empire
+Fixed South German formable
 Removed Franconia Duplicate decision
+
+---2.6.3.1---
+Fixed Belgian formable
+Fixed Magna Frisia formable
+Fixed Carthage formable
+Fixed Roman formable
+Fixed Celtic formable
