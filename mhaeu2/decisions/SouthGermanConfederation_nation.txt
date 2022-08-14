@@ -8,6 +8,9 @@ country_decisions = {
 			NOT = { has_country_flag = formed_south_german_federation_flag }
 			NOT = { exists = SGF }
 			culture_group = germanic
+			NOT = { tag = GER }
+			NOT = { tag = NGF }
+			NOT = { tag = HLR }
 		}
 		provinces_to_highlight = {
 			region = south_german_region

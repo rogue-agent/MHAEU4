@@ -205,3 +205,6 @@ Fixed Magna Frisia formable
 Fixed Carthage formable
 Fixed Roman formable
 Fixed Celtic formable
+
+---2.6.3.2---
+Fixed SGF formable
