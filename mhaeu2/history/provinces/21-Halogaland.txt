@@ -1,9 +1,9 @@
 #Hålogaland, incl. Steig, Vågan, Trondenes, Andenes, Alstahaug
 
+add_core = SMI
 owner = NOR
 controller = NOR
 add_core = NOR
-add_core = SMI
 culture = sapmi
 religion = catholic
 hre = no

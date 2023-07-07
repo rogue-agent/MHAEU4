@@ -1,11 +1,13 @@
 ﻿l_english:
  # Country:
- SGF: "South German Confederation"
+ SGF: "South Germany"
  SGF_ADJ: "South German"
  
  # Decisions:
  form_south_german_confederation_title: "Found the South German Confederation"
  form_south_german_confederation_desc: "We have to unite all South German people under our reign. And then we should form a confederation, the South German Confederation."
+form_south_german_confederation_dip_title: "Found the South German Nation"
+ form_south_german_confederation_dip_desc: "We have to unite all South German people under our banner. Uniting for a unified South Germany"
  
  # Ideas:
  SGF_ideas: "South German Ideas"

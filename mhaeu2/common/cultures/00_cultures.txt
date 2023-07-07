@@ -100,6 +100,20 @@ germanic = {
 			Amanda Beate Debora Sara Anne Saga Sibyl Joanna Joanne Adele Adelgunde Adelheid Adolfine Agatha Agnes Alexandra Alice Alina Aline Alma Alwina Alwine Amalia Amalie 
 		}
 	}
+	baltic_german = {
+		primary = RIG
+		male_names = {
+			Albrecht Friedrich August Emil Ferdinand Karl Ludwig Karl Wilhelm Adolf Alfred Anton Benedikt 
+			Benjamin Denis Diederick Eckbert Erwin Florian Franz Gebhard Gottfried Hartmann Heinrich Helmut 
+			Horst Joachim Kaspar Kurt Leo Ludwig Lukas Manfred Michael Nikolaus Oskar Otto Philipp Reiner Rudolf 
+			Rupprecht Siegfried Siegmund Thomas Urs Viktor Werner Alvydas Arelis Auctune Bajoras Beidras Budo Dagonis 
+			Ekkelis Galindas Galindo Gauronas Gerdautas Glande Golding Jauguttis Karatas Klukis Kugis Milzas Nomedas 
+			Prusas Sergonis Ulinniks Ulitis Jens Johann Engelbert Fromhold Johannes Henning Silvester Dietrich
+		}
+		female_names = {
+			Raphaela Sabine Vera Betten Dagas Gelennis Gerkus Grasus Gulbis Mila Milyuns Weslikan Ziedas Gertrud Ida
+		}
+	}
 	hessian = {
 		primary = HES
 		male_names = {
@@ -324,20 +338,6 @@ germanic = {
 			Edema Eisinga Emmius Eschels "fan Esens" Feddes Galama Hamkes Halbertsma Haringsma
 			Japiks "fan Jever" Jelckama Jelgersma Lenige Ripperda "fan Rossum" Steenbicker 
 			Sirksena Syrtsema "fan Thabor" Vitringa Walles Wiarda Zelle
-		}
-	}
-	baltic_german = {
-		primary = RIG
-		male_names = {
-			Albrecht Friedrich August Emil Ferdinand Karl Ludwig Karl Wilhelm Adolf Alfred Anton Benedikt 
-			Benjamin Denis Diederick Eckbert Erwin Florian Franz Gebhard Gottfried Hartmann Heinrich Helmut 
-			Horst Joachim Kaspar Kurt Leo Ludwig Lukas Manfred Michael Nikolaus Oskar Otto Philipp Reiner Rudolf 
-			Rupprecht Siegfried Siegmund Thomas Urs Viktor Werner Alvydas Arelis Auctune Bajoras Beidras Budo Dagonis 
-			Ekkelis Galindas Galindo Gauronas Gerdautas Glande Golding Jauguttis Karatas Klukis Kugis Milzas Nomedas 
-			Prusas Sergonis Ulinniks Ulitis Jens Johann Engelbert Fromhold Johannes Henning Silvester Dietrich
-		}
-		female_names = {
-			Raphaela Sabine Vera Betten Dagas Gelennis Gerkus Grasus Gulbis Mila Milyuns Weslikan Ziedas Gertrud Ida
 		}
 	}
 	female_names = {
@@ -1244,31 +1244,6 @@ british	= {
 			Young Yelverton
 		}
 	}
-	cornish = {
-		primary = CRN
-		dynasty_names = { 
-			Aberffraw Dinefwr Mathrafal Gwynedd Tudor Kernew "of Cornwall" Glyndwr "Ternyllwg" 
-			#CK2
-			"Morgannwg" "Caradoc" "Mostyn" "Gorfynydd" Denbigh "Gwynn" "Gwarthaf" "Môn" "Penfro"
-			"Aberteifi" "Gethin" "Gruffudd" "Carmarthen" "Mynyw" "Anwyl of Tywyn" "Fane"
-			"of Bristol" "Evans" "Owen" "Lloyd" 
-		}
-		male_names = {
-			Arthek Arthyen Austol Benesek Branok Branek Bryok Breok Brioc Cadan Cador Carantok Casek Casworon Clemo
-			Clesek Corentyn Costentyn De Day Edern Enyon Gerens Gerren Goron Gryffyn Gwalather Hedrek Hedrok
-			Jago Jory Jowan Kenal Keneder Kenver Kitto Locryn Lowen Madern Massen Meryasek Peran Perran Piran
-			Pasco Pascow Rewan Ruan Ruman Santo Treeve Treave Cadwur Casworan
-		}
-		female_names = {
-			Cryda Creeda Endellion Endelienta Eia Keyne Keyna
-			Mabena Newlyn Newlyna Wenn Gwenn Gwenyth Beaten Bennath Berlewen Bersaba
-			Beryan Bryluen Caja Chesten Conwenna Delen Demelza Derowen Derwa Doryty Ebrel Elestren Elowen
-			Emblyn Endelyn Eseld Ewella Glanna Gwennol Hedra Ia Jenifry Jenifer Jowanet Kelynen Kensa Kerensa
-			Keresen Kerezen Kerra Lamorna Loveday Lowdy Lowena Lowenna Mabyn Melder Melwyn Melyonen Melyor Meliora
-			Meraud Merouda Merryn Metheven Morgelyn Morvoren Morwen Morwenna Nessa Pasca Pascatte Peswera Rosen 
-			Rosenwyn Senara Sowena Sowenna Splanna Steren Talwyn Tamsyn Tegen Tregereth Tressa Trueth Wenna Ysella
-		}
-	}
 	scottish = {
 		primary = SCO
 		dynasty_names = { 
@@ -1402,6 +1377,87 @@ gaelic	= {
 			Samthann Scáthach Sébdann Selblaith Seonaid Joan Sinech Siobán Joan Sisuile Sláíne Slaine 
 			Sorcha Suaibsech Sáerlaith Sétach Síthmaith Tailefhlaith Tailltiu Temair Tuathflaith Tómnat 
 			Uallach Uasal Úna Una Mona Éua
+		}
+	}
+	manx = {
+		primary = KOI
+
+		male_names = {
+			Aonghas Alasdair Ailbeart Adhamh Ailean Anndra Arailt Artair Aaron Amhlaidh Ailpein
+			Bhaltair Boisil Brian Benneit Beathan Boisil Brus Bruadar Breacan Bearnard Bhaltair
+			Cresdean Calum Conan Conal Cormac Cailean
+			Domhnall Donnchadh Dughall Daibhidh Diarmid Dolan Daniel Deorsa Dughlas
+			Eoghan Eobhann Eideard Eachann Eoin Eosaph Eanruig Ellair
+			Fearchar Faolan Fearghas Fionn Filib Frangan Friseal Fionnlagh
+			Gillebríghde Gillechreosd Gillecallum Gilleasp Gilleandrais Garbhan Goiridh Griogair
+			Hamish Harailt Horas
+			Iain Iacob Iosag Iomhar Iosaph Iona
+			Lucais Labhrainn
+			Maoilios Murchadh Martain Mascual Marcus Mata Mecheil Morgan Mungan Murchadh
+			Neacal Niall Niallghas
+			Oilbhreis Oisean
+			Padraig Pol Peadar
+			Raibeart Ruadh Ruaraidh Raghnall Ruiseart
+			Seumas Seoras Somhairle Seleas Samuel Sachairi Steaphan
+			Thomais Tadhg Toibaid
+			Uilleam Uisdean 
+		}
+		female_names = {
+			Anna
+			Beathag Baraball Bearnas Beitiris Bhioctoria Brighde
+			Catreona Ceit Coinneach Claimha
+			Deirdre Deoiridh Diorbhail
+			Ealasaid Cibhlin Eubh
+			Floraidh Floireans Fionnaghal Frangag Fionnghuala
+			Gormal Gormlaith Giorsal
+			Iseabail 
+			Liusaidh Leagsaidh Leitis Lucrais Leosa
+			Mairead Marsail Marta Milread Moibeal Moire Mor Mairi
+			Nansaidh
+			Olibhia Oighrig
+			Peanaidh
+			Rut Raonaid Rebeca
+			Seonag Sorcha Sene Siusan Seleas
+			Tearlag Teasag
+			Una
+		}
+		dynasty_names = {
+			Arasgain
+			Bochanan Beitean Brus
+			Caimbeul Cinneide Caimbeulach Comyn Cochran
+			Donohoe Dernly
+			Gordan Grannd Guinne
+			Haig
+			Lamont
+			MacCongáil MacDhiarmaid Moireach MacPharlain MacLeoid MacDhomhnaill MacDhonnachaidh Munro MacNab
+			Ncill
+			Rothach Ros
+			Stiubhart Singlear Sutherlarach
+		}
+	}
+	cornish = {
+		primary = CRN
+		dynasty_names = { 
+			Aberffraw Dinefwr Mathrafal Gwynedd Tudor Kernew "of Cornwall" Glyndwr "Ternyllwg" 
+			#CK2
+			"Morgannwg" "Caradoc" "Mostyn" "Gorfynydd" Denbigh "Gwynn" "Gwarthaf" "Môn" "Penfro"
+			"Aberteifi" "Gethin" "Gruffudd" "Carmarthen" "Mynyw" "Anwyl of Tywyn" "Fane"
+			"of Bristol" "Evans" "Owen" "Lloyd" 
+		}
+		male_names = {
+			Arthek Arthyen Austol Benesek Branok Branek Bryok Breok Brioc Cadan Cador Carantok Casek Casworon Clemo
+			Clesek Corentyn Costentyn De Day Edern Enyon Gerens Gerren Goron Gryffyn Gwalather Hedrek Hedrok
+			Jago Jory Jowan Kenal Keneder Kenver Kitto Locryn Lowen Madern Massen Meryasek Peran Perran Piran
+			Pasco Pascow Rewan Ruan Ruman Santo Treeve Treave Cadwur Casworan
+		}
+		female_names = {
+			Cryda Creeda Endellion Endelienta Eia Keyne Keyna
+			Mabena Newlyn Newlyna Wenn Gwenn Gwenyth Beaten Bennath Berlewen Bersaba
+			Beryan Bryluen Caja Chesten Conwenna Delen Demelza Derowen Derwa Doryty Ebrel Elestren Elowen
+			Emblyn Endelyn Eseld Ewella Glanna Gwennol Hedra Ia Jenifry Jenifer Jowanet Kelynen Kensa Kerensa
+			Keresen Kerezen Kerra Lamorna Loveday Lowdy Lowena Lowenna Mabyn Melder Melwyn Melyonen Melyor Meliora
+			Meraud Merouda Merryn Metheven Morgelyn Morvoren Morwen Morwenna Nessa Pasca Pascatte Peswera Rosen 
+			Rosenwyn Senara Sowena Sowenna Splanna Steren Talwyn Tamsyn Tegen Tregereth Tressa Trueth Wenna Ysella
 		}
 	}
 	welsh = {

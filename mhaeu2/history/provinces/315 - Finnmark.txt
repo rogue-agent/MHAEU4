@@ -1,5 +1,6 @@
 #315 - Finnmark
 
+add_core = SMI
 owner = NOR
 controller = NOR
 culture = sapmi

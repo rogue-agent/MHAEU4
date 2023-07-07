@@ -1,0 +1,15 @@
+version="2.6.3.2"
+tags={
+	"Map"
+	"Fixes"
+	"Gameplay"
+	"Historical"
+	"Religion"
+	"Missions And Decisions"
+	"New Nations"
+}
+name="MHAEU 2.6.3.2"
+picture="thumbnail.png"
+supported_version="1.33.3"
+path="C:/Users/DEWIL/Documents/Paradox Interactive/Europa Universalis IV/mod/MHAEU"
+remote_file_id="2352463131"

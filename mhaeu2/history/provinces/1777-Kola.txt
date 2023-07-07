@@ -1,5 +1,6 @@
 #Kola
 
+add_core = SMI
 owner = NOV
 controller = NOV
 capital = "Kola"

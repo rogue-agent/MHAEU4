@@ -1,9 +1,11 @@
 ﻿l_english:
  # Country:
- NGF: "North German Confederation"
+ NGF: "North Germany"
  NGF_ADJ: "North German"
  
  # Decisions:
  form_north_german_confederation_title: "Found the North German Confederation"
- form_north_german_confederation_desc: "We have to unite all North German people under our reign. And then we should form a confederation, the North German Confederation."
+ form_north_german_confederation_desc: "We have to unite all North German people under our reign. The nations and people want a federation, and such they will have."
+ form_north_german_confederation_dip_title: "Found the North German Nation"
+ form_north_german_confederation_dip_desc: "We have to unite all North German people under our banner. Uniting for a unified North Germany"
  

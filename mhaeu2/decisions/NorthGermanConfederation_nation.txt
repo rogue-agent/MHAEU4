@@ -1,5 +1,5 @@
  country_decisions = {
-	form_north_german_confederation = {
+	form_north_german_confederation_dip = {
 		major = yes
 		potential = {
 			OR = {
@@ -119,6 +119,128 @@
 			set_government_rank = 2
 			change_government = monarchy
 			add_government_reform = english_monarchy
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_north_german_confederation = {
+		major = yes
+		potential = {
+			OR = {
+			  	capital_scope = {
+					region = north_german_region
+				} 
+				capital_scope = {
+					region = low_countries_region
+				} 
+			}
+			NOT = { has_country_flag = formed_north_german_federation_flag }
+			NOT = { exists = NGF }
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 15
+					adm_tech = 10
+				}
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					NOT = { government = theocracy }
+				}
+			}
+			culture_group = germanic
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = north_german_region
+					region = low_countries_region
+					NOT = { area = bohemia_area }
+					NOT = { area = erzgebirge_area }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					ROOT = { tag = BRA }
+					owned_by = ROOT
+					unrest = 1
+				}
+			}
+		}
+		allow = {
+			NOT = { exists = NGF }
+			adm_tech = 15
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			legitimacy_equivalent = 100
+			num_of_cities = 20
+			all_owned_province = {
+				NOT = { unrest = 1 }
+			}
+			OR = {
+				owns = 50
+			 	owns = 92
+			}
+			OR = {
+			 	owns = 45
+			 	owns = 44
+			}
+			OR = {
+			 	owns = 61
+			 	owns = 94
+			}
+			OR = {
+			 	owns = 85
+			 	owns = 84
+			}
+			OR = {
+			 	owns = 43
+			 	owns = 1744
+			}
+			owns = 57
+		}
+		effect = {
+			every_subject_country = {
+				limit = {
+					capital_scope = {
+						region = north_german_region
+					}
+				}
+				ROOT = { inherit = PREV }
+			}
+			change_tag = NGF
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+					OR = {
+						is_elector = yes
+						is_part_of_hre = no
+					}
+				}
+				set_government_rank = 2
+			}
+			north_german_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NGF
+			}			
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 30
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 }
+			}
+			set_country_flag = formed_north_german_federation_flag
+			set_government_rank = 2
 		}
 		ai_will_do = {
 			factor = 1
