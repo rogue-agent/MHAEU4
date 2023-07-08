@@ -1,4 +1,4 @@
-version="2.6.3.2"
+version="2.7.1"
 tags={
 	"Map"
 	"Fixes"
@@ -8,8 +8,8 @@ tags={
 	"Missions And Decisions"
 	"New Nations"
 }
-name="MHAEU 2.6.3.2"
+name="MHAEU 2.7.1"
 picture="thumbnail.png"
 supported_version="1.33.3"
-path="C:/Users/DEWIL/Documents/Paradox Interactive/Europa Universalis IV/mod/MHAEU"
+path="C:/Users/Kole/Documents/Paradox Interactive/Europa Universalis IV/mod/MHAEU"
 remote_file_id="2352463131"
