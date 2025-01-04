@@ -1,0 +1,13 @@
+
+CSR = "countries/Citystaterome.txt"
+POO = "countries/Princedomorange.txt"
+CBU = "countries/Countyburgundy.txt"
+CME = "countries/Countymaine.txt"
+WRO = "countries/Wroclaw.txt"
+GR1 ="countries/Groenland.txt"
+SGF = "countries/SouthGermanConfederation.txt"
+BYX ="countries/Byzanta.txt"
+NGF = "countries/NorthGermanConfederation.txt"
+ANG = "countries/Angevin.txt"
+CTG = "countries/Carthage.txt"
+BVE = "countries/Bremen-Verden.txt"

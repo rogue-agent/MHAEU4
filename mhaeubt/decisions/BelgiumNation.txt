@@ -1,0 +1,113 @@
+country_decisions = {
+
+	belgium_nation = {
+		major = yes
+		potential = {
+			NOT = { government_rank = 2 }
+			NOT = { government_rank = 3 }
+			OR = {
+				primary_culture = flemish
+				primary_culture = wallonian
+			}
+			OR = {
+				OR = {
+					tag = FLA
+					tag = BRB
+					tag = LIE
+				}
+				OR = {
+					capital = 87
+					capital = 88
+					capital = 90
+					capital = 1865
+					capital = 4769
+					capital = 1743
+					capital = 181
+					capital = 94
+					capital = 93
+					capital = 1866
+					capital = 91
+					capital = 92
+					capital = 2974
+					capital = 1744
+					capital = 1742
+				}
+			}
+			
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = NED }
+			NOT = { exists = BEL }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			
+		}
+		allow = {
+			is_at_war = no
+			adm_tech = 10
+			num_of_cities = 2
+			OR = {
+				OR = {
+					tag = FLA
+					tag = BRB
+					tag = LIE
+				}
+				OR = {
+					capital = 87
+					capital = 88
+					capital = 90
+					capital = 1865
+					capital = 4769
+					capital = 1743
+					capital = 181
+					capital = 94
+					capital = 93
+					capital = 1866
+					capital = 91
+					capital = 92
+					capital = 2974
+					capital = 1744
+					capital = 1742
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			change_government = republic
+			add_government_reform = american_republic
+			add_accepted_culture = wallonian
+			add_accepted_culture = flemish
+			low_countries_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BEL
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = BEL
+		}
+		if = {
+			limit = { has_custom_ideas = no }
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

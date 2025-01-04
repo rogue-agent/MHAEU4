@@ -34,7 +34,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = { exists = TNA }
+			NOT = { exists = CEU }
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
@@ -79,7 +79,7 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = TNA
+			change_tag = CEU
 			remove_non_electors_emperors_from_empire_effect = yes
 			munster_area = {
 				limit = {

@@ -3,6 +3,7 @@
 owner = KUR
 controller = KUR
 add_core = KUR
+add_core = LVA
 culture = livonian
 religion = catholic
 hre = no

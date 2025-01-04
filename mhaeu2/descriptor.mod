@@ -1,4 +1,4 @@
-version="2.7.1"
+version="2.7.5"
 tags={
 	"Map"
 	"Fixes"
@@ -8,7 +8,7 @@ tags={
 	"Missions And Decisions"
 	"New Nations"
 }
-name="MHAEU 2.7.1"
-supported_version="1.33.3"
+name="MHAEU"
+picture="thumbnail.png"
+supported_version="v1.37.2.0"
 remote_file_id="2352463131"
-picture = "thumbnail.png"

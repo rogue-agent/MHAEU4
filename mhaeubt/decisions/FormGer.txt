@@ -1,0 +1,73 @@
+country_decisions = {
+
+	form_ger = {
+		major= yes
+		potential = {
+			NOT = { exists = GER }
+			NOT = { tag = GER }
+			culture_group = germanic
+            OR = {
+            tag = NGF
+            tag = SGF
+            }
+		}
+		provinces_to_highlight = {
+			culture_group = germanic
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			adm_tech = 15
+			num_of_cities = 35
+            OR = {
+				owns_or_subject_of = 134
+				owns_or_subject_of = 50
+			}
+			OR = {
+				owns_or_subject_of = 1744
+				owns_or_subject_of = 65
+			}
+			OR = {
+				owns_or_subject_of = 85
+				owns_or_subject_of = 1872
+			}
+			OR = {
+				owns_or_subject_of = 165
+				owns_or_subject_of = 45
+			}
+			OR = {
+				owns_or_subject_of = 79
+				owns_or_subject_of = 41
+			}
+			OR = {
+				owns_or_subject_of = 43
+				owns_or_subject_of = 1876
+			}
+			owns_or_subject_of = 77
+			owns_or_subject_of = 84
+			owns_or_subject_of = 94
+		}
+		effect = {
+			change_tag = GER
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = german_flag
+			change_government = republic
+			add_government_reform = english_parliamentary_republic_government
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

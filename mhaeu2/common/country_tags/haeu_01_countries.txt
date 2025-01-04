@@ -1,14 +1,6 @@
-AAD = "countries/aland.txt"
-OSW = "countries/OselWiek.txt"
-DRP = "countries/Dorpat.txt"
 CSR = "countries/Citystaterome.txt"
 POO = "countries/Princedomorange.txt"
-CBU = "countries/Countyburgundy.txt"
-VLS = "countries/Valais.txt"
 CME = "countries/Countymaine.txt"
-WRO = "countries/Wroclaw.txt"
-SCN = "countries/Skane.txt"
-GGT = "countries/Gotaland.txt"
 IKK = "countries/Ingria.txt"
 GR1 ="countries/Groenland.txt"
 SGF = "countries/SouthGermanConfederation.txt"
@@ -16,8 +8,22 @@ BYX ="countries/Byzanta.txt"
 NGF = "countries/NorthGermanConfederation.txt"
 IBE = "countries/Iberia.txt"
 ANG = "countries/Angevin.txt"
-BEL = "countries/Belgium.txt"
 CTG = "countries/Carthage.txt"
 BVE = "countries/Bremen-Verden.txt"
+
+#1356 country
 CEU = "countries/Celtic_Union.txt"
 TNA = "countries/TirnanGael.txt"
+SCN = "countries/Skane.txt"
+CBU = "countries/Countyburgundy.txt"
+GGT = "countries/Gotaland.txt"
+
+#BT Country
+ZDN = "countries/Zenden.txt"
+OSW = "countries/OselWiek.txt"
+DRP = "countries/Dorpat.txt"
+AAD = "countries/aland.txt"
+BEL = "countries/Belgium.txt"
+
+#Wroclaw mod
+WRO = "countries/Wroclaw.txt"

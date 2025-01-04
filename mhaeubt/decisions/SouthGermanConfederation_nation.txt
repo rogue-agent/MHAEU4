@@ -1,0 +1,182 @@
+country_decisions = {
+	form_south_german_confederation = {
+		major = yes
+		potential = {
+			capital_scope = {
+						region = south_german_region
+					}
+			NOT = { has_country_flag = formed_south_german_federation_flag }
+			NOT = { exists = SGF }
+			culture_group = germanic
+			NOT = { tag = GER }
+			NOT = { tag = NGF }
+			NOT = { tag = HLR }
+		}
+		provinces_to_highlight = {
+			region = south_german_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = SGF }
+			adm_tech = 10
+			num_of_cities = 15
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			OR = {
+				owns = 134
+				owns = 165
+				owns = 77
+			}
+			OR = {
+				owns = 65
+				owns = 75
+			}
+			OR = {
+				owns = 1872
+				owns = 67
+				owns = 4712
+			}
+			OR = {
+				owns = 1868
+				owns = 76
+			}
+			
+		}
+		effect = {
+			every_subject_country = {
+				limit = {
+					capital_scope = {
+						region = south_german_region
+					}
+				}
+				ROOT = { inherit = PREV }
+			}
+			change_tag = SGF
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+					OR = {
+						is_elector = yes
+						is_part_of_hre = no
+					}
+				}
+				set_government_rank = 2
+			}
+			south_german_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SGF
+			}			
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 }
+			}
+			set_government_rank = 2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_south_german_confederation_dip = {
+		major = yes
+		potential = {
+			capital_scope = {
+						region = south_german_region
+					}
+			NOT = { has_country_flag = formed_south_german_federation_flag }
+			NOT = { exists = SGF }
+			culture_group = germanic
+			NOT = { tag = GER }
+			NOT = { tag = NGF }
+			NOT = { tag = HLR }
+		}
+		provinces_to_highlight = {
+			region = south_german_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = SGF }
+			adm_tech = 10
+			num_of_cities = 15
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			OR = {
+				owns_or_subject_of = 134
+				owns_or_subject_of = 165
+				owns_or_subject_of = 77
+			}
+			OR = {
+				owns_or_subject_of = 65
+				owns_or_subject_of = 75
+			}
+			OR = {
+				owns_or_subject_of = 1872
+				owns_or_subject_of = 67
+				owns_or_subject_of = 4712
+			}
+			OR = {
+				owns_or_subject_of = 1868
+				owns_or_subject_of = 76
+			}
+			
+		}
+		effect = {
+			every_subject_country = {
+				limit = {
+					capital_scope = {
+						region = south_german_region
+					}
+				}
+				ROOT = { inherit = PREV }
+			}
+			change_tag = SGF
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+					OR = {
+						is_elector = yes
+						is_part_of_hre = no
+					}
+				}
+				set_government_rank = 2
+			}
+			south_german_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SGF
+			}			
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 }
+			}
+			set_government_rank = 2
+			change_government = monarchy
+			add_government_reform = austrian_archduchy_reform
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

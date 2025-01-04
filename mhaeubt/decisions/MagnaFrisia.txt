@@ -1,0 +1,78 @@
+country_decisions = {
+
+	magna_frisia = {
+		major = yes
+		potential = {
+			AND = {
+				NOT = { government_rank = 2 }
+				NOT = { government_rank = 3 }
+				NOT = { tag = PAP }
+				NOT = { tag = HLR }
+				NOT = { tag = ROM }
+				NOT = { tag = NED }
+				NOT = { tag = BEL }
+				NOT = { tag = NGF }
+				NOT = { tag = SGF }
+				is_colonial_nation = no
+				OR = {
+					is_former_colonial_nation = no
+					AND = {
+						is_former_colonial_nation = yes
+						ai = no
+					}
+				}
+				primary_culture = frisian
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 55
+				province_id = 1931
+				province_id = 4382
+				province_id = 100
+				province_id = 97
+				province_id = 4383
+				province_id = 98
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_at_war = no
+			adm_tech = 6
+			owns_or_subject_of = 55
+			owns_or_subject_of = 1931
+			owns_or_subject_of = 4382
+			owns_or_subject_of = 100
+			owns_or_subject_of = 97
+			owns_or_subject_of = 4383
+			capital =  98 #Utrecht aka Traiectum
+			NOT = { government_rank = 2 }
+			NOT = { government_rank = 3 }
+			OR = {
+				OR = {
+					tag = FRI
+					NOT = { exists = FRI }
+				}
+				primary_culture = frisian
+			}
+		}
+		effect = {
+			change_tag = FRI
+			set_government_rank = 2
+			change_government = monarchy
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+	}
+}

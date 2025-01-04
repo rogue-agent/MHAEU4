@@ -1,0 +1,207 @@
+country_decisions = {
+
+	restore_roman_empire = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = restored_rome_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = PAP }
+			NOT = { exists = ROM }
+			OR = {
+				culture_group = french
+				culture_group = latin
+				culture_group = byzantine
+				primary_culture = armenian
+				primary_culture = romanian
+				religion = coptic
+			}
+			is_part_of_hre = no
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = italy_region
+				#france
+				area = provence_area
+				area = languedoc_area
+				#iberia
+				region = iberia_region
+				#germany
+				area = carinthia_area
+				#balkans
+				area = morea_area
+				area = macedonia_area
+				area = northern_greece_area
+				area = thrace_area
+				area = bulgaria_area
+				area = albania_area
+				area = croatia_area
+				area = east_adriatic_coast_area
+				area = silistria_area
+				#anatolia
+				area = germiyan_area
+				area = hudavendigar_area
+				area = aydin_area
+				area = aegean_archipelago_area
+				area = kastamonu_area
+				#africa
+				area = tripolitania_area
+				area = tunisia_area
+				area = djerba_area
+
+				#important cities
+				province_id = 318 # Ephesus
+				province_id = 118 # Roma
+				province_id = 2313 # Antioch
+				province_id = 358 # Alexandria
+				province_id = 321 # Salamis
+				province_id = 339 # Cirta
+				province_id = 2410 # Theodoro
+				province_id = 285 # Cafa
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			italy_region = {
+				type = all
+				owned_by = ROOT
+			}
+			provence_area = {
+				type = all
+				owned_by = ROOT
+			}
+			languedoc_area = {
+				type = all
+				owned_by = ROOT
+			}
+			iberia_region = {
+				type = all
+				owned_by = ROOT
+			}
+			carinthia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			morea_area = {
+				type = all
+				owned_by = ROOT
+			}
+			macedonia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			northern_greece_area = {
+				type = all
+				owned_by = ROOT
+			}
+			thrace_area = {
+				type = all
+				owned_by = ROOT
+			}
+			bulgaria_area = {
+				type = all
+				owned_by = ROOT
+			}
+			albania_area = {
+				type = all
+				owned_by = ROOT
+			}
+			croatia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			east_adriatic_coast_area = {
+				type = all
+				owned_by = ROOT
+			}
+			kastamonu_area = {
+				type = all
+				owned_by = ROOT
+			}
+			tripolitania_area = {
+				type = all
+				owned_by = ROOT
+			}
+			tunisia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			djerba_area = {
+				type = all
+				owned_by = ROOT
+			}
+			owns = 318 # Ephesus
+			owns = 118 # Roma
+			owns = 2313 # Antioch
+			owns = 358 # Alexandria
+			owns = 321 # Salamis
+			owns = 339 # Cirta
+			owns = 2410 # Theodoro
+			owns = 285 # Cafa
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			118 = {
+				is_state = yes
+			}
+		}
+		effect = {
+			118 = {
+				move_capital_effect = yes
+			}
+			change_tag = ROM
+			restore_country_name_effect = yes
+			custom_tooltip = roman_culture_provinces_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = ROOT
+					}
+					change_culture = roman
+				}
+			}
+			change_primary_culture = roman
+			custom_tooltip = restore_roman_empire_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			set_government_rank = 3
+			add_prestige = 50
+			add_core = 118 # Rome
+			#if = {
+			#	limit = {
+			#		is_part_of_hre = yes
+			#		is_elector = no
+			#	}
+			#	every_owned_province = {
+			#		limit = {
+			#			is_part_of_hre = yes
+			#		}
+			#		set_in_empire = no
+			#	}
+			#}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = restored_rome_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

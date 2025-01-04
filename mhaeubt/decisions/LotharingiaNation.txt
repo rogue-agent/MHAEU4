@@ -1,0 +1,97 @@
+country_decisions = {
+
+	lotharingia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_lotharingia_flag }
+			NOT = { tag = IBE }
+			NOT = { tag = GER }
+			NOT = { tag = FRA }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = PAP }
+			OR = {
+				capital_scope = { region = low_countries_region }
+				capital_scope = { area = bourgogne_area }
+				capital_scope = { area = west_burgundy_area }
+				capital_scope = { area = savoy_dauphine_area }
+				capital_scope = { area = lorraine_area }
+				capital_scope = { area = piedmont_area }
+				capital_scope = { area = provence_area }
+				capital = 1878
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1878
+				province_id = 4696
+				province_id = 202
+				province_id = 192
+				province_id = 193
+				province_id = 90
+				province_id = 98
+				province_id = 97
+				province_id = 91
+				province_id = 191
+				province_id = 1878
+			}
+			NOT = { owned_by = ROOT }
+		}
+
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = LOT }
+			num_of_cities = 30
+			owns_or_subject_of = 4696
+			owns_or_subject_of = 202
+			owns_or_subject_of = 192
+			owns_or_subject_of = 193
+			owns_or_subject_of = 90
+			owns_or_subject_of = 98
+			owns_or_subject_of = 97
+			owns_or_subject_of = 91
+			owns_or_subject_of = 191
+			owns_or_subject_of = 1878
+			OR = {
+				is_part_of_hre = no
+				is_emperor = yes
+			}
+		}
+		effect = {
+			change_tag = LOT
+			ROOT = { set_dynasty = "de Lothaire" }
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 3
+			}
+			low_countries_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = LOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_lotharingia_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

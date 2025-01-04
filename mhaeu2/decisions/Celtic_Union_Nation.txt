@@ -37,6 +37,7 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
+			NOT = { exists = TNA }
 			adm_tech = 9
 			is_subject = no
 			is_at_war = no
@@ -70,7 +71,7 @@ country_decisions = {
 			}
 		}
 	 	effect = {
-			change_tag = CEU
+			change_tag = TNA
 			add_prestige = 25
 			if = {
 				limit = { has_custom_ideas = no }

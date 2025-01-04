@@ -1,8 +1,8 @@
 #1871 - Wallis
 
-add_core = VLS
-owner = VLS
-controller = VLS
+add_core = ZDN
+owner = ZDN
+controller = ZDN
 culture = arpitan
 religion = catholic
 capital = "Sion"
