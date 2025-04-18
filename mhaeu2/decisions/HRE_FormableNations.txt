@@ -1143,4 +1143,113 @@ country_decisions = {
 			factor = 1
 		}
 	}
+	teuton_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = TEU }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				ai = no
+				NOT = { exists = TEU }
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			OR = {
+				capital_scope = {
+					region = north_german_region
+				}
+				capital_scope = {
+						region = low_countries_region
+					}
+			}
+			government = theocracy
+			NOT = { tag = TEU }
+		}
+		provinces_to_highlight = {
+				province_id = 43
+				province_id = 2997
+				province_id = 1841
+				province_id = 42
+				province_id = 41
+				province_id = 40
+				province_id = 4747
+				province_id = 49
+				province_id = 1859
+				province_id = 2950
+				province_id = 767
+		}
+
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { exists = TEU }
+			government = theocracy
+			europe = {
+				NOT = { religion = ROOT }
+			}
+			OR = {
+				owns_core_province = 43
+				owns_core_province = 40
+				owns_core_province = 41
+				owns_core_province = 42
+				owns_core_province = 49
+				owns_core_province = 767
+				owns_core_province = 1841
+				owns_core_province = 1859
+				owns_core_province = 2950
+				owns_core_province = 2997
+				owns_core_province = 4747
+				AND = {
+					before = 1600
+					religion = protestant
+				}
+				AND = {
+					OR = {
+						tag = MAG
+						tag = RIG
+						tag = TRI
+						tag = BAM
+						tag = MAI
+						tag = VER
+						tag = BVE
+					}
+					num_of_cities = 4
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 2
+				region = north_german_region
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = TEU
+			add_government_reform = monastic_order_reform
+			restore_country_name_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 5
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
 }

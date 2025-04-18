@@ -153,7 +153,6 @@ country_decisions = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
 			NOT = { exists = GBR }
 			OR = {
 				ai = no

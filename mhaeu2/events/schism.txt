@@ -1,0 +1,57 @@
+namespace = schism
+
+# Livonian order mending schism for Protestants
+country_event = {
+	id = schism.1
+	title = schism.1.t
+	desc = government_events.3.desc
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_byz.2.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				ai_attitude = {
+					who = LIV
+					attitude = attitude_rivalry
+				}
+			}
+			modifier = {
+				factor = 0
+				ai_attitude = {
+					who = LIV
+					attitude = attitude_hostile
+				}
+			}
+			modifier = {
+				factor = 0
+				ai_attitude = {
+					who = LIV
+					attitude = attitude_outraged
+				}
+			}
+		}
+		change_religion = protestant
+		capital_scope = {
+			if = {
+				limit = {
+					NOT = { religion = protestant }
+				}
+				change_religion = protestant
+			}
+		}
+		add_stability = -1
+		add_prestige = -30
+	}
+	option = {
+		name = flavor_byz.2.b
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = -3
+	}
+}

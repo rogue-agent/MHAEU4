@@ -28,7 +28,6 @@ country_decisions = {
 				}
 				set_government_rank = 3
 			}
-			change_technology_group = muslim
 			change_government = monarchy
 			add_government_reform = iqta
 			add_country_modifier = {

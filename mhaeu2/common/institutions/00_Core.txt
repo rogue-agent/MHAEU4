@@ -280,7 +280,7 @@ renaissance = {
 		build_cost = -0.05
 	}
 
-	trade_company_efficiency = 0.4
+	trade_company_efficiency = 0.2
 
 
 	historical_start_date = 1450.1.1
@@ -351,13 +351,16 @@ renaissance = {
 			area = ile_de_france_area
 			area = valencia_area
 			province_id = 213
+			151 = {
+				owner = BYZ
+			}
 		}
 		is_state = yes
 		NOT = { province_id = 126 }
 		is_island = no
 		devastation = 0
 		OR = {
-			development = 22
+			development = 20
 			is_capital = yes
 			normal_or_historical_nations = no
 			is_year = 1475
@@ -555,7 +558,7 @@ new_world_i = {
 		global_prov_trade_power_modifier = 0.10
 	}
 
-	trade_company_efficiency = 0.6
+	trade_company_efficiency = 0.5
 
 
 	historical_start_date = 1500.1.1
@@ -947,6 +950,10 @@ printing_press = {
 			religion = reformed
 			region = north_german_region
 			region = south_german_region
+			AND = {
+				is_year = 1600
+				superregion = china_superregion
+			}
 		}
 
 	}
@@ -1276,7 +1283,7 @@ global_trade = {
 	
 	can_start = {
 		is_year = 1600
-		is_institution_enabled = printing_press
+		#is_institution_enabled = printing_press
 		is_island = no
 		highest_value_trade_node = yes
 		OR = {

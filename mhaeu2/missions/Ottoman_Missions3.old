@@ -3,28 +3,7 @@ tur_conquerors_of_the_near_east = {
 	generic = no #if a mission without generic = yes wants this slot then it overrides this.
 	ai = yes
 	potential = {
-		OR = {
-			AND = {
-				NOT = { has_dlc = "Domination" }
-				tag = TUR
-			}
-			AND = {
-				tag = RUM
-				OR = {
-					AND = {
-						NOT = { was_tag = AKK }
-						NOT = { was_tag = QAR }
-					}
-					AND = {
-						OR = {
-							was_tag = AKK
-							was_tag = QAR
-						}
-						NOT = { has_dlc = "King of Kings" }
-					}
-				}
-			}
-		}
+		tag = TUR
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -58,10 +37,9 @@ tur_conquerors_of_the_near_east = {
 				}
 				add_permanent_claim = ROOT
 			}
+		151 = {
+    		cede_province = TUR
 		}
-
-		ai_weight = {
-			factor = 250
 		}
 	}
 	conquer_southern_greece = {
@@ -124,16 +102,18 @@ tur_conquerors_of_the_near_east = {
 				add_claim = ROOT
 			}
 		}
-
-		ai_weight = {
-			factor = 250
-		}
 	}
 	conquer_serbia = {
 		icon = mission_non-western_soldiers
 		required_missions = { conquer_southern_greece }
 		position = 5
-
+		
+		ai_weight = {
+			factor = 3
+		}
+		ai_priority = {
+			factor = 3
+		}
 		completed_by = 1460.1.1
 		provinces_to_highlight = {
 			OR = {
@@ -182,15 +162,16 @@ tur_conquerors_of_the_near_east = {
 				add_permanent_claim = ROOT
 			}
 		}
-		
-		ai_weight = {
-			factor = 250
-		}
 	}
 	conquer_bosnia = {
 		icon = mission_assemble_an_army
 		required_missions = { conquer_serbia }
-
+		ai_weight = {
+			factor = 2
+		}
+		ai_priority = {
+			factor = 2
+		}
 		completed_by = 1463.1.1
 		provinces_to_highlight = {
 			area = bosnia_area
@@ -218,14 +199,16 @@ tur_conquerors_of_the_near_east = {
 				add_claim = ROOT
 			}
 		}
-		ai_weight = {
-			factor = 100
-		}
 	}
 	conquer_hungary = {
 		icon = mission_eastern_european_city
 		required_missions = { conquer_bosnia }
-
+		ai_weight = {
+			factor = 2
+		}
+		ai_priority = {
+			factor = 1
+		}
 		completed_by = 1542.1.1
 		provinces_to_highlight = {
 			area = alfold_area
@@ -264,9 +247,6 @@ tur_conquerors_of_the_near_east = {
 				add_claim = ROOT
 			}
 		}
-		ai_weight = {
-			factor = 50
-		}
 	}
 }
 
@@ -275,28 +255,7 @@ tur_eastern_balkans = {
 	ai = yes
 	
 	potential = {
-		OR = {
-			AND = {
-				NOT = { has_dlc = "Domination" }
-				tag = TUR
-			}
-			AND = {
-				tag = RUM
-				OR = {
-					AND = {
-						NOT = { was_tag = AKK }
-						NOT = { was_tag = QAR }
-					}
-					AND = {
-						OR = {
-							was_tag = AKK
-							was_tag = QAR
-						}
-						NOT = { has_dlc = "King of Kings" }
-					}
-				}
-			}
-		}
+		tag = TUR
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -305,7 +264,13 @@ tur_eastern_balkans = {
 	vassalize_wallachia = {
 		icon = mission_impaled_soldies
 		position = 6
-
+		
+		ai_weight = {
+			factor = 2
+		}
+		ai_priority = {
+			factor = 3
+		}
 		completed_by = 1462.11.1
 		required_missions = { conquer_serbia }
 		provinces_to_highlight = {
@@ -334,14 +299,16 @@ tur_eastern_balkans = {
 				add_permanent_claim = ROOT
 			}
 		}
-		ai_weight = {
-			factor = 50
-		}
 	}
 	vassalize_transylvania = {
 		icon = mission_eastern_european_city
 		required_missions = { vassalize_wallachia }
-
+		ai_weight = {
+			factor = 3
+		}
+		ai_priority = {
+			factor = 2
+		}
 		completed_by = 1599.3.17
 		provinces_to_highlight = {
 			OR = {
@@ -373,9 +340,6 @@ tur_eastern_balkans = {
 				add_claim = ROOT
 			}
 		}
-		ai_weight = {
-			factor = 50
-		}
 	}
 }
 
@@ -384,28 +348,7 @@ tur_conquest_of_middle_east = {
 	ai = yes
 	
 	potential = {
-		OR = {
-			AND = {
-				NOT = { has_dlc = "Domination" }
-				tag = TUR
-			}
-			AND = {
-				tag = RUM
-				OR = {
-					AND = {
-						NOT = { was_tag = AKK }
-						NOT = { was_tag = QAR }
-					}
-					AND = {
-						OR = {
-							was_tag = AKK
-							was_tag = QAR
-						}
-						NOT = { has_dlc = "King of Kings" }
-					}
-				}
-			}
-		}
+		tag = TUR
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -415,6 +358,9 @@ tur_conquest_of_middle_east = {
 		icon = mission_non-western_soldiers
 		required_missions = {  }
 		completed_by = 1514.8.23
+		ai_weight = {
+			factor = 5
+		}
 		trigger = {
 			army_size_percentage = 0.85
 		}
@@ -476,16 +422,18 @@ tur_conquest_of_middle_east = {
 				add_permanent_claim = ROOT
 			}
 		}
-		ai_weight = {
-			factor = 100 # AI will go (up to) this many percent above army budget in order to reach the army size needed
-		}
 	}
 	consolidate_asia_minor = {
 		icon = mission_ottoman_harem
 		required_missions = { army_reforms_of_mehemed_II }
 		position = 3
 		completed_by = 1469.1.1
-
+		ai_weight = {
+			factor = 3
+		}
+		ai_priority = {
+			factor = 5
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = hudavendigar_area
@@ -570,15 +518,18 @@ tur_conquest_of_middle_east = {
 				}
 			}
 		}
-		ai_weight = {
-			factor = 200
-		}
 	}
 	safeguard_eastern_anatolia = {
 		icon = mission_unite_home_region
 		required_missions = { consolidate_asia_minor }
 		position = 5
-
+		
+		ai_weight = {
+			factor = 6
+		}
+		ai_priority = {
+			factor = 3
+		}
 		completed_by = 1514.8.23
 		provinces_to_highlight = {
 			OR = {
@@ -651,10 +602,6 @@ tur_conquest_of_middle_east = {
 				add_permanent_claim = ROOT
 			}
 		}
-		
-		ai_weight = {
-			factor = 300
-		}
 	}
 	conquer_mesopotamia = {
 		icon = mission_persian_soldiers
@@ -692,10 +639,6 @@ tur_conquest_of_middle_east = {
 				}
 				add_permanent_claim = ROOT
 			}
-		}
-		
-		ai_weight = {
-			factor = 300
 		}
 	}
 	conquer_haasa = {
@@ -741,38 +684,13 @@ tur_conquest_of_middle_east = {
 				}
 			}
 		}
-		
-		ai_weight = {
-			factor = 300
-		}
 	}
 }
 
 tur_black_sea = {
 	slot = 4
 	potential = {
-		OR = {
-			AND = {
-				NOT = { has_dlc = "Domination" }
-				tag = TUR
-			}
-			AND = {
-				tag = RUM
-				OR = {
-					AND = {
-						NOT = { was_tag = AKK }
-						NOT = { was_tag = QAR }
-					}
-					AND = {
-						OR = {
-							was_tag = AKK
-							was_tag = QAR
-						}
-						NOT = { has_dlc = "King of Kings" }
-					}
-				}
-			}
-		}
+		tag = TUR
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -802,10 +720,6 @@ tur_black_sea = {
 				}
 			}
 		}
-		
-		ai_weight = {
-			factor = 300
-		}
 	}
 	take_kaffa = {
 		icon = mission_war_chest
@@ -828,10 +742,6 @@ tur_black_sea = {
 				}
 			}
 		}
-		
-		ai_weight = {
-			factor = 300
-		}
 	}
 }
 
@@ -840,28 +750,7 @@ tur_eastern_mediterrenean_missions = {
 	ai = yes
 	
 	potential = {
-		OR = {
-			AND = {
-				NOT = { has_dlc = "Domination" }
-				tag = TUR
-			}
-			AND = {
-				tag = RUM
-				OR = {
-					AND = {
-						NOT = { was_tag = AKK }
-						NOT = { was_tag = QAR }
-					}
-					AND = {
-						OR = {
-							was_tag = AKK
-							was_tag = QAR
-						}
-						NOT = { has_dlc = "King of Kings" }
-					}
-				}
-			}
-		}
+		tag = TUR
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -872,7 +761,12 @@ tur_eastern_mediterrenean_missions = {
 		required_missions = { safeguard_eastern_anatolia }
 		completed_by = 1516.8.24
 		position = 6
-
+		ai_weight = {
+			factor = 6
+		}
+		ai_priority = {
+			factor = 4
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = aleppo_area
@@ -950,17 +844,18 @@ tur_eastern_mediterrenean_missions = {
 				add_permanent_claim = ROOT
 			}
 		}
-		
-		ai_weight = {
-			factor = 300
-		}
 	}
 	conquer_egypt = {
 		icon = mission_egyptian_mamluk_soldier
 		required_missions = { conquer_levant }
 		position = 6
 		completed_by = 1517.1.1
-
+		ai_weight = {
+			factor = 6
+		}
+		ai_priority = {
+			factor = 5
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = delta_area
@@ -1061,10 +956,6 @@ tur_eastern_mediterrenean_missions = {
 				add_permanent_claim = ROOT
 			}
 		}
-		
-		ai_weight = {
-			factor = 300
-		}
 	}
 	defeat_the_knights = { #Conquer Rhodes
 		icon = mission_teutonic_knights
@@ -1083,10 +974,6 @@ tur_eastern_mediterrenean_missions = {
 				name = "ottoman_naval_dominance"
 				duration = 7300
 			}
-		}
-		
-		ai_weight = {
-			factor = 300
 		}
 	}
 	take_crete_from_venice = { #Conquer Crete
@@ -1109,10 +996,6 @@ tur_eastern_mediterrenean_missions = {
 				duration = 7300 #20 Years
 			}
 		}
-		
-		ai_weight = {
-			factor = 300
-		}
 	}
 	
 }
@@ -1120,28 +1003,7 @@ tur_eastern_mediterrenean_missions = {
 tur_conquer_western_mediterrenean = {
 	slot = 2
 	potential = {
-		OR = {
-			AND = {
-				NOT = { has_dlc = "Domination" }
-				tag = TUR
-			}
-			AND = {
-				tag = RUM
-				OR = {
-					AND = {
-						NOT = { was_tag = AKK }
-						NOT = { was_tag = QAR }
-					}
-					AND = {
-						OR = {
-							was_tag = AKK
-							was_tag = QAR
-						}
-						NOT = { has_dlc = "King of Kings" }
-					}
-				}
-			}
-		}
+		tag = TUR
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -1236,7 +1098,7 @@ tur_conquer_western_mediterrenean = {
 		effect = {
 			add_country_modifier = {
 				name = "tur_barbary_pirates"
-				duration = -1
+				duration = 9125
 			}
 		}
 	}
@@ -1245,28 +1107,7 @@ tur_conquer_western_mediterrenean = {
 tur_indian_ocean = {
 	slot = 4
 	potential = {
-		OR = {
-			AND = {
-				NOT = { has_dlc = "Domination" }
-				tag = TUR
-			}
-			AND = {
-				tag = RUM
-				OR = {
-					AND = {
-						NOT = { was_tag = AKK }
-						NOT = { was_tag = QAR }
-					}
-					AND = {
-						OR = {
-							was_tag = AKK
-							was_tag = QAR
-						}
-						NOT = { has_dlc = "King of Kings" }
-					}
-				}
-			}
-		}
+		tag = TUR
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -1314,10 +1155,6 @@ tur_indian_ocean = {
 				}
 				add_permanent_claim = ROOT
 			}
-		}
-		
-		ai_weight = {
-			factor = 300
 		}
 	}
 	conquer_mocha = { #Conquer Mocha

@@ -173,6 +173,13 @@ grand_duchy_reform = {
 	potential = {
 		OR = {
 			AND = {
+				tag = FIN
+				OR = {
+					is_year = 1500
+					is_free_or_tributary_trigger = yes
+				}
+			}
+			AND = {
 				tag = LIT
 				NOT = { map_setup = map_setup_random }
 			}
@@ -183,7 +190,7 @@ grand_duchy_reform = {
 		}
 	}
 	legacy_equivalent = despotic_monarchy
-	fixed_rank = 1
+	#fixed_rank = 1
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	modifiers = {
@@ -258,7 +265,7 @@ shogunate = {
 		owns = 1020
 	}
 	legacy_equivalent = shogunate_legacy
-	fixed_rank = 2
+	#fixed_rank = 2
 	maintain_dynasty = yes
 	allow_vassal_war = yes
 	allow_vassal_alliance = yes
@@ -294,7 +301,7 @@ daimyo = {
 	}
 	replacement_on_independence_war = indep_daimyo
 	legacy_equivalent = daimyo_legacy
-	fixed_rank = 1
+	#fixed_rank = 1
 	maintain_dynasty = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -327,7 +334,7 @@ feudal_france_reform = {
 			}
 		}
 	}
-	fixed_rank = 2
+	#fixed_rank = 2
 	lock_level_when_selected = yes
 
 	modifiers = {
@@ -351,7 +358,7 @@ appanage_reform = {
 		is_subject_of_type = appanage
 	}
 	replacement_on_independence_war = feudalism_reform
-	fixed_rank = 1
+	#fixed_rank = 1
 	maintain_dynasty = yes
 	valid_for_nation_designer = no
 	lock_level_when_selected = yes
@@ -506,7 +513,7 @@ celestial_empire = {
 		bureaucrats
 	}
 
-	fixed_rank = 3
+	#fixed_rank = 3
 	start_territory_to_estates = 0.9
 
 	modifiers = {
@@ -638,7 +645,7 @@ chinese_warlord = {
 			}
 		}
 	}
-	fixed_rank = 2
+	#fixed_rank = 2
 
 	modifiers = {
 		manpower_recovery_speed = 0.25
@@ -725,15 +732,15 @@ danish_archkingdom = {
 elective_monarchy = {
 	icon = "elective_monarchy"
 	allow_normal_conversion = yes
-	potential = {
-		OR = {
-			has_reform = elective_monarchy
-			AND = {
-				is_playing_custom_nation = yes
-				have_had_reform = elective_monarchy
-			}
-		}
-	}
+	#potential = {
+	#	OR = {
+	#		has_reform = elective_monarchy
+	#		AND = {
+	#			is_playing_custom_nation = yes
+	#			have_had_reform = elective_monarchy
+	#		}
+	#	}
+	#}
 	legacy_equivalent = elective_monarchy_legacy
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -995,7 +1002,7 @@ ottoman_government = {
 	allow_normal_conversion = yes
 	icon = "ottoman_government"
 	potential = {
-		religion_group = muslim
+		#religion_group = muslim
 		OR = {
 			AND = {
 				tag = TUR
@@ -1009,9 +1016,9 @@ ottoman_government = {
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 20
-	nation_designer_trigger = {
-		religion_group = muslim
-	}
+	#nation_designer_trigger = {
+	#	religion_group = muslim
+	#}
 	legacy_equivalent = ottoman_government_legacy
 	maintain_dynasty = yes
 	modifiers = {
@@ -1226,7 +1233,7 @@ bulgarian_tsardom_reform = {
 		can_claim_states = yes 
 		harsh_treatment_cost = -0.25
 	}
-	fixed_rank = 3
+	#fixed_rank = 3
 	ai = {
 		factor = 100
 	}
@@ -1524,7 +1531,7 @@ roman_empire_reform = {
 		culture_conversion_cost = -0.25
 		culture_conversion_time = -0.1
 	}
-	fixed_rank = 3
+	#fixed_rank = 3
 	conditional = {
 		allow = {
 			OR = {
@@ -2321,6 +2328,8 @@ prussian_monarchy = {
 			religion = reformed
 			religion = hussite
 			religion = anglican
+			religion = orthodox
+			religion = coptic
 			has_unlocked_government_reform = { government_reform = prussian_monarchy }
 		}
 	}
@@ -2488,13 +2497,15 @@ principality = {
 			tag = POO
 			culture_group = east_slavic
 			culture_group = slavic
+			culture_group = west_slavic
+			culture_group = south_slavic
 			AND = {
 				is_playing_custom_nation = yes
 				have_had_reform = principality
 			}
 		}
 	}
-	fixed_rank = 1
+	#fixed_rank = 1
 	legacy_equivalent = principality_legacy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 5
@@ -2502,8 +2513,10 @@ principality = {
 		OR = {
 			culture_group = east_slavic
 			culture_group = slavic
+			culture_group = west_slavic
+			culture_group = south_slavic
 		}
-		religion = orthodox
+		#religion = orthodox
 	}
 	modifiers = {
 		global_unrest = -1
@@ -2532,10 +2545,12 @@ tsardom = {
 	icon = "tsardom"
 	allow_normal_conversion = yes
 	potential = {
-		religion = orthodox
+		#religion = orthodox
 		OR = {
 			culture_group = east_slavic
 			culture_group = slavic
+			culture_group = west_slavic
+			culture_group = south_slavic
 		}
 		OR = {
 			AND = {
@@ -2558,7 +2573,11 @@ tsardom = {
 	nation_designer_cost = 40
 
 	nation_designer_trigger = {
-		culture_group = east_slavic
+		OR = {
+			culture_group = east_slavic
+			culture_group = west_slavic
+			culture_group = south_slavic
+		}
 	}
 
 	modifiers = {
@@ -2617,7 +2636,7 @@ ruthenian_tsardom = {
 	}
 	fixed_rank = 3
 	nation_designer_trigger = {
-		religion = orthodox
+		#religion = orthodox
 		OR = {
 			primary_culture = ruthenian
 			primary_culture = byelorussian
@@ -2697,8 +2716,8 @@ mamluk_government = {
 	icon = "mamluk_government"
 	allow_normal_conversion = yes
 	potential = {
-		religion_group = muslim
-		religion = coptic
+		#religion_group = muslim
+		#religion = coptic
 		OR = {
 			AND = {
 				tag = MAM
@@ -2714,7 +2733,7 @@ mamluk_government = {
 	nation_designer_cost = 60
 
 	nation_designer_trigger = {
-		religion_group = muslim
+		#religion_group = muslim
 	}
 
 	modifiers = {
@@ -2740,27 +2759,27 @@ mamluk_government = {
 feudal_theocracy = {
 	icon = "feudal_theocracy"
 	allow_normal_conversion = yes
-	potential = {
-		OR = {
-			AND = {
-				OR = {
-					religion_group = muslim
-					religion_group = zoroastrian_group
-				}
-				OR = {
-					has_reform = feudal_theocracy
-					have_had_reform = feudal_theocracy
-				}
-			}
-			AND = {
-				is_playing_custom_nation = yes
-				have_had_reform = feudal_theocracy
-			}
-		}
-	}
-	nation_designer_trigger = {
-		religion_group = muslim
-	}
+	#potential = {
+	#	OR = {
+	#		AND = {
+	#			OR = {
+	#				religion_group = muslim
+	#				religion_group = zoroastrian_group
+	#			}
+	#			OR = {
+	#				has_reform = feudal_theocracy
+	#				have_had_reform = feudal_theocracy
+	#			}
+	#		}
+	#		AND = {
+	#			is_playing_custom_nation = yes
+	#			have_had_reform = feudal_theocracy
+	#		}
+	#	}
+	#}
+	#nation_designer_trigger = {
+	#	religion_group = muslim
+	#}
 	legacy_equivalent = feudal_theocracy_legacy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 60

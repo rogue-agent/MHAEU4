@@ -32,6 +32,7 @@ country_decisions = {
 			owns_core_province = 236 # London
 		}
 		effect = {
+			add_government_reform = angevin_monarchy
 			change_tag = ANG
 			inherit = FRA
 			if = {
@@ -106,12 +107,13 @@ country_decisions = {
 			owns_core_province = 183 # Paris
 			senior_union_with = ENG
 			NOT = {
-				ROOT = { num_of_unions = 3 }
+				ROOT = { personal_union = 3 }
 			}
 		}
 		effect = {
 			change_tag = ANG
 			inherit = ENG
+			add_government_reform = angevin_monarchy
 			if = {
 				limit = {
 					is_part_of_hre = yes
@@ -191,6 +193,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = ANG
+			add_government_reform = angevin_monarchy
 			if = {
 				limit = {
 					is_part_of_hre = yes

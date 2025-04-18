@@ -3,6 +3,7 @@ country_decisions = {
 	bremen-verden_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = BVE }
 			NOT = { government_rank = 2 }
 			NOT = { government_rank = 3 }
 			OR = {
@@ -15,11 +16,10 @@ country_decisions = {
 						capital = 54
 					}
 					NOT = {
-						num_of_cities = 4
+						num_of_cities = 5
 					}
 				}
 			}
-			
 			OR = {
 				ai = no
 				AND = {
@@ -34,18 +34,70 @@ country_decisions = {
 				tag = BRE
 			}
 			adm_tech = 5
-			is_subject = no
 			is_at_war = no
-			NOT = { exists = BVE }
             owns_core_province = 1874 # Bremen
             owns_core_province = 54 # Stade
                         
 		}
 	 	effect = {
 			change_tag = BVE
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	adopt_bremen_nation = {
+		major = yes
+		potential = {
+			NOT = { government = republic }
+			NOT = { government_rank = 2 }
+			NOT = { government_rank = 3 }
+			tag = BVE
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 2
+				}
+			}
+		}
+		allow = {
+			tag = BVE
+			is_at_war = no
+            owns_core_province = 1874 # Bremen
+                        
+		}
+	 	effect = {
 			change_government = republic
 			add_government_reform = merchants_reform
-			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	adopt_verden_nation = {
+		major = yes
+		potential = {
+			NOT = { government = theocracy }
+			NOT = { government_rank = 2 }
+			NOT = { government_rank = 3 }
+			tag = BVE
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 2
+				}
+			}
+		}
+		allow = {
+			tag = BVE
+			is_at_war = no
+            owns_core_province = 54 # Stade
+		}
+	 	effect = {
+			change_government = theocracy
 		}
 		ai_will_do = {
 			factor = 400

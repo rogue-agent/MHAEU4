@@ -1,6 +1,7 @@
 #118 - Roma
 
 add_core = CSR
+add_permanent_claim = CSR
 owner = PAP
 controller = PAP
 culture = umbrian 

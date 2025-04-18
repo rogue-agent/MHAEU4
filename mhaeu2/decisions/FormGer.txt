@@ -6,10 +6,10 @@ country_decisions = {
 			NOT = { exists = GER }
 			NOT = { tag = GER }
 			culture_group = germanic
-            OR = {
-            tag = NGF
-            tag = SGF
-            }
+            		OR = {
+            			tag = NGF
+            			tag = SGF
+            		}
 		}
 		provinces_to_highlight = {
 			culture_group = germanic
@@ -20,7 +20,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			adm_tech = 15
 			num_of_cities = 35
-            OR = {
+            		OR = {
 				owns_or_subject_of = 134
 				owns_or_subject_of = 50
 			}

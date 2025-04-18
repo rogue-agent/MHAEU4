@@ -1,5 +1,5 @@
 government = monarchy
-add_government_reform = feudalism_reform
+add_government_reform = elective_monarchy_reform
 government_rank = 1
 technology_group = eastern
 religion = catholic
@@ -7,11 +7,12 @@ primary_culture = finnish
 add_accepted_culture = karelian
 add_accepted_culture = finno-swede
 historical_rival = SWE
-capital = 27	# Nyland
+capital = 27	# Turku
 
 1353.1.1 = {
 	monarch = {
-		name = "Bengt I"
+		name = "Bengt"
+		monarch_name = "Bengt I"
 		dynasty = "Algotsson"
 		culture = swedish
 		birth_date = 1330.1.1
@@ -19,28 +20,233 @@ capital = 27	# Nyland
 		DIP = 3
 		MIL = 1
 	}
-}
+} #the duchal title was vacant for 200 years, using castle bailiffs as leaders of Finland
 1444.11.11 = {
-    monarch = {
-		country_of_origin = SWE
-		name = "Karl "
-		dynasty = "Knutsson"
-		birth_date = 1440.8.7
-		death_date = 1470.5.14
-		adm = 1
-		dip = 2
-		mil = 2
+	monarch = {
+		ADM = 1
+		DIP = 1
+		MIL = 1
+		regent = yes
 	}
 }
-1470.11.11 = {
-    monarch = {
-		country_of_origin = SWE
-		name = "Sten "
-		dynasty = "Sture"
-		birth_date = 1440.8.7
-		death_date = 1503.12.14
-		adm = 2
-		dip = 2
-		mil = 2
+1446.1.1 = {
+	monarch = {
+		name = "Magnus"
+		dynasty = "Gren"
+		culture = swedish
+		birth_date = 1400.1.1
+		ADM = 3
+		DIP = 3
+		MIL = 1
+	}
+}
+1454.11.11 = {
+	monarch = {
+		ADM = 1
+		DIP = 1
+		MIL = 1
+		regent = yes
+	}
+}
+1455.1.1 = {
+	monarch = {
+		name = "Kristiern Bengtsson"
+		dynasty = "Oxenstierna"
+		culture = swedish
+		birth_date = 1410.1.1
+		ADM = 3
+		DIP = 3
+		MIL = 1
+	}
+}
+1462.11.11 = {
+	monarch = {
+		ADM = 1
+		DIP = 1
+		MIL = 1
+		regent = yes
+	}
+}
+1463.1.1 = {
+	monarch = {
+		name = "Birger"
+		dynasty = "Trolle"
+		culture = swedish
+		birth_date = 1430.1.1
+		ADM = 3
+		DIP = 3
+		MIL = 1
+	}
+}
+1464.11.11 = {
+	monarch = {
+		ADM = 1
+		DIP = 1
+		MIL = 1
+		regent = yes
+	}
+}
+1472.1.1 = {
+	monarch = {
+		name = "Magnus"
+		dynasty = "Frille"
+		culture = swedish
+		birth_date = 1430.1.1
+		ADM = 0
+		DIP = 1
+		MIL = 1
+	}
+}
+1472.11.11 = {
+	monarch = {
+		ADM = 1
+		DIP = 1
+		MIL = 1
+		regent = yes
+	}
+}
+1503.1.1 = {
+	monarch = {
+		name = "Ingeborg"
+		dynasty = "Tott"
+		culture = danish
+		birth_date = 1442.1.1
+		ADM = 1
+		DIP = 0
+		MIL = 0
+	}
+}
+1504.1.1 = {
+	monarch = {
+		ADM = 1
+		DIP = 1
+		MIL = 1
+		regent = yes
+	}
+}
+1504.2.1 = {
+	monarch = {
+		name = "Erik Turesson"
+		dynasty = "Bielke"
+		culture = swedish
+		birth_date = 1460.1.1
+		ADM = 3
+		DIP = 3
+		MIL = 1
+	}
+}
+1504.12.11 = {
+	monarch = {
+		ADM = 1
+		DIP = 1
+		MIL = 1
+		regent = yes
+	}
+}
+1504.12.14 = {
+	monarch = {
+		name = "Josef Pedersson"
+		dynasty = "af Djula"
+		culture = finno-swede
+		birth_date = 1467.1.1
+		ADM = 3
+		DIP = 2
+		MIL = 3
+	}
+}
+1515.1.1 = {
+	monarch = {
+		ADM = 1
+		DIP = 1
+		MIL = 1
+		regent = yes
+	}
+}
+1515.11.11 = {
+	monarch = {
+		name = "Krister Klasson"
+		dynasty = "Horn"
+		culture = finnish
+		birth_date = 1470.1.1
+		ADM = 3
+		DIP = 3
+		MIL = 1
+	}
+}
+1520.1.1 = {
+	monarch = {
+		ADM = 1
+		DIP = 1
+		MIL = 1
+		regent = yes
+	}
+}
+1520.6.11 = {
+	monarch = {
+		name = "Wulf"
+		dynasty = "von Grewendorp"
+		culture = danish
+		birth_date = 1480.1.1
+		ADM = 3
+		DIP = 3
+		MIL = 1
+	}
+}
+1521.6.1 = {
+	monarch = {
+		ADM = 1
+		DIP = 1
+		MIL = 1
+		regent = yes
+	}
+}
+1521.11.11 = {
+	monarch = {
+		name = "Tomas"
+		dynasty = "Lebe"
+		culture = danish
+		birth_date = 1490.1.1
+		ADM = 3
+		DIP = 3
+		MIL = 3
+	}
+}
+1522.6.1 = {
+	monarch = {
+		ADM = 1
+		DIP = 1
+		MIL = 1
+		regent = yes
+	}
+}
+1522.11.11 = {
+	monarch = {
+		name = "Didrik"
+		dynasty = "Persson"
+		culture = danish
+		birth_date = 1490.1.1
+		ADM = 3
+		DIP = 3
+		MIL = 2
+	}
+}
+1554.1.1 = {
+	monarch = {
+		ADM = 1
+		DIP = 1
+		MIL = 1
+		regent = yes
+	}
+}
+1556.11.11 = {
+	monarch = {
+		name = "Johan"
+		monarch_name= "Johan III"
+		dynasty = "Vasa"
+		culture = swedish
+		birth_date = 1537.12.20
+		ADM = 2
+		DIP = 1
+		MIL = 1
 	}
 }

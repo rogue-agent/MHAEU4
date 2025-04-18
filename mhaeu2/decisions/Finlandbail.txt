@@ -1,0 +1,44 @@
+country_decisions = {
+
+	estmonarchy = {
+		major= yes
+		potential = {
+			tag = FIN 
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+		}
+		effect = {
+			add_government_reform = grand_duchy_reform
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	estduchy = {
+		major= yes
+		potential = {
+			ROOT = { 
+				overlord_of = FIN
+			}
+		}
+		allow = {
+			is_year = 1500
+		}
+		effect = {
+			add_government_reform = grand_duchy_reform
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
